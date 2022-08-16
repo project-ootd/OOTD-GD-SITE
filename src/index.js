@@ -1,25 +1,23 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-
+import ReactDOM, { createRoot } from "react-dom/client";
 import App from "./App";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { render } from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Test1 from "./components/Test1";
 import Sub_detail from "./components/Sub_detail";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="test1" element={<test1 />} />
-      <Route path="Sub_detail" element={<Sub_detail />} />
-    </Routes>
-    
-  </BrowserRouter>
-  </React.StrictMode>,
-  root
-);
+const root = createRoot(document.getElementById("root"));
+setInterval(() => {
+  root.render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/Test1" element={<Test1 />} />
+          <Route path="/Sub_detail" element={<Sub_detail />} />
+        </Routes>
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+}, 1000);
