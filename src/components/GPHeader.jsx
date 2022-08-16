@@ -3,13 +3,14 @@ import axios from "axios";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import "../styles/GP/GPHeader.scss";
+import { Link } from "react-router-dom";
 const GPHeader = () => {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
       const data = await axios({
-        url: `http://localhost:4000/test1`,
+        url: `http://localhost:4000/Login`,
         method: "GET",
       });
       setUser(data.data);
@@ -41,113 +42,113 @@ const GPHeader = () => {
   return (
     <header>
       <h1>
-        <a href="#">OOTD</a>
+        <Link to="">OOTD</Link>
       </h1>
       <nav className="top-bar">
         <ul>
           <li>
-            <a href="#">Man</a>
+            <Link to="">Man</Link>
             <ul>
               <li>
-                <a href="#">Summer</a>
+                <Link to="">Summer</Link>
                 <ul>
                   <li>
-                    <a href="#">Shirts</a>
+                    <Link to="">Shirts</Link>
                   </li>
                   <li>
-                    <a href="#">Pants</a>
+                    <Link to="">Pants</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="#">Winter</a>
+                <Link to="">Winter</Link>
                 <ul>
                   <li>
-                    <a href="#">Shirts</a>
+                    <Link to="">Shirts</Link>
                   </li>
                   <li>
-                    <a href="#">Pants</a>
+                    <Link to="">Pants</Link>
                   </li>
                 </ul>
               </li>
             </ul>
           </li>
           <li>
-            <a href="#">Woman</a>
+            <Link to="WGDP">Woman</Link>
             <ul>
               <li>
-                <a href="#">Summer</a>
+                <Link to="">Summer</Link>
                 <ul>
                   <li>
-                    <a href="#">Shirts</a>
+                    <Link to="">Shirts</Link>
                   </li>
                   <li>
-                    <a href="#">Pants</a>
+                    <Link to="">Pants</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="#">Winter</a>
+                <Link to="">Winter</Link>
                 <ul>
                   <li>
-                    <a href="#">Shirts</a>
+                    <Link to="">Shirts</Link>
                   </li>
                   <li>
-                    <a href="#">Pants</a>
+                    <Link to="">Pants</Link>
                   </li>
                 </ul>
               </li>
             </ul>
           </li>
           <li>
-            <a href="#">Kids</a>
+            <Link to="">Kids</Link>
             <ul>
               <li>
-                <a href="#">Summer</a>
+                <Link to="">Summer</Link>
                 <ul>
                   <li>
-                    <a href="#">Shirts</a>
+                    <Link to="">Shirts</Link>
                   </li>
                   <li>
-                    <a href="#">Pants</a>
+                    <Link to="">Pants</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="#">Winter</a>
+                <Link to="">Winter</Link>
                 <ul>
                   <li>
-                    <a href="#">Shirts</a>
+                    <Link to="">Shirts</Link>
                   </li>
                   <li>
-                    <a href="#">Pants</a>
+                    <Link to="">Pants</Link>
                   </li>
                 </ul>
               </li>
             </ul>
           </li>
           <li>
-            <a href="#">Accessory</a>
+            <Link to="">Accessory</Link>
             <ul>
               <li>
-                <a href="#">Ring</a>
+                <Link to="">Ring</Link>
                 <ul>
                   <li>
-                    <a href="#">Gold</a>
+                    <Link to="">Gold</Link>
                   </li>
                   <li>
-                    <a href="#">Diamond</a>
+                    <Link to="">Diamond</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="#">Necklace</a>
+                <Link to="">Necklace</Link>
                 <ul>
                   <li>
-                    <a href="#">Gold</a>
+                    <Link to="">Gold</Link>
                   </li>
                   <li>
-                    <a href="#">Diamond</a>
+                    <Link to="">Diamond</Link>
                   </li>
                 </ul>
               </li>
