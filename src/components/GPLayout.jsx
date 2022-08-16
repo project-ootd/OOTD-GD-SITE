@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/GP/GPLayout.scss";
+import { Link } from "react-router-dom";
 const GPLayout = () =>{
     return (
         <>
@@ -171,13 +172,15 @@ const GPLayout = () =>{
                   <img src="http://www.bnx.oa.gg/data/Contents/bnx_16fw_visual_18_list.jpg" alt="" />
                   <div className="ico-view"><i className="fas fa-search" /></div>
                 </div>
-                <div className="prod-name">단가라 OPS</div>
+                <div className="prod-name"><Link to="Sub_detail">단가라 OPS</Link></div>
                 <div className="prod-price">19,800</div>
                 <div className="free-del"><span /></div>
               </li>
             </ul>
           </div>
         </section>
+
+        
         </>
       );
 }
