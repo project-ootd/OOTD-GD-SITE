@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import "../styles/GP/GPHeader.scss";
 import { Link } from "react-router-dom";
 const GPHeader = () => {
   const [user, setUser] = useState([]);
