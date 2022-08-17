@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/NewmainPG.scss";
+import Login from "./Login";
 
 const NewmainPG = () => {
   return (
@@ -126,20 +127,7 @@ const NewmainPG = () => {
             </ul>
           </div>
         </nav>
-        <nav className="login">
-          <input
-            type="text"
-            style={{ width: "100px", height: "20px" }}
-            placeholder="ID"
-          />
-          <input
-            type="password"
-            style={{ width: "100px", height: "20px" }}
-            placeholder="Password"
-          />
-          <button>Login</button>
-          <button>Sign in</button>
-        </nav>
+        <Login />
       </header>
       <section>
         <div className="img">

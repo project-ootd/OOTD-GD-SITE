@@ -3,14 +3,11 @@ import App from "../App";
 import GPHeader from "./GPHeader";
 import GPLayout from "./GPLayout";
 
-const WGDP = () =>{
-    return(
-        <>
-        
-        <GPHeader />
-        <GPLayout />
-        
-        </>
-    );
-}
+const WGDP = () => {
+  return (
+    <>
+      <GPLayout />
+    </>
+  );
+};
 export default WGDP;

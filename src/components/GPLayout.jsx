@@ -51,6 +51,7 @@ const GPLayout = () => {
                   </div>
                 </div>
               </Link>
+
               <div className="prod-name">단가라 OPS</div>
               <div className="prod-price">19,800</div>
               <div className="free-del">
@@ -284,15 +285,17 @@ const GPLayout = () => {
               <div className="prod-price">19,800</div>
             </li>
             <li className="cell">
-              <div className="img-box">
-                <img
-                  src="http://www.bnx.oa.gg/data/Contents/bnx_16fw_visual_18_list.jpg"
-                  alt=""
-                />
-                <div className="ico-view">
-                  <i className="fas fa-search" />
+              <Link to="/Sub_detail">
+                <div className="img-box">
+                  <img
+                    src="http://www.bnx.oa.gg/data/Contents/bnx_16fw_visual_18_list.jpg"
+                    alt=""
+                  />
+                  <div className="ico-view">
+                    <i className="fas fa-search" />
+                  </div>
                 </div>
-              </div>
+              </Link>
               <div className="prod-name">단가라 OPS</div>
               <div className="prod-price">19,800</div>
               <div className="free-del">
