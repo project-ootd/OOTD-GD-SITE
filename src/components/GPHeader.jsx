@@ -32,7 +32,7 @@ const GPHeader = () => {
   const loginBtn = () => {
     user.map((user) =>
       user.id === id
-        ? user.pw === pw
+        ? user.passwor === pw
           ? alert("로그인 성공")
           : alert("비밀번호 오류")
         : alert("아이디 오류")
