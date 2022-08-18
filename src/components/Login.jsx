@@ -5,18 +5,7 @@ import "../styles/NewmainPG.scss";
 
 const Login = () => {
   const [user, setUser] = useState([]);
-
-  useEffect(() => {
-    const getData = async () => {
-      const data = await axios({
-        url: `http://localhost:4000/test1`,
-        method: "GET",
-      });
-      setUser(data.data);
-      console.log(data.data);
-    };
-    getData();
-  }, []);
+  const [chk, setChk] = useState(false);
 
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
@@ -28,16 +17,31 @@ const Login = () => {
     setPw(e.target.value);
   };
 
-  const loginBtn = () => {
-    user.map((user) =>
-      user.id === id
-        ? user.pw === pw
-          ? alert("로그인 성공")
-          : alert("비밀번호 오류")
-        : alert("아이디 오류")
-    );
+  const loginBtn = async () => {
+    const data = await axios({
+      url: `http://localhost:4000/test1/login`,
+      method: "GET",
+      data: {
+        id,
+        pw,
+      },
+    });
+    setChk(data.data);
+    console.log("check : " + chk);
+    if (data.data === true) {
+      alert("로그인 성공");
+    } else if (data.data === false) {
+      alert("로그인 실패");
+    }
+    console.log("chk : " + data.data);
+    // user.map((user) =>
+    //   user.id === id
+    //     ? user.pw === pw
+    //       ? alert("로그인 성공")
+    //       : alert("비밀번호 오류")
+    //     : alert("아이디 오류")
+    // );
   };
-
   return (
     <nav className="login">
       {/*  로그인/회원가입 버튼  */}

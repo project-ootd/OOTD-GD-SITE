@@ -2,10 +2,26 @@ import axios from "axios";
 import React, { useState } from "react";
 import "../styles/Join.scss";
 
-const Join = ({ Join }) => {
+const Join = () => {
   const [id, setJoinId] = useState("");
   const [pw, setJoinPw] = useState("");
   const [name, setJoinName] = useState("");
+
+  const [user, setUser] = useState([]);
+
+  const joinbtn = async () => {
+    const data = await axios({
+      url: `http://localhost:4000/test1`,
+      method: "POST",
+      data: {
+        id,
+        pw,
+        name,
+      },
+    });
+    setUser(id, pw, name);
+    console.log("data : " + id, pw, name);
+  };
 
   const joinIdChange = (e) => {
     setJoinId(e.target.value);
@@ -19,12 +35,13 @@ const Join = ({ Join }) => {
     setJoinName(e.target.value);
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     setJoinId("");
     setJoinPw("");
     setJoinName("");
-    Join(id, pw, name);
+    console.log("onsubmit : " + id, pw, name);
+    setUser(id, pw, name);
   };
 
   return (
@@ -39,6 +56,7 @@ const Join = ({ Join }) => {
           onChange={joinIdChange}
           placeholder="아이디를 입력하세요"
         />
+
         <input
           type="text"
           name="pw"
@@ -46,6 +64,7 @@ const Join = ({ Join }) => {
           onChange={joinPwChange}
           placeholder="비밀번호를 입력하세요"
         />
+
         <input
           type="text"
           name="name"
@@ -53,7 +72,9 @@ const Join = ({ Join }) => {
           onChange={joinNameChange}
           placeholder="이름을 입력하세요"
         />
-        <button>회원가입</button>
+        <button type="submit" onClick={joinbtn}>
+          회원가입
+        </button>
       </form>
     </div>
   );
