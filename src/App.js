@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Join from "./components/Join";
 import axios from "axios";
 
+import Topbar from "./components/Topbar";
+import Footer from "./components/Footer";
+
 import NewmainPG from "./components/NewmainPG";
 
 function App() {
@@ -22,8 +25,13 @@ function App() {
 
   return (
     <div>
+      <Topbar />
+
       <NewmainPG />
+
       <Join join={join} />
+
+      <Footer />
     </div>
   );
 }

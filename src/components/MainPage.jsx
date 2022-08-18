@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import Login from "./Login";
+
+import "../styles/MainPage.scss";
+
 const MainPage = () => {
   return (
     <div>
@@ -120,6 +124,7 @@ const MainPage = () => {
             </li>
           </ul>
         </nav>
+
         <Login />
       </header>
       {/* Top bar */}
