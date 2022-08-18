@@ -1,6 +1,7 @@
-import React from "react";
-import "../styles/GP/GPLayout.scss";
+import React, { useEffect, useState } from "react";
+import "../styles/subscss/GPLayout.scss";
 import { Link } from "react-router-dom";
+import axios from "axios";
 const GPLayout = () => {
   return (
     <>

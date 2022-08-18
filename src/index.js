@@ -7,10 +7,10 @@ import { render } from "react-dom";
 // import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Test1 from "./components/Test1";
+import Test1 from "./TestFile/TestBae";
 import Sub_detail from "./components/Sub_detail";
-import Join from "./components/Join";
-import WGDP from "./components/WGDP";
+import Join from "./Page/Join";
+import WGDP from "./Page/WGDP";
 
 const root = createRoot(document.getElementById("root"));
 

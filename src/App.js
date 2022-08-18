@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Join from "./components/Join";
+import Join from "./Page/Join";
 import axios from "axios";
 
 import Topbar from "./components/Topbar";
