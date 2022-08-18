@@ -1,5 +1,6 @@
 import React from "react";
-
+import Topbar from "./components/Topbar";
+import Footer from "./components/Footer";
 import NewmainPG from "./components/NewmainPG";
 
 function App() {
@@ -8,6 +9,8 @@ function App() {
       <Topbar />
 
       <NewmainPG />
+
+      <Footer />
     </div>
   );
 }

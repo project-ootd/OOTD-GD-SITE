@@ -1,0 +1,21 @@
+.company {
+  margin-top: 100px;
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+.company > ul {
+  color: white;
+}
+.company > ul > li:first-child {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.company > ul > li {
+  margin-top: 5px;
+  font-size: 12px;
+}
+.company > ul > li:last-child {
+  text-align: center;
+  font-size: 1rem;
+}
