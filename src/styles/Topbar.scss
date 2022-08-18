@@ -56,7 +56,6 @@ header h1 {
   display: inline-block;
   flex-wrap: nowrap;
 }
-
 /* 1, 2차 메뉴 아이템에 relative를 줌 */
 .top-bar ul > li {
   position: relative;
@@ -69,7 +68,7 @@ header h1 {
   color: inherit;
   background-color: black;
   font-size: 1.3rem;
-  width: 120px;
+  width: 150px;
 
   /* 3차메뉴 아이템이 아래로 표시 되는 것을 제대로 표시하기 */
   white-space: nowrap;

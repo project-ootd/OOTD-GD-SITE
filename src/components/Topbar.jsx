@@ -1,11 +1,13 @@
 import React from "react";
 import "../styles/Topbar.scss";
+import { Link } from "react-router-dom";
 const Topbar = () => {
   return (
     <div>
       <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        Link
+        to="https://cdLinkjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
       />
       <header>
         <h1>
@@ -15,108 +17,106 @@ const Topbar = () => {
           <div className="menu-box-1">
             <ul>
               <li>
-                <a href="#">MAN</a>
+                <Link to="#">MAN</Link>
                 <ul>
                   <li>
-                    <a href="#">SUMMER</a>
+                    <Link to="#">SUMMER</Link>
                     <ul>
+                      <li>Link </li>
                       <li>
-                        <a href="#">TOP</a>
-                      </li>
-                      <li>
-                        <a href="#">BOTTOM</a>
+                        <Link to="#">BOTTOM</Link>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#">WINTER</a>
+                    <Link to="#">WINTER</Link>
                     <ul>
                       <li>
-                        <a href="#">TOP</a>
+                        <Link to="#">TOP</Link>
                       </li>
                       <li>
-                        <a href="#">BOTTOM</a>
+                        <Link to="#">BOTTOM</Link>
                       </li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="#">WOMAN</a>
+                <Link to="WGDP">WOMAN</Link>
                 <ul>
                   <li>
-                    <a href="#">SUMMER</a>
+                    <Link to="#">SUMMER</Link>
                     <ul>
                       <li>
-                        <a href="#">TOP</a>
+                        <Link to="#">TOP</Link>
                       </li>
                       <li>
-                        <a href="#">BOTTOM</a>
+                        <Link to="#">BOTTOM</Link>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#">WINTER</a>
+                    <Link to="#">WINTER</Link>
                     <ul>
                       <li>
-                        <a href="#">TOP</a>
+                        <Link to="#">TOP</Link>
                       </li>
                       <li>
-                        <a href="#">BOTTOM</a>
+                        <Link to="#">BOTTOM</Link>
                       </li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="#">KIDS</a>
+                <Link to="#">KIDS</Link>
                 <ul>
                   <li>
-                    <a href="#">SUMMER</a>
+                    <Link to="#">SUMMER</Link>
                     <ul>
                       <li>
-                        <a href="#">TOP</a>
+                        <Link to="#">TOP</Link>
                       </li>
                       <li>
-                        <a href="#">BOTTOM</a>
+                        <Link to="#">BOTTOM</Link>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#">WINTER</a>
+                    <Link to="#">WINTER</Link>
                     <ul>
                       <li>
-                        <a href="#">TOP</a>
+                        <Link to="#">TOP</Link>
                       </li>
                       <li>
-                        <a href="#">BOTTOM</a>
+                        <Link to="#">BOTTOM</Link>
                       </li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="#">ACCESSORY</a>
+                <Link to="#">ACCESSOLY</Link>
                 <ul>
                   <li>
-                    <a href="#">RING</a>
+                    <Link to="#">RING</Link>
                     <ul>
                       <li>
-                        <a href="#">GOLD</a>
+                        <Link to="#">GOLD</Link>
                       </li>
                       <li>
-                        <a href="#">DIAMOND</a>
+                        <Link to="#">DIAMOND/</Link>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#">NECKLACE</a>
+                    <Link to="#">NECKLACE</Link>
                     <ul>
                       <li>
-                        <a href="#">GOLD</a>
+                        <Link to="#">GOLD</Link>
                       </li>
                       <li>
-                        <a href="#">DIAMOND</a>
+                        <Link to="#">DIAMOND</Link>
                       </li>
                     </ul>
                   </li>
