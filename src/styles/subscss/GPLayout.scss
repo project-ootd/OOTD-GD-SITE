@@ -87,16 +87,22 @@ a {
 /* 커스텀 */
 
 /* 상품 정렬 */
+.list-box-1 {
+  width: 100%;
+  border: 5px solid gold;
+}
 .list-box-1 .cell {
   width: 20%;
   padding: 0 10px;
   margin-top: 20px;
   cursor: pointer;
+  border: 5px solid red;
 }
 
 /* 메뉴리스트 전체 틀 */
 .list-box-1 .row {
   margin: 0 -10px;
+  margin-left: 25%;
 }
 
 /* 상품 제목 및 가격 */
