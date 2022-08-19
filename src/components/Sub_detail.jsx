@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Sub_detail.scss";
 import { Link } from "react-router-dom";
-import Buy from "../btn/Buy";
+import Buybtn from "../btn/Buybtn";
 import ShoppingCart from "../btn/ShoppingCart";
 import FavoritCheck from "../btn/FavoritCheck";
 
@@ -70,7 +70,7 @@ const Sub_detail = () => {
           <hr />
           <div className="buy-btn-box flex">
             <div className="buy">
-              <Buy />
+              <Buybtn />
             </div>
             <div className="cart">
               <ShoppingCart />
