@@ -2,6 +2,8 @@ import React from "react";
 import "../styles/Topbar.scss";
 import { Link } from "react-router-dom";
 import Login from "./Login";
+import { BsEye } from "react-icons/bs";
+
 const Topbar = () => {
   return (
     <div>
@@ -12,7 +14,11 @@ const Topbar = () => {
       />
       <header>
         <h1>
-          <i className="fa-regular fa-eye">&nbsp; OOTD</i>
+          <div>
+            <Link to="/">
+              <BsEye /> OOTD
+            </Link>
+          </div>
         </h1>
         <nav className="top-bar">
           <div className="menu-box-1">
@@ -23,7 +29,6 @@ const Topbar = () => {
                   <li>
                     <Link to="#">SUMMER</Link>
                     <ul>
-                      <li>Link </li>
                       <li>
                         <Link to="#">BOTTOM</Link>
                       </li>
