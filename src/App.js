@@ -9,29 +9,12 @@ import TestChoi from "./TestFile/TestChoi";
 import NewmainPG from "./components/NewmainPG";
 
 function App() {
-  const [user, setUser] = useState([]);
-
-  const join = async (id, pw, name) => {
-    const data = await axios({
-      url: `http://localhost:4000/test1`,
-      method: "POST",
-      data: {
-        id,
-        pw,
-        name,
-      },
-    });
-    setUser(data.data);
-  };
-
   return (
     <div>
       <Topbar />
 
       <TestChoi />
-      {/* <NewmainPG />
-
-      <Join join={join} /> */}
+      {/* <NewmainPG /> */}
 
       <Footer />
     </div>
