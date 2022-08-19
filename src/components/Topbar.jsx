@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Topbar.scss";
 import { Link } from "react-router-dom";
+import Login from "./Login";
 const Topbar = () => {
   return (
     <div>
@@ -125,20 +126,7 @@ const Topbar = () => {
             </ul>
           </div>
         </nav>
-        <nav className="login">
-          <input
-            type="text"
-            style={{ width: "100px", height: "20px" }}
-            placeholder="ID"
-          />
-          <input
-            type="password"
-            style={{ width: "100px", height: "20px" }}
-            placeholder="Password"
-          />
-          <button>Login</button>
-          <button>Sign in</button>
-        </nav>
+        <Login />
       </header>
     </div>
   );
