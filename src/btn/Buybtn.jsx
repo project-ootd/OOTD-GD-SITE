@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { BiWon } from "react-icons/bi";
-import "../styles/subscss/Buy.scss";
+import "../styles/subscss/Buybtn.scss";
 
-function Buy() {
+function Buybtn() {
   return (
     <div>
       <button className="sell">
@@ -14,4 +14,4 @@ function Buy() {
     </div>
   );
 }
-export default Buy;
+export default Buybtn;

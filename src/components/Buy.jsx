@@ -5,7 +5,7 @@ import Buybtn from "../btn/Buybtn";
 
 import { Link } from "react-router-dom";
 
-const TestChoi = (args) => {
+const Buy = (args) => {
   return (
     <>
       <link
@@ -115,4 +115,4 @@ const TestChoi = (args) => {
   );
 };
 
-export default TestChoi;
+export default Buy;
