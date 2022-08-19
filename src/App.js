@@ -4,6 +4,7 @@ import axios from "axios";
 
 import Topbar from "./components/Topbar";
 import Footer from "./components/Footer";
+import TestChoi from "./TestFile/TestChoi";
 
 import NewmainPG from "./components/NewmainPG";
 
@@ -27,9 +28,10 @@ function App() {
     <div>
       <Topbar />
 
-      <NewmainPG />
+      <TestChoi />
+      {/* <NewmainPG />
 
-      <Join join={join} />
+      <Join join={join} /> */}
 
       <Footer />
     </div>
