@@ -1,6 +1,6 @@
 import React from "react";
 import { Table, Checkbox, Mask, Badge, Button } from "react-daisyui";
-import "../styles/Test/TestChoi.scss";
+import "../styles/Buy.scss";
 import Buybtn from "../btn/Buybtn";
 
 import { Link } from "react-router-dom";
@@ -105,12 +105,7 @@ const Buy = (args) => {
           </Table.Footer>
         </Table>
       </div>
-      <div class="mockup-window border bg-base-300">
-        <div class="flex justify-center px-4 py-16 bg-base-200">
-          <Buybtn />
-          
-        </div>
-      </div>
+      
     </>
   );
 };
