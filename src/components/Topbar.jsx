@@ -15,9 +15,7 @@ const Topbar = () => {
       <header>
         <h1>
           <div>
-            <Link to="/">
-              <BsEye /> OOTD
-            </Link>
+            <Link to="/"><BsEye /> </Link> <Link to="/">OOTD</Link>
           </div>
         </h1>
         <nav className="top-bar">
@@ -111,7 +109,7 @@ const Topbar = () => {
                         <Link to="#">GOLD</Link>
                       </li>
                       <li>
-                        <Link to="#">DIAMOND/</Link>
+                        <Link to="#">DIAMOND</Link>
                       </li>
                     </ul>
                   </li>

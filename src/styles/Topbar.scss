@@ -28,19 +28,26 @@ header {
   background-color: black;
   font-weight: bold;
   align-items: center;
+    
 }
 
 body {
   padding-top: 50px;
 }
 
-header h1 {
+header > h1 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   white-space: nowrap;
   letter-spacing: -0.3rem;
+  width: 150px;
+  font-size: 1.5rem;
 }
 
 /* top-bar > menu-box */
 .menu-box-1 {
+  
 }
 
 .menu-box-1 > ul {
@@ -102,6 +109,7 @@ header h1 {
 
 .login {
   display: flex;
+  align-items: center;
   margin-left: auto;
 }
 

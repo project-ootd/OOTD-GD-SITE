@@ -1,20 +1,21 @@
 import React, { useState } from "react";
+import "tailwindcss/tailwind.css";
 import Join from "./Page/Join";
 import axios from "axios";
 
 import Topbar from "./components/Topbar";
-import Footer from "./components/Footer";
-import TestChoi from "./TestFile/TestChoi";
-
 import NewmainPG from "./components/NewmainPG";
+import Footer from "./components/Footer";
+import Buy from "./components/Buy";
+
+import Payment from "./components/Payment";
 
 function App() {
   return (
     <div>
       <Topbar />
 
-      <TestChoi />
-      {/* <NewmainPG /> */}
+      {/* <Buy /> */}
 
       <Footer />
     </div>
