@@ -63,6 +63,8 @@ a {
 /*  */
 .main-pic {
   text-align: center;
+  margin-left: 33%;
+  
 }
 
 /* 배너 및 상품 목록 */
@@ -90,14 +92,14 @@ a {
 /* 상품 정렬 */
 .list-box-1 {
   width: 100%;
-  border: 5px solid gold;
+  
 }
 .list-box-1 .cell {
   width: 20%;
   padding: 0 10px;
   margin-top: 20px;
   cursor: pointer;
-  border: 5px solid red;
+  
 }
 
 /* 메뉴리스트 전체 틀 */
