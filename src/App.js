@@ -9,13 +9,15 @@ import Footer from "./components/Footer";
 import Buy from "./components/Buy";
 
 import Payment from "./components/Payment";
+import Popup from "./components/Pop-up";
 
 function App() {
   return (
     <div>
       <Topbar />
 
-      {/* <Buy /> */}
+      <NewmainPG />
+      <Popup />
 
       <Footer />
     </div>
