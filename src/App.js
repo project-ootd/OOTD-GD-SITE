@@ -10,13 +10,21 @@ import Buy from "./components/Buy";
 import MGDP from "./Page/MGDP";
 
 import Payment from "./components/Payment";
+import Popup from "./components/Pop-up";
 
 function App() {
   return (
     <div>
       <Topbar />
+<<<<<<< HEAD
+
+      <NewmainPG />
+      <Popup />
+
+=======
       <MainPG />
       {/* <Buy /> */}
+>>>>>>> master
       <Footer />
     </div>
   );
