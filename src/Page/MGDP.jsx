@@ -1,16 +1,16 @@
 import React from "react";
 import App from "../App";
-import Woman from "../components/Woman";
+import Man from "../components/Man";
 
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
-const WGDP = () => {
+const MGDP = () => {
   return (
     <>
       <Topbar />
-      <Woman />
+      <Man />
       <Footer />
     </>
   );
 };
-export default WGDP;
+export default MGDP;

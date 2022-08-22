@@ -1,42 +1,17 @@
-import React, { useEffect, useState } from "react";
-import "../styles/subscss/GPLayout.scss";
+import React from "react";
+import "../styles/subscss/Man.scss";
 import { Link } from "react-router-dom";
-import axios from "axios";
-const GPLayout = () => {
+
+const Man = () => {
   return (
     <>
       <section>
         <div className="sub-menu">
-          <h1>Woman</h1>
-          <ul className="sub-menu2">
-            <li>
-              <a href="#">Summer</a>
-            </li>
-            <li>
-              <a href="#">Shirts</a>
-            </li>
-            <li>
-              <a href="#">Pants</a>
-            </li>
-          </ul>
-          <ul className="sub-menu3">
-            <li>
-              <Link to="/Sub_detail">
-                <a href="#">Winter</a>
-              </Link>
-            </li>
-            <li>
-              <a href="#">Shirts</a>
-            </li>
-            <li>
-              <a href="#">Pants</a>
-            </li>
-          </ul>
+          <h1>Man</h1>
         </div>
-        <hr />
         <div className="main-pic">
           <img
-            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzExMTRfMTQ0%2FMDAxNTEwNjI4MzI3MjQz.qj1sxYqHpSI70QFo4CDLEtZqHljHf-nE_P4XA5qbqPsg.m2AQGcQkwVpesYetoNvyN3WzNlA2hmkxJMlOGts6jQ4g.JPEG.banillamodels%2F2015091182355.jpg&type=sc960_832"
+            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20120827_41%2Fsouth_monkey_1346009917900q3i71_JPEG%2Fmalemodelsphotos.jpg&type=sc960_832"
             alt=""
           />
         </div>
@@ -344,4 +319,5 @@ const GPLayout = () => {
     </>
   );
 };
-export default GPLayout;
+
+export default Man;
