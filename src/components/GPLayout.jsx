@@ -21,7 +21,9 @@ const GPLayout = () => {
           </ul>
           <ul className="sub-menu3">
             <li>
-              <a href="#">Winter</a>
+              <Link to="/Sub_detail">
+                <a href="#">Winter</a>
+              </Link>
             </li>
             <li>
               <a href="#">Shirts</a>
@@ -40,7 +42,7 @@ const GPLayout = () => {
         </div>
         <div className="list-box-1 con">
           <ul className="row">
-          <li className="cell">
+            <li className="cell">
               <div className="img-box">
                 <img
                   src="https://image.msscdn.net/images/goods_img/20200701/1503346/1503346_1_500.jpg?t=20220401110908"
@@ -160,7 +162,9 @@ const GPLayout = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">SWEAT SHORTS MARCHE EMBLEM_NAVY CREAM</div>
+              <div className="prod-name">
+                SWEAT SHORTS MARCHE EMBLEM_NAVY CREAM
+              </div>
               <div className="prod-price">53,100</div>
               <div className="free-del">
                 <span />
@@ -328,7 +332,7 @@ const GPLayout = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">  SU SPRAY TEE(WHITE)</div>
+              <div className="prod-name"> SU SPRAY TEE(WHITE)</div>
               <div className="prod-price">29,400</div>
               <div className="free-del">
                 <span />

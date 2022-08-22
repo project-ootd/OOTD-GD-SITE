@@ -12,6 +12,18 @@ const Join = (args) => {
   const [user, setUser] = useState([]);
 
   const joinbtn = async () => {
+    if (id.length == 0) {
+      alert("아이디 없음");
+      return;
+    }
+    if (pw.length == 0) {
+      alert("비번 없음");
+      return;
+    }
+    if (name.length == 0) {
+      alert("이름 없음");
+      return;
+    }
     const data = await axios({
       url: `http://localhost:4000/test1`,
       method: "POST",
@@ -48,17 +60,6 @@ const Join = (args) => {
 
   return (
     <div>
-      <link
-        href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
-        rel="stylesheet"
-        type="text/css"
-      />
-      <link
-        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css"
-        rel="stylesheet"
-        type="text/css"
-      />
-
       <Topbar />
       <h1>회원가입</h1>
 
@@ -84,9 +85,9 @@ const Join = (args) => {
           onChange={joinNameChange}
           placeholder="이름을 입력하세요"
         />
-        <Button color="secondary" type="submit" onClick={joinbtn}>
-          Click me!
-        </Button>
+        <button class="btn btn-secondary" type="submit" onClick={joinbtn}>
+          회원가입
+        </button>
         {/* <button className="btn" type="submit" onClick={joinbtn}>
           회원가입
         </button> */}

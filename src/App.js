@@ -14,6 +14,7 @@ function App() {
   return (
     <div>
       <Topbar />
+      <NewmainPG />
 
       {/* <Buy /> */}
 
