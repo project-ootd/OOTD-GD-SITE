@@ -1,46 +1,23 @@
-import React, { useEffect, useState } from "react";
-import "../styles/subscss/GPLayout.scss";
+import React from "react";
+import "../styles/subscss/Man.scss";
 import { Link } from "react-router-dom";
-import axios from "axios";
-const GPLayout = () => {
+
+const Man = () => {
   return (
     <>
       <section>
         <div className="sub-menu">
-          <h1>Woman</h1>
-          <ul className="sub-menu2">
-            <li>
-              <a href="#">Summer</a>
-            </li>
-            <li>
-              <a href="#">Shirts</a>
-            </li>
-            <li>
-              <a href="#">Pants</a>
-            </li>
-          </ul>
-          <ul className="sub-menu3">
-            <li>
-              <a href="#">Winter</a>
-            </li>
-            <li>
-              <a href="#">Shirts</a>
-            </li>
-            <li>
-              <a href="#">Pants</a>
-            </li>
-          </ul>
+          <h1>Man</h1>
         </div>
-        <hr />
         <div className="main-pic">
           <img
-            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzExMTRfMTQ0%2FMDAxNTEwNjI4MzI3MjQz.qj1sxYqHpSI70QFo4CDLEtZqHljHf-nE_P4XA5qbqPsg.m2AQGcQkwVpesYetoNvyN3WzNlA2hmkxJMlOGts6jQ4g.JPEG.banillamodels%2F2015091182355.jpg&type=sc960_832"
+            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20120827_41%2Fsouth_monkey_1346009917900q3i71_JPEG%2Fmalemodelsphotos.jpg&type=sc960_832"
             alt=""
           />
         </div>
         <div className="list-box-1 con">
           <ul className="row">
-          <li className="cell">
+            <li className="cell">
               <div className="img-box">
                 <img
                   src="https://image.msscdn.net/images/goods_img/20200701/1503346/1503346_1_500.jpg?t=20220401110908"
@@ -160,7 +137,9 @@ const GPLayout = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">SWEAT SHORTS MARCHE EMBLEM_NAVY CREAM</div>
+              <div className="prod-name">
+                SWEAT SHORTS MARCHE EMBLEM_NAVY CREAM
+              </div>
               <div className="prod-price">53,100</div>
               <div className="free-del">
                 <span />
@@ -328,7 +307,7 @@ const GPLayout = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">  SU SPRAY TEE(WHITE)</div>
+              <div className="prod-name"> SU SPRAY TEE(WHITE)</div>
               <div className="prod-price">29,400</div>
               <div className="free-del">
                 <span />
@@ -340,4 +319,5 @@ const GPLayout = () => {
     </>
   );
 };
-export default GPLayout;
+
+export default Man;

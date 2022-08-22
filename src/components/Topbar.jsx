@@ -25,7 +25,7 @@ const Topbar = () => {
           <div className="menu-box-1">
             <ul>
               <li>
-                <Link to="#">MAN</Link>
+                <Link to="/MGDP">MAN</Link>
                 <ul>
                   <li>
                     <Link to="#">SUMMER</Link>
@@ -49,7 +49,7 @@ const Topbar = () => {
                 </ul>
               </li>
               <li>
-                <Link to="WGDP">WOMAN</Link>
+                <Link to="/WGDP">WOMAN</Link>
                 <ul>
                   <li>
                     <Link to="#">SUMMER</Link>

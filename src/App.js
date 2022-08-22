@@ -4,9 +4,10 @@ import Join from "./Page/Join";
 import axios from "axios";
 
 import Topbar from "./components/Topbar";
-import NewmainPG from "./components/NewmainPG";
+import MainPG from "./components/MainPG";
 import Footer from "./components/Footer";
 import Buy from "./components/Buy";
+import MGDP from "./Page/MGDP";
 
 import Payment from "./components/Payment";
 import Popup from "./components/Pop-up";
@@ -15,10 +16,15 @@ function App() {
   return (
     <div>
       <Topbar />
+<<<<<<< HEAD
 
       <NewmainPG />
       <Popup />
 
+=======
+      <MainPG />
+      {/* <Buy /> */}
+>>>>>>> master
       <Footer />
     </div>
   );
