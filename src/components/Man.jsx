@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/subscss/Woman.scss";
+import "../styles/subscss/Man.scss";
 import { Link } from "react-router-dom";
 
 const Man = () => {
@@ -11,7 +11,7 @@ const Man = () => {
         </div>
         <div className="main-pic">
           <img
-            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzExMTRfMTQ0%2FMDAxNTEwNjI4MzI3MjQz.qj1sxYqHpSI70QFo4CDLEtZqHljHf-nE_P4XA5qbqPsg.m2AQGcQkwVpesYetoNvyN3WzNlA2hmkxJMlOGts6jQ4g.JPEG.banillamodels%2F2015091182355.jpg&type=sc960_832"
+            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20120827_41%2Fsouth_monkey_1346009917900q3i71_JPEG%2Fmalemodelsphotos.jpg&type=sc960_832"
             alt=""
           />
         </div>
