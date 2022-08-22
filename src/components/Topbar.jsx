@@ -15,14 +15,17 @@ const Topbar = () => {
       <header>
         <h1>
           <div>
-            <Link to="/"><BsEye /> </Link> <Link to="/">OOTD</Link>
+            <Link to="/">
+              <BsEye />{" "}
+            </Link>{" "}
+            <Link to="/">OOTD</Link>
           </div>
         </h1>
         <nav className="top-bar">
           <div className="menu-box-1">
             <ul>
               <li>
-                <Link to="#">MAN</Link>
+                <Link to="/MGDP">MAN</Link>
                 <ul>
                   <li>
                     <Link to="#">SUMMER</Link>
@@ -46,7 +49,7 @@ const Topbar = () => {
                 </ul>
               </li>
               <li>
-                <Link to="WGDP">WOMAN</Link>
+                <Link to="/WGDP">WOMAN</Link>
                 <ul>
                   <li>
                     <Link to="#">SUMMER</Link>

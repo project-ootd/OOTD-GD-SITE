@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/NewmainPG.scss";
+import "../styles/MainPG.scss";
 import Login from "./Login";
 import { Link } from "react-router-dom";
 const NewmainPG = () => {
