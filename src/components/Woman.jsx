@@ -8,33 +8,6 @@ const Woman = () => {
       <section>
         <div className="sub-menu">
           <h1>Woman</h1>
-<<<<<<< HEAD:src/components/GPLayout.jsx
-          <ul className="sub-menu2">
-            <li>
-              <a href="#">Summer</a>
-            </li>
-            <li>
-              <a href="#">Shirts</a>
-            </li>
-            <li>
-              <a href="#">Pants</a>
-            </li>
-          </ul>
-          <ul className="sub-menu3">
-            <li>
-              <Link to="/Sub_detail">
-                <a href="#">Winter</a>
-              </Link>
-            </li>
-            <li>
-              <a href="#">Shirts</a>
-            </li>
-            <li>
-              <a href="#">Pants</a>
-            </li>
-          </ul>
-=======
->>>>>>> master:src/components/Woman.jsx
         </div>
         <div className="main-pic">
           <img
