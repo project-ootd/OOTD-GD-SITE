@@ -16,13 +16,13 @@ function App() {
   return (
     <div>
       <Topbar />
-      <NewmainPG />
-<<<<<<< HEAD
+      <MainPG />
+
 
       {/* <Buy /> */}
-=======
+
       <Popup />
->>>>>>> master
+
 
       <Footer />
     </div>

@@ -20,15 +20,15 @@ const Man = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20200701/1503346/1503346_1_500.jpg?t=20220401110908"
+                  src="https://image.msscdn.net/images/goods_img/20220509/2545522/2545522_1_500.jpg?t=20220519141825"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">TSHIRT BELLE DE JOUR_GREY GREEN</div>
-              <div className="prod-price">37,800</div>
+              <div className="prod-name">하이커 섀도우 피그먼트 반팔티 다크 블루</div>
+              <div className="prod-price">29,900</div>
               <div className="free-del">
                 <span />
               </div>
@@ -36,80 +36,80 @@ const Man = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220329/2453555/2453555_1_500.jpg?t=20220331173218"
+                  src="https://image.msscdn.net/images/goods_img/20220420/2503002/2503002_1_500.jpg?t=20220506124346"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name"> TSHIRT FLOWERMARDI_OATMEAL BLACK</div>
-              <div className="prod-price">40,500</div>
+              <div className="prod-name"> 미시간 울버린 반팔티 블랙</div>
+              <div className="prod-price">29,900</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220329/2453502/2453502_1_500.jpg?t=20220405102956"
+                  src="https://image.msscdn.net/images/goods_img/20220420/2503004/2503004_1_500.jpg?t=20220506124131"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">TSHIRT UNIV_OATMEAL BLACK</div>
-              <div className="prod-price">40,500</div>
+              <div className="prod-name">미시간 울버린 반팔티 헤더 그레이</div>
+              <div className="prod-price">29,900</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/prd_img/20220329/2453556/detail_2453556_3_500.jpg"
+                  src="https://image.msscdn.net/images/goods_img/20220509/2545524/2545524_1_500.jpg?t=20220519141924"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name"> TSHIRT FLOWERMARDI_IVORY NAVY</div>
-              <div className="prod-price">37,800</div>
+              <div className="prod-name">하이커 섀도우 피그먼트 반팔티 고스트 그레이</div>
+              <div className="prod-price">29,900</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220329/2453552/2453552_1_500.jpg?t=20220331173345"
+                  src="https://image.msscdn.net/images/goods_img/20220509/2545536/2545536_1_500.jpg?t=20220519143344"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name"> TSHIRT FLOWERMARDI_BLACK CREAM</div>
-              <div className="prod-price">37,800</div>
+              <div className="prod-name">마운틴 타이거 피그먼트 반팔티 블랙 차콜 </div>
+              <div className="prod-price">27,900</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220420/2503701/2503701_2_500.jpg?t=20220426143913"
+                  src="https://image.msscdn.net/images/goods_img/20190503/1033848/1033848_1_500.jpg?t=20220422133513"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">FLARE SKIRT BANDING BACK_BEIGE</div>
-              <div className="prod-price">104,000</div>
+              <div className="prod-name">리에디션 브리즈 오픈 카라 셔츠 [D.NAVY]</div>
+              <div className="prod-price">44,000</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220211/2354451/2354451_2_500.jpg?t=20220426145355"
+                  src="https://image.msscdn.net/images/goods_img/20190503/1033849/1033849_1_500.jpg?t=20220422134200"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">WAFFLE SHORTS_GREEN WHITE</div>
-              <div className="prod-price">46,800</div>
+              <div className="prod-name">리에디션 브리즈 오픈 카라 셔츠 [BLACK] </div>
+              <div className="prod-price">44,000</div>
               <div className="free-del">
                 <span />
               </div>
@@ -117,20 +117,20 @@ const Man = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220211/2354455/2354455_2_500.jpg?t=20220426145321"
+                  src="https://image.msscdn.net/images/goods_img/20220422/2509149/2509149_1_500.jpg?t=20220422134408"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">WAFFLE SHORTS_BLUE WHITE</div>
-              <div className="prod-price">46,800</div>
+              <div className="prod-name">리에디션 브리즈 오픈 카라 셔츠 [WHITE] </div>
+              <div className="prod-price">44,000</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220211/2354445/2354445_2_500.jpg?t=20220426144329"
+                  src="https://image.msscdn.net/images/goods_img/20220422/2509172/2509172_1_500.jpg?t=20220422134428"
                   alt=""
                 />
                 <div className="ico-view">
@@ -138,9 +138,9 @@ const Man = () => {
                 </div>
               </div>
               <div className="prod-name">
-                SWEAT SHORTS MARCHE EMBLEM_NAVY CREAM
+              리에디션 브리즈 오픈 카라 셔츠 [BLUE GREY]
               </div>
-              <div className="prod-price">53,100</div>
+              <div className="prod-price">44,000</div>
               <div className="free-del">
                 <span />
               </div>
@@ -148,15 +148,15 @@ const Man = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220420/2503745/2503745_2_500.jpg?t=20220426143633"
+                  src="https://image.msscdn.net/images/goods_img/20220422/2510184/2510184_1_500.jpg?t=20220429105158"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">CABLE CROPPED TOP MRCD_WHITE BLUE</div>
-              <div className="prod-price">67,500</div>
+              <div className="prod-name">페이퍼 코튼 오버핏 반팔 셔츠 [PALE MINT] </div>
+              <div className="prod-price">44,000</div>
               <div className="free-del">
                 <span />
               </div>
@@ -164,28 +164,28 @@ const Man = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2588169/2588169_2_500.jpg?t=20220527163630"
+                  src="https://image.msscdn.net/images/goods_img/20190503/1033853/1033853_1_500.jpg?t=20220422135855"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name"> SU TWINKLE CROP TEE(BLACK)</div>
-              <div className="prod-price">22,750</div>
+              <div className="prod-name">미니멀 카라 린넨 풀오버 셔츠 [BLACK]</div>
+              <div className="prod-price">47,200</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2587926/2587926_2_500.jpg?t=20220527154906"
+                  src="https://image.msscdn.net/images/goods_img/20190503/1033854/1033854_1_500.jpg?t=20220422135928"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">SU CHAIN OFF SHOULDER(WHITE)</div>
-              <div className="prod-price">29,400</div>
+              <div className="prod-name">미니멀 카라 린넨 풀오버 셔츠 [CHARCOAL]</div>
+              <div className="prod-price">47,200</div>
               <div className="free-del">
                 <span />
               </div>
@@ -193,34 +193,34 @@ const Man = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2587896/2587896_1_500.jpg?t=20220527154737"
+                  src="https://image.msscdn.net/images/goods_img/20190607/1066104/1066104_1_500.jpg?t=20220422140034"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">SU CHAIN OFF SHOULDER(BLACK)</div>
-              <div className="prod-price">31,850</div>
+              <div className="prod-name">미니멀 카라 린넨 풀오버 셔츠 [NAVY] </div>
+              <div className="prod-price">47,200</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2588100/2588100_2_500.jpg?t=20220527161848"
+                  src="https://image.msscdn.net/images/goods_img/20200429/1427125/1427125_1_500.jpg?t=20220422140053"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">SU LOGO BOX TEE(WHITE)</div>
-              <div className="prod-price">23,400</div>
+              <div className="prod-name">미니멀 카라 린넨 풀오버 셔츠 [MOCHA] </div>
+              <div className="prod-price">47,200</div>
             </li>
             <li className="cell">
               <Link to="/Sub_detail">
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220527/2588114/2588114_2_500.jpg?t=20220527162558"
+                    src="https://image.msscdn.net/images/goods_img/20200429/1427126/1427126_1_500.jpg?t=20220422140129"
                     alt=""
                   />
                   <div className="ico-view">
@@ -229,8 +229,8 @@ const Man = () => {
                 </div>
               </Link>
 
-              <div className="prod-name">SU SHIRRING TEE(PINK)</div>
-              <div className="prod-price">21,600</div>
+              <div className="prod-name">미니멀 카라 린넨 풀오버 셔츠 [OATMEAL]</div>
+              <div className="prod-price">47,200</div>
               <div className="free-del">
                 <span />
               </div>
@@ -238,15 +238,15 @@ const Man = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2588111/2588111_2_500.jpg?t=20220527162419"
+                  src="https://image.msscdn.net/images/goods_img/20220429/2532247/2532247_2_500.jpg?t=20220503145324"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name"> SU REFLECT TEE(BLACK)</div>
-              <div className="prod-price">22,100</div>
+              <div className="prod-name">앰플 포켓 셔츠(블랙)</div>
+              <div className="prod-price">46,900</div>
               <div className="free-del">
                 <span />
               </div>
@@ -254,20 +254,20 @@ const Man = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2588174/2588174_2_500.jpg?t=20220527163722"
+                  src="https://image.msscdn.net/images/goods_img/20210622/2004880/2004880_5_500.jpg?t=20220504163412"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">SU TWINKLE CROP TEE(WHITE)</div>
-              <div className="prod-price">22,750</div>
+              <div className="prod-name">엠브로이더리 레이스 셔츠 블랙</div>
+              <div className="prod-price">43,900</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2588038/2588038_2_500.jpg?t=20220527161437"
+                  src="https://image.msscdn.net/images/goods_img/20220429/2532248/2532248_2_500.jpg?t=20220503145316"
                   alt=""
                 />
                 <div className="ico-view">
@@ -275,8 +275,8 @@ const Man = () => {
                 </div>
               </div>
 
-              <div className="prod-name"> SU FACE TEE(WHITE)</div>
-              <div className="prod-price">27,300</div>
+              <div className="prod-name">템플 스티치 라인 셔츠(블랙)</div>
+              <div className="prod-price">49,800</div>
               <div className="free-del">
                 <span />
               </div>
@@ -284,15 +284,15 @@ const Man = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2588101/2588101_2_500.jpg?t=20220527161923"
+                  src="https://image.msscdn.net/images/goods_img/20210622/2004877/2004877_5_500.jpg?t=20220504163419"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">SU LOGO MESH TOP(BEIGE)</div>
-              <div className="prod-price">25,200</div>
+              <div className="prod-name">엠브로이더리 레이스 셔츠 화이트</div>
+              <div className="prod-price">43,900</div>
               <div className="free-del">
                 <span />
               </div>
@@ -300,15 +300,15 @@ const Man = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2588120/2588120_2_500.jpg?t=20220527162743"
+                  src="https://image.msscdn.net/images/goods_img/20220429/2532256/2532256_2_500.jpg?t=20220503145238"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name"> SU SPRAY TEE(WHITE)</div>
-              <div className="prod-price">29,400</div>
+              <div className="prod-name">자카드 포켓셔츠(아이보리)</div>
+              <div className="prod-price">49,800</div>
               <div className="free-del">
                 <span />
               </div>
