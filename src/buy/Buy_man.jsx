@@ -1,12 +1,15 @@
 import React from "react";
 import { Table, Checkbox, Mask, Badge, Button } from "react-daisyui";
 import "../styles/buy/Buy_man.scss";
+import Topbar from "../components/Topbar";
+import Footer from "../components/Footer";
 
 import { Link } from "react-router-dom";
 
 const Buy_man = (args) => {
   return (
     <>
+    <Topbar />
       <div
         className="overflow-x-auto w-full"
         style={{ width: "50%", margin: "15vh auto" }}
@@ -142,6 +145,7 @@ const Buy_man = (args) => {
           </tfoot>
         </table>
       </div>
+      <Footer />
     </>
   );
 };
