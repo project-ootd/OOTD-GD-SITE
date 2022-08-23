@@ -76,7 +76,7 @@ const Topbar = () => {
                 </ul>
               </li>
               <li>
-                <Link to="#">KIDS</Link>
+                <Link to="/KGDP">KIDS</Link>
                 <ul>
                   <li>
                     <Link to="#">SUMMER</Link>

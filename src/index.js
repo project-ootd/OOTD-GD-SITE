@@ -12,6 +12,8 @@ import Sub_detail from "./components/Sub_detail";
 import Join from "./Page/Join";
 import WGDP from "./Page/WGDP";
 import MGDP from "./Page/MGDP";
+import KGDP from "./Page/KGDP";
+
 const root = createRoot(document.getElementById("root"));
 
 setInterval(() => {
@@ -19,6 +21,7 @@ setInterval(() => {
     <React.StrictMode>
       <BrowserRouter>
         <Routes>
+          <Route path="/KGDP" element={<KGDP />} />
           <Route path="/MGDP" element={<MGDP />} />
           <Route path="/" element={<App />} />
           <Route path="/Test1" element={<Test1 />} />
