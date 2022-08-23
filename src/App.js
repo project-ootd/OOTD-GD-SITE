@@ -11,6 +11,7 @@ import MGDP from "./Page/MGDP";
 
 import Payment from "./components/Payment";
 import Popup from "./components/Pop-up";
+import Sub_detail_man from "./sub_detail/Sub_detail_man";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <Topbar />
       {/* <Sub_detail /> */}
 
-      <Buy_man />
+      <MainPG />
 
       <Footer />
     </div>

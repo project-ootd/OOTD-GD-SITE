@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BiWon } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import "../styles/subscss/Buybtn.scss";
+import Buy_man from "../buy/Buy_man";
 
 function Buybtn() {
   return (
@@ -10,7 +11,7 @@ function Buybtn() {
         <div className="won">
           <BiWon />
         </div>{" "}
-        <Link to="/Sub_detail_man">구매하기</Link>
+        <Link to="/Buy_man">구매하기</Link>
       </button>
     </div>
   );
