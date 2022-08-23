@@ -6,7 +6,7 @@ import { BsEye } from "react-icons/bs";
 
 const Topbar = () => {
   return (
-    <div>
+    <div class="top-bar">
       <link
         rel="stylesheet"
         Link

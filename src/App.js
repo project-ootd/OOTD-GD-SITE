@@ -6,7 +6,7 @@ import axios from "axios";
 import Topbar from "./components/Topbar";
 import MainPG from "./components/MainPG";
 import Footer from "./components/Footer";
-import Buy from "./components/Buy";
+import Buy_man from "./buy/Buy_man";
 import MGDP from "./Page/MGDP";
 
 import Payment from "./components/Payment";
@@ -16,13 +16,9 @@ function App() {
   return (
     <div>
       <Topbar />
-      <MainPG />
+      {/* <Sub_detail /> */}
 
-
-      {/* <Buy /> */}
-
-      <Popup />
-
+      <Buy_man />
 
       <Footer />
     </div>
