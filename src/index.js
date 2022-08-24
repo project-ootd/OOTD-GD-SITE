@@ -12,7 +12,12 @@ import Sub_detail_man from "./sub_detail/Sub_detail_man";
 import Join from "./Page/Join";
 import WGDP from "./Page/WGDP";
 import MGDP from "./Page/MGDP";
+<<<<<<< HEAD
+import KGDP from "./Page/KGDP";
+
+=======
 import Buy_man from "./buy/Buy_man";
+>>>>>>> master
 const root = createRoot(document.getElementById("root"));
 
 setInterval(() => {
@@ -20,6 +25,7 @@ setInterval(() => {
     <React.StrictMode>
       <BrowserRouter>
         <Routes>
+          <Route path="/KGDP" element={<KGDP />} />
           <Route path="/MGDP" element={<MGDP />} />
           <Route path="/" element={<App />} />
           <Route path="/Test1" element={<Test1 />} />

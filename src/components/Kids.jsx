@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from "react";
-import "../styles/subscss/Woman.scss";
+import React from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
-const Woman = () => {
+import "../styles/subscss/Kids.scss";
+const Kids = () => {
   return (
-    <>
+    <div>
       <section>
         <div className="sub-menu">
-          <h1>Woman</h1>
+          <h1>KIDS</h1>
         </div>
         <div className="main-pic">
           <img
-            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzExMTRfMTQ0%2FMDAxNTEwNjI4MzI3MjQz.qj1sxYqHpSI70QFo4CDLEtZqHljHf-nE_P4XA5qbqPsg.m2AQGcQkwVpesYetoNvyN3WzNlA2hmkxJMlOGts6jQ4g.JPEG.banillamodels%2F2015091182355.jpg&type=sc960_832"
+            src="https://zesty1.jpg3.kr/HARA14/new_popup/jk_main_0808_05.jpg"
             alt=""
           />
         </div>
@@ -20,22 +19,15 @@ const Woman = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20200701/1503346/1503346_1_500.jpg?t=20220401110908"
+                  src="https://jkids.co.kr/shopimages/verysweet/0030020003613.jpg?1660785967"
                   alt=""
                 />
-
                 <div className="ico-view">
-                  <Link to="/Sub_detail">
-                    <i className="fas fa-search" />
-                  </Link>
+                  <i className="fas fa-search" />
                 </div>
               </div>
-
-              <div className="prod-name">
-                <Link to="/Sub_detail">TSHIRT BELLE DE JOUR_GREY GREEN</Link>
-              </div>
-
-              <div className="prod-price">37,800</div>
+              <div className="prod-name">제나플리츠스커트</div>
+              <div className="prod-price">16,900</div>
               <div className="free-del">
                 <span />
               </div>
@@ -43,80 +35,80 @@ const Woman = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220329/2453555/2453555_1_500.jpg?t=20220331173218"
+                  src="https://jkids.co.kr/shopimages/verysweet/0020020004543.jpg?1660036965"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name"> TSHIRT FLOWERMARDI_OATMEAL BLACK</div>
-              <div className="prod-price">40,500</div>
+              <div className="prod-name"> 로스터데님셔츠자켓</div>
+              <div className="prod-price">28,900</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220329/2453502/2453502_1_500.jpg?t=20220405102956"
+                  src="https://jkids.co.kr/shopimages/verysweet/0020010031963.jpg?1659673460"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">TSHIRT UNIV_OATMEAL BLACK</div>
-              <div className="prod-price">40,500</div>
+              <div className="prod-name">할리데이카라티</div>
+              <div className="prod-price">29,900</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/prd_img/20220329/2453556/detail_2453556_3_500.jpg"
+                  src="https://jkids.co.kr/shopimages/verysweet/0020010031863.gif?1658821663"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name"> TSHIRT FLOWERMARDI_IVORY NAVY</div>
-              <div className="prod-price">37,800</div>
+              <div className="prod-name">루디스ST카라티</div>
+              <div className="prod-price">22,800</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220329/2453552/2453552_1_500.jpg?t=20220331173345"
+                  src="https://jkids.co.kr/shopimages/verysweet/0040020008053.jpg?1658196323"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name"> TSHIRT FLOWERMARDI_BLACK CREAM</div>
-              <div className="prod-price">37,800</div>
+              <div className="prod-name">바나멜빵바지 </div>
+              <div className="prod-price">32,800</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220420/2503701/2503701_2_500.jpg?t=20220426143913"
+                  src="https://jkids.co.kr/shopimages/verysweet/0010020001453.gif?1658976887"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">FLARE SKIRT BANDING BACK_BEIGE</div>
-              <div className="prod-price">104,000</div>
+              <div className="prod-name">테론니트베스트</div>
+              <div className="prod-price">24,800</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220211/2354451/2354451_2_500.jpg?t=20220426145355"
+                  src="https://jkids.co.kr/shopimages/verysweet/0020010031873.jpg?1658822079"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">WAFFLE SHORTS_GREEN WHITE</div>
-              <div className="prod-price">46,800</div>
+              <div className="prod-name">위캔드롱카라원피스티 </div>
+              <div className="prod-price">22,800</div>
               <div className="free-del">
                 <span />
               </div>
@@ -124,30 +116,28 @@ const Woman = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220211/2354455/2354455_2_500.jpg?t=20220426145321"
+                  src="https://jkids.co.kr/shopimages/verysweet/0020010031733.jpg?1657851482"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">WAFFLE SHORTS_BLUE WHITE</div>
-              <div className="prod-price">46,800</div>
+              <div className="prod-name">케일라맨투맨 </div>
+              <div className="prod-price">18,900</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220211/2354445/2354445_2_500.jpg?t=20220426144329"
+                  src="https://jkids.co.kr/shopimages/verysweet/0090010013983.jpg?1661231705"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">
-                SWEAT SHORTS MARCHE EMBLEM_NAVY CREAM
-              </div>
-              <div className="prod-price">53,100</div>
+              <div className="prod-name">시스템상하SET</div>
+              <div className="prod-price">34,800</div>
               <div className="free-del">
                 <span />
               </div>
@@ -155,15 +145,15 @@ const Woman = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220420/2503745/2503745_2_500.jpg?t=20220426143633"
+                  src="https://jkids.co.kr/shopimages/verysweet/0090010013973.jpg?1661231113"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">CABLE CROPPED TOP MRCD_WHITE BLUE</div>
-              <div className="prod-price">67,500</div>
+              <div className="prod-name">인투스페이스상하SET </div>
+              <div className="prod-price">38,900</div>
               <div className="free-del">
                 <span />
               </div>
@@ -171,28 +161,28 @@ const Woman = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2588169/2588169_2_500.jpg?t=20220527163630"
+                  src="https://jkids.co.kr/shopimages/verysweet/0140010005393.jpg?1661229779"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name"> SU TWINKLE CROP TEE(BLACK)</div>
-              <div className="prod-price">22,750</div>
+              <div className="prod-name">파르페파자마상하SET</div>
+              <div className="prod-price">24,900</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2587926/2587926_2_500.jpg?t=20220527154906"
+                  src="https://jkids.co.kr/shopimages/verysweet/0140010004973.jpg?1656316446"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">SU CHAIN OFF SHOULDER(WHITE)</div>
-              <div className="prod-price">29,400</div>
+              <div className="prod-name">도리스파자마SET</div>
+              <div className="prod-price">24,900</div>
               <div className="free-del">
                 <span />
               </div>
@@ -200,34 +190,34 @@ const Woman = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2587896/2587896_1_500.jpg?t=20220527154737"
+                  src="https://jkids.co.kr/shopimages/verysweet/0140010004943.jpg?1656294505"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">SU CHAIN OFF SHOULDER(BLACK)</div>
-              <div className="prod-price">31,850</div>
+              <div className="prod-name">페이스심볼파자마SET </div>
+              <div className="prod-price">24,900</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2588100/2588100_2_500.jpg?t=20220527161848"
+                  src="https://jkids.co.kr/shopimages/verysweet/0140010004873.jpg?1656293202"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">SU LOGO BOX TEE(WHITE)</div>
-              <div className="prod-price">23,400</div>
+              <div className="prod-name">스마일닷뽀송파자마SET </div>
+              <div className="prod-price">37,900</div>
             </li>
             <li className="cell">
               <Link to="/Sub_detail">
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220527/2588114/2588114_2_500.jpg?t=20220527162558"
+                    src="https://jkids.co.kr/shopimages/verysweet/0140010005193.jpg?1656292853"
                     alt=""
                   />
                   <div className="ico-view">
@@ -236,8 +226,8 @@ const Woman = () => {
                 </div>
               </Link>
 
-              <div className="prod-name">SU SHIRRING TEE(PINK)</div>
-              <div className="prod-price">21,600</div>
+              <div className="prod-name">브레니파자마SET</div>
+              <div className="prod-price">24,900</div>
               <div className="free-del">
                 <span />
               </div>
@@ -245,15 +235,15 @@ const Woman = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2588111/2588111_2_500.jpg?t=20220527162419"
+                  src="https://jkids.co.kr/shopimages/verysweet/0140010004963.jpg?1656292572"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name"> SU REFLECT TEE(BLACK)</div>
-              <div className="prod-price">22,100</div>
+              <div className="prod-name">메이지파자마SET</div>
+              <div className="prod-price">24,900</div>
               <div className="free-del">
                 <span />
               </div>
@@ -261,20 +251,20 @@ const Woman = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2588174/2588174_2_500.jpg?t=20220527163722"
+                  src="https://jkids.co.kr/shopimages/verysweet/0140010005043.jpg?1656291917"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">SU TWINKLE CROP TEE(WHITE)</div>
-              <div className="prod-price">22,750</div>
+              <div className="prod-name">다람쥐실내복</div>
+              <div className="prod-price">14,900</div>
             </li>
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2588038/2588038_2_500.jpg?t=20220527161437"
+                  src="https://jkids.co.kr/shopimages/verysweet/0140010005033.jpg?1656292240"
                   alt=""
                 />
                 <div className="ico-view">
@@ -282,8 +272,8 @@ const Woman = () => {
                 </div>
               </div>
 
-              <div className="prod-name"> SU FACE TEE(WHITE)</div>
-              <div className="prod-price">27,300</div>
+              <div className="prod-name">랫두잇실내복</div>
+              <div className="prod-price">14,900</div>
               <div className="free-del">
                 <span />
               </div>
@@ -291,15 +281,15 @@ const Woman = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2588101/2588101_2_500.jpg?t=20220527161923"
+                  src="https://jkids.co.kr/shopimages/verysweet/0140010005163.jpg?1656294715"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">SU LOGO MESH TOP(BEIGE)</div>
-              <div className="prod-price">25,200</div>
+              <div className="prod-name">홀릭도트실내복</div>
+              <div className="prod-price">14,900</div>
               <div className="free-del">
                 <span />
               </div>
@@ -307,15 +297,15 @@ const Woman = () => {
             <li className="cell">
               <div className="img-box">
                 <img
-                  src="https://image.msscdn.net/images/goods_img/20220527/2588120/2588120_2_500.jpg?t=20220527162743"
+                  src="https://jkids.co.kr/shopimages/verysweet/0140010005003.jpg?1656293071"
                   alt=""
                 />
                 <div className="ico-view">
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name"> SU SPRAY TEE(WHITE)</div>
-              <div className="prod-price">29,400</div>
+              <div className="prod-name">레인보우실내복</div>
+              <div className="prod-price">14,900</div>
               <div className="free-del">
                 <span />
               </div>
@@ -323,7 +313,8 @@ const Woman = () => {
           </ul>
         </div>
       </section>
-    </>
+    </div>
   );
 };
-export default Woman;
+
+export default Kids;
