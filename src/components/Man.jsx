@@ -28,7 +28,7 @@ const Man = () => {
                 </div>
               </div>
               <div className="prod-name">
-                <Link to="/sub_detail_man">
+                <Link to="/SubDetailMan">
                   하이커 섀도우 피그먼트 반팔티 다크 블루
                 </Link>
               </div>

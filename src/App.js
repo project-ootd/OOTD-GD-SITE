@@ -6,12 +6,11 @@ import "tailwindcss/tailwind.css";
 import Topbar from "./components/Topbar";
 import MainPG from "./components/MainPG";
 import Footer from "./components/Footer";
-import Buy_man from "./buy/Buy_man";
+import BuyMan from "./buy/BuyMan";
 import MGDP from "./Page/MGDP";
 
 import Payment from "./components/Payment";
 import Popup from "./components/Pop-up";
-import Sub_detail_man from "./sub_detail/Sub_detail_man";
 
 // import Topbar from "./components/Topbar";
 // import MainPG from "./components/MainPG";
