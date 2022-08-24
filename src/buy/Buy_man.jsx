@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Buy_man = (args) => {
   return (
     <>
-    <Topbar />
+      <Topbar />
       <div
         className="overflow-x-auto w-full"
         style={{ width: "50%", margin: "15vh auto" }}
@@ -132,7 +132,9 @@ const Buy_man = (args) => {
               <th />
               <th></th>
               <th>
-                <button class="btn">돌아가기</button>
+                <Link to="/Sub_detail_man">
+                  <button class="btn">돌아가기</button>
+                </Link>
               </th>
               <th>
                 <button class="btn btn-secondary" style={{ marginLeft: "0" }}>
