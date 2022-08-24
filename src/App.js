@@ -40,7 +40,7 @@ function App() {
 
       <Footer /> */}
 
-      <Carousel />
+      <Popup />
     </div>
   );
 }

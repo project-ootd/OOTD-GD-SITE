@@ -2,3 +2,17 @@
   width: 500px;
   margin: 0 auto;
 }
+
+.slick-prev,
+.slick-next {
+  width: auto;
+  height: auto;
+}
+
+.slick-next {
+  right: -50px;
+}
+
+.slick-prev {
+  left: -50px;
+}

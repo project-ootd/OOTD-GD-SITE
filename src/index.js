@@ -3,7 +3,7 @@ import ReactDOM, { createRoot } from "react-dom/client";
 import App from "./App";
 import { RecoilRoot } from "recoil";
 
-import { render } from "react-dom";
+// import { render } from "react-dom";
 
 // import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -18,6 +18,7 @@ import RGDP from "./Page/RGDP";
 import KGDP from "./Page/KGDP";
 
 import BuyMan from "./buy/BuyMan";
+import Carousel from "./components/Carousel";
 
 const root = createRoot(document.getElementById("root"));
 
@@ -36,6 +37,7 @@ setInterval(() => {
             <Route path="/SubDetailMan" element={<SubDetailMan />} />
             <Route path="/WGDP" element={<WGDP />} />
             <Route path="/Join" element={<Join />} />
+            <Route path="/Carousel" element={<Carousel />} />
           </Routes>
         </BrowserRouter>
       </RecoilRoot>
