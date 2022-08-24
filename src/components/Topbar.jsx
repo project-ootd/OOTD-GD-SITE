@@ -9,8 +9,7 @@ const Topbar = () => {
     <div class="top-bar">
       <link
         rel="stylesheet"
-        Link
-        to="https://cdLinkjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        href="https://cdLinkjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
       />
       <header>
         <h1>
