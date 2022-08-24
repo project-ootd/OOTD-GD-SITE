@@ -1,8 +1,8 @@
-body,
-html {
+body {
   overflow-x: hidden;
   background-color: black;
 }
+
 body,
 ul,
 li {
@@ -10,59 +10,32 @@ li {
   margin: 0;
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
-.buttons {
-  display: flex;
-}
+
 .sub-menu {
   display: flex;
   overflow-x: hidden;
   margin-top: 5vh;
-  height: 9.5vh;
+
   color: white;
 }
 
 .sub-menu > h1 {
-  margin-left: 5%;
-  font-size: 2rem;
+  margin-left: 15%;
+  font-size: 1.7em;
   color: white;
-}
-
-.sub-menu2 {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  margin-left: 7%;
-  width: 25%;
-}
-
-.sub-menu3 {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  width: 25%;
-}
-
-.sub-menu ul > li:first-child {
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-.sub-menu ul > li:nth-child(2) {
-  color: white;
-}
-
-.sub-menu ul > li:nth-child(3) {
-  color: white;
+  margin-top: 1.5vh;
 }
 
 /* sub-menu end */
 /*  */
 .main-pic {
   text-align: center;
+  margin-left: 30%;
 }
 
 /* 배너 및 상품 목록 */
@@ -83,11 +56,15 @@ a {
 .cell {
   float: left;
   box-sizing: border-box;
+  border: 5px sold red;
 }
 
 /* 커스텀 */
 
 /* 상품 정렬 */
+.list-box-1 {
+  width: 100%;
+}
 .list-box-1 .cell {
   width: 20%;
   padding: 0 10px;
@@ -96,8 +73,8 @@ a {
 }
 
 /* 메뉴리스트 전체 틀 */
-.list-box-1 .row {
-  margin: 0 -10px;
+.list-box-1.con {
+  margin: 0;
 }
 
 /* 상품 제목 및 가격 */

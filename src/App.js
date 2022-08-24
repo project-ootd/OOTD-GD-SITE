@@ -1,31 +1,46 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
+import "tailwindcss/tailwind.css";
+// import Join from "./Page/Join";
+// import axios from "axios";
 
-import Join from "./components/Join";
 import Topbar from "./components/Topbar";
+import MainPG from "./components/MainPG";
 import Footer from "./components/Footer";
+import BuyMan from "./buy/BuyMan";
+import MGDP from "./Page/MGDP";
 
-import NewmainPG from "./components/NewmainPG";
+import Payment from "./components/Payment";
+import Popup from "./components/Pop-up";
+
+// import Topbar from "./components/Topbar";
+// import MainPG from "./components/MainPG";
+// import Footer from "./components/Footer";
+// import Buy from "./components/Buy";
+// import MGDP from "./Page/MGDP";
+
+// import Payment from "./components/Payment";
+// import Popup from "./components/Pop-up";
+import Carousel from "./components/Carousel";
 
 function App() {
-  useEffect(() => {
-    const getData = async () => {
-      const data = await axios({
-        url: `http://localhost:4000/test1`,
-        method: "GET",
-      });
-      console.log(data.data);
-    };
-    getData();
-  }, []);
-
   return (
     <div>
       <Topbar />
 
-      <NewmainPG />
+      <MainPG />
 
       <Footer />
+
+      {/* <Topbar />
+      <MainPG /> */}
+
+      {/* <Buy /> */}
+      {/* 
+      <Popup />
+
+      <Footer /> */}
+
+      <Popup />
     </div>
   );
 }

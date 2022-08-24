@@ -1,15 +1,14 @@
 import React from "react";
 import App from "../App";
-import GPHeader from "./GPHeader";
-import GPLayout from "./GPLayout";
+import Woman from "../components/Woman";
 
-import Topbar from "./Topbar";
-import Footer from "./Footer";
+import Topbar from "../components/Topbar";
+import Footer from "../components/Footer";
 const WGDP = () => {
   return (
     <>
       <Topbar />
-      <GPLayout />
+      <Woman />
       <Footer />
     </>
   );
