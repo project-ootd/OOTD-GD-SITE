@@ -1,12 +1,12 @@
 import React from "react";
 import { Table, Checkbox, Mask, Badge, Button } from "react-daisyui";
-import "../styles/buy/Buy_man.scss";
+import "../styles/buy/BuyMan.scss";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
 
 import { Link } from "react-router-dom";
 
-const Buy_man = (args) => {
+const BuyMan = (args) => {
   return (
     <>
       <Topbar />
@@ -42,7 +42,7 @@ const Buy_man = (args) => {
                   <div className="avatar">
                     <div className="mask mask-squircle w-12 h-12">
                       <img
-                        src="https://image.msscdn.net/images/goods_img/20220601/2594411/2594411_1_500.jpg?t=20220601075542"
+                        src="https://image.msscdn.net/images/goodsMmg/20220601/2594411/2594411M00.jpg?t=20220601075542"
                         alt="Avatar Tailwind CSS Component"
                       />
                     </div>
@@ -132,7 +132,7 @@ const Buy_man = (args) => {
               <th />
               <th></th>
               <th>
-                <Link to="/Sub_detail_man">
+                <Link to="/SubDetailMan">
                   <button class="btn">돌아가기</button>
                 </Link>
               </th>
@@ -152,4 +152,4 @@ const Buy_man = (args) => {
   );
 };
 
-export default Buy_man;
+export default BuyMan;
