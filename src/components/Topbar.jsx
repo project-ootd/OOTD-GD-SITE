@@ -102,7 +102,7 @@ const Topbar = () => {
                 </ul>
               </li>
               <li>
-                <Link to="/">ACCESSOLY</Link>
+                <Link to="/RGDP">ACCESSORY</Link>
                 <ul>
                   <li>
                     <Link to="#">RING</Link>
