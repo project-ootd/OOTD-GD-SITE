@@ -27,7 +27,11 @@ const Man = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">하이커 섀도우 피그먼트 반팔티 다크 블루</div>
+              <div className="prod-name">
+                <Link to="/sub_detail_man">
+                  하이커 섀도우 피그먼트 반팔티 다크 블루
+                </Link>
+              </div>
               <div className="prod-price">29,900</div>
               <div className="free-del">
                 <span />
@@ -69,7 +73,9 @@ const Man = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">하이커 섀도우 피그먼트 반팔티 고스트 그레이</div>
+              <div className="prod-name">
+                하이커 섀도우 피그먼트 반팔티 고스트 그레이
+              </div>
               <div className="prod-price">29,900</div>
             </li>
             <li className="cell">
@@ -82,7 +88,9 @@ const Man = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">마운틴 타이거 피그먼트 반팔티 블랙 차콜 </div>
+              <div className="prod-name">
+                마운틴 타이거 피그먼트 반팔티 블랙 차콜{" "}
+              </div>
               <div className="prod-price">27,900</div>
             </li>
             <li className="cell">
@@ -95,7 +103,9 @@ const Man = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">리에디션 브리즈 오픈 카라 셔츠 [D.NAVY]</div>
+              <div className="prod-name">
+                리에디션 브리즈 오픈 카라 셔츠 [D.NAVY]
+              </div>
               <div className="prod-price">44,000</div>
             </li>
             <li className="cell">
@@ -108,7 +118,9 @@ const Man = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">리에디션 브리즈 오픈 카라 셔츠 [BLACK] </div>
+              <div className="prod-name">
+                리에디션 브리즈 오픈 카라 셔츠 [BLACK]{" "}
+              </div>
               <div className="prod-price">44,000</div>
               <div className="free-del">
                 <span />
@@ -124,7 +136,9 @@ const Man = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">리에디션 브리즈 오픈 카라 셔츠 [WHITE] </div>
+              <div className="prod-name">
+                리에디션 브리즈 오픈 카라 셔츠 [WHITE]{" "}
+              </div>
               <div className="prod-price">44,000</div>
             </li>
             <li className="cell">
@@ -138,7 +152,7 @@ const Man = () => {
                 </div>
               </div>
               <div className="prod-name">
-              리에디션 브리즈 오픈 카라 셔츠 [BLUE GREY]
+                리에디션 브리즈 오픈 카라 셔츠 [BLUE GREY]
               </div>
               <div className="prod-price">44,000</div>
               <div className="free-del">
@@ -155,7 +169,9 @@ const Man = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">페이퍼 코튼 오버핏 반팔 셔츠 [PALE MINT] </div>
+              <div className="prod-name">
+                페이퍼 코튼 오버핏 반팔 셔츠 [PALE MINT]{" "}
+              </div>
               <div className="prod-price">44,000</div>
               <div className="free-del">
                 <span />
@@ -171,7 +187,9 @@ const Man = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">미니멀 카라 린넨 풀오버 셔츠 [BLACK]</div>
+              <div className="prod-name">
+                미니멀 카라 린넨 풀오버 셔츠 [BLACK]
+              </div>
               <div className="prod-price">47,200</div>
             </li>
             <li className="cell">
@@ -184,7 +202,9 @@ const Man = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">미니멀 카라 린넨 풀오버 셔츠 [CHARCOAL]</div>
+              <div className="prod-name">
+                미니멀 카라 린넨 풀오버 셔츠 [CHARCOAL]
+              </div>
               <div className="prod-price">47,200</div>
               <div className="free-del">
                 <span />
@@ -200,7 +220,9 @@ const Man = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">미니멀 카라 린넨 풀오버 셔츠 [NAVY] </div>
+              <div className="prod-name">
+                미니멀 카라 린넨 풀오버 셔츠 [NAVY]{" "}
+              </div>
               <div className="prod-price">47,200</div>
             </li>
             <li className="cell">
@@ -213,7 +235,9 @@ const Man = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">미니멀 카라 린넨 풀오버 셔츠 [MOCHA] </div>
+              <div className="prod-name">
+                미니멀 카라 린넨 풀오버 셔츠 [MOCHA]{" "}
+              </div>
               <div className="prod-price">47,200</div>
             </li>
             <li className="cell">
@@ -229,7 +253,9 @@ const Man = () => {
                 </div>
               </Link>
 
-              <div className="prod-name">미니멀 카라 린넨 풀오버 셔츠 [OATMEAL]</div>
+              <div className="prod-name">
+                미니멀 카라 린넨 풀오버 셔츠 [OATMEAL]
+              </div>
               <div className="prod-price">47,200</div>
               <div className="free-del">
                 <span />
