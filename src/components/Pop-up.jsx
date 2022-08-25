@@ -1,7 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "../styles/subscss/Pop-up.scss";
 const Popup = () => {
-  const [row, Setrow] = useState("curr");
+  // const [row, Setrow] = useState("curr");
   const [active, setActive] = useState(true);
 
   return (

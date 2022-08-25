@@ -15,14 +15,14 @@ const SubDetailMan = () => {
       <div>
         <p className="title_name">
           {" "}
-          쿨맥스 브이넥 반팔 니트 [블랙]{" "}
-          <span>Coolmax V-neck short-sleeve knit [Black]</span>
+          하이커 섀도우 피그먼트 반팔티 다크 블루{" "}
+          <span>HIKER SHADOW PIGMENT OVER FIT TEE DARK BLUE</span>
         </p>
         <div className="sub_box flex">
           <div className="img-box">
             <img
-              src="https://image.msscdn.net/images/goods_img/20220601/2594411/2594411_1_500.jpg?t=20220601075542"
-              alt=""
+              src="https://image.msscdn.net/images/goods_img/20220509/2545522/2545522_1_500.jpg?t=20220519141825"
+              alt="Avatar Tailwind CSS Component"
             />
           </div>
 
@@ -60,10 +60,10 @@ const SubDetailMan = () => {
                   <p className="p3">OOTD 적립금</p>
                 </div>
                 <div className="text2">
-                  <p className="p1">53,000원</p>
+                  <p className="p1">39,000원</p>
                   <div className="p2">
                     {" "}
-                    36,019 ~ 39,800원 <br />
+                    27,358 ~ 29,900원 <br />
                     <div className="coupon-btn">
                       <Link to="/Test1">쿠폰받기</Link>
                     </div>
@@ -75,7 +75,7 @@ const SubDetailMan = () => {
             <hr />
             <div className="buy-btn-box flex">
               <div className="buy">
-                <Link to="/Buy_man">
+                <Link to="/BuyMan">
                   <BuybtnMan />
                 </Link>
               </div>

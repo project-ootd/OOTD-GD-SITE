@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../styles/subscss/Woman.scss";
 import { Link } from "react-router-dom";
-import axios from "axios";
+
 const Woman = () => {
   return (
     <>
