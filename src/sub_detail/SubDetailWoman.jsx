@@ -36,7 +36,7 @@ const SubDetailWoman = () => {
                   <p className="p4">구매후기</p>
                 </div>
                 <div className="text2">
-                  <p className="p1">WHATITISNT / MG2202ST53BK</p>
+                  <p className="p1">CHJShop / CHJT-001</p>
                   <p className="p2">5.9천 회 이상</p>
                   <p className="p3">300개 이상</p>
                   <p className="p4">
