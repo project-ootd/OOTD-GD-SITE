@@ -1,9 +1,7 @@
 import React from "react";
-import { Table, Checkbox, Mask, Badge, Button } from "react-daisyui";
 import "../styles/buy/BuyMan.scss";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
-
 import { Link } from "react-router-dom";
 
 const BuyMan = (args) => {
@@ -42,7 +40,7 @@ const BuyMan = (args) => {
                   <div className="avatar">
                     <div className="mask mask-squircle w-12 h-12">
                       <img
-                        src="https://image.msscdn.net/images/goodsMmg/20220601/2594411/2594411M00.jpg?t=20220601075542"
+                        src="https://image.msscdn.net/images/goods_img/20220509/2545522/2545522_1_big.jpg"
                         alt="Avatar Tailwind CSS Component"
                       />
                     </div>

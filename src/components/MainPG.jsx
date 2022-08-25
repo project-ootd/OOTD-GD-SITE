@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/MainPG.scss";
-import Login from "./Login";
 import { Link } from "react-router-dom";
+
 const NewmainPG = () => {
   return (
     <div>

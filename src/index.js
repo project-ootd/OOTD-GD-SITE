@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM, { createRoot } from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import App from "./App";
 import { RecoilRoot } from "recoil";
 
@@ -21,6 +21,7 @@ import BuyWoman from "./buy/BuyWoman";
 import BuyKids from "./buy/BuyKids";
 import BuyMan from "./buy/BuyMan";
 import Carousel from "./components/Carousel";
+import ScrollToTop from "./components/ScrollToTop";
 
 const root = createRoot(document.getElementById("root"));
 
@@ -45,6 +46,8 @@ setInterval(() => {
             <Route path="/Join" element={<Join />} />
             <Route path="/Carousel" element={<Carousel />} />
           </Routes>
+          <ScrollToTop />
+          {/* 화면 전환시 맨 위에서 시작 */}
         </BrowserRouter>
       </RecoilRoot>
     </React.StrictMode>

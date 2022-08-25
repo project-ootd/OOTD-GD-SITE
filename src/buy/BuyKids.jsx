@@ -1,9 +1,7 @@
 import React from "react";
-import { Table, Checkbox, Mask, Badge, Button } from "react-daisyui";
 import "../styles/buy/BuyMan.scss";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
-
 import { Link } from "react-router-dom";
 
 const BuyWoman = (args) => {

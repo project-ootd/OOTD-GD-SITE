@@ -1,6 +1,4 @@
 import React from "react";
-import "../styles/sub_detail/SubDetailMan.scss";
-
 import { Link } from "react-router-dom";
 import Buybtn from "../btn/BuybtnMan";
 import ShoppingCart from "../btn/ShoppingCart";

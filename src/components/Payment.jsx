@@ -1,6 +1,5 @@
 import React from "react";
 import { WindowMockup } from "react-daisyui";
-import BuybtnMan from "../btn/BuybtnMan";
 
 const Payment = (args) => {
   return (
