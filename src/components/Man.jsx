@@ -241,7 +241,7 @@ const Man = () => {
               <div className="prod-price">47,200</div>
             </li>
             <li className="cell">
-              <Link to="/Sub_detail">
+              <Link to="/Sub_detail_man">
                 <div className="img-box">
                   <img
                     src="https://image.msscdn.net/images/goods_img/20200429/1427126/1427126_1_500.jpg?t=20220422140129"

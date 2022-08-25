@@ -6,11 +6,7 @@ import { BsEye } from "react-icons/bs";
 
 const Topbar = () => {
   return (
-    <div class="top-bar">
-      <link
-        rel="stylesheet"
-        href="https://cdLinkjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      />
+    <div className="top-bar">
       <header>
         <h1>
           <div>

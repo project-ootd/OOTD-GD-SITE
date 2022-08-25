@@ -3,6 +3,22 @@ import "../styles/subscss/Woman.scss";
 import { Link } from "react-router-dom";
 import axios from "axios";
 const Woman = () => {
+  const [showing, setShowing] = useState(false);
+
+  const [prd, setPrd] = useState([]);
+  useEffect(() => {
+    const getData = async () => {
+      const data = await axios({
+        url: `http://localhost:4000/test2`,
+        method: "GET",
+      });
+      console.log(data.data);
+      setPrd(data.data);
+      setShowing(true);
+    };
+    getData();
+  }, []);
+
   return (
     <>
       <section>
@@ -25,17 +41,18 @@ const Woman = () => {
                 />
 
                 <div className="ico-view">
-                  <Link to="/WSBP">
+                  <Link to="/SubDetailMan">
                     <i className="fas fa-search" />
                   </Link>
                 </div>
               </div>
-
               <div className="prod-name">
-                <Link to="/WSBP">TSHIRT BELLE DE JOUR_GREY GREEN</Link>
+                <Link to="/WSBP"></Link>;
               </div>
-
-              <div className="prod-price">37,800</div>
+              {/* {console.log(prd)} */}
+              {/* {prd.map((prdPrice) => {
+                return <div className="prod-price"> {prd[2].prdPrice}</div>;
+              })} */}
               <div className="free-del">
                 <span />
               </div>
@@ -224,7 +241,7 @@ const Woman = () => {
               <div className="prod-price">23,400</div>
             </li>
             <li className="cell">
-              <Link to="/Sub_detail">
+              <Link to="/Sub_detail_man">
                 <div className="img-box">
                   <img
                     src="https://image.msscdn.net/images/goods_img/20220527/2588114/2588114_2_500.jpg?t=20220527162558"

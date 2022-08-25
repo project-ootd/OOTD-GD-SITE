@@ -216,7 +216,7 @@ const Kids = () => {
               <div className="prod-price">37,900</div>
             </li>
             <li className="cell">
-              <Link to="/Sub_detail">
+              <Link to="/Sub_detail_man">
                 <div className="img-box">
                   <img
                     src="https://jkids.co.kr/shopimages/verysweet/0140010005193.jpg?1656292853"
