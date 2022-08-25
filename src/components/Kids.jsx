@@ -26,7 +26,9 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">제나플리츠스커트</div>
+              <div className="prod-name">
+                <Link to="/KSBP">제나플리츠스커트</Link>
+              </div>
               <div className="prod-price">16,900</div>
               <div className="free-del">
                 <span />

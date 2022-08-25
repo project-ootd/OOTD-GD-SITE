@@ -11,7 +11,7 @@ function Buybtn_man() {
         <div className="won">
           <BiWon />
         </div>{" "}
-        <Link to="/BuyMan">구매하기</Link>
+        구매하기
       </button>
     </div>
   );

@@ -25,14 +25,14 @@ const Woman = () => {
                 />
 
                 <div className="ico-view">
-                  <Link to="/Sub_detail">
+                  <Link to="/WSBP">
                     <i className="fas fa-search" />
                   </Link>
                 </div>
               </div>
 
               <div className="prod-name">
-                <Link to="/Sub_detail">TSHIRT BELLE DE JOUR_GREY GREEN</Link>
+                <Link to="/WSBP">TSHIRT BELLE DE JOUR_GREY GREEN</Link>
               </div>
 
               <div className="prod-price">37,800</div>

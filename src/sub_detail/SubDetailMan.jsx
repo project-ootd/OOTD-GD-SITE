@@ -6,7 +6,7 @@ import BuybtnMan from "../btn/BuybtnMan";
 import ShoppingCart from "../btn/ShoppingCart";
 import FavoritCheck from "../btn/FavoritCheck";
 import Topbar from "../components/Topbar";
-import { Footer } from "react-daisyui";
+import Footer from "../components/Footer";
 
 const SubDetailMan = () => {
   return (

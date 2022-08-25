@@ -1,12 +1,10 @@
 import React from "react";
-import "../styles/sub_detail/Sub_detail_man.scss";
+import "../styles/sub_detail/SubDetailMan.scss";
 
 import { Link } from "react-router-dom";
-import Buybtn from "../btn/Buybtn";
+import BuybtnMan from "../btn/BuybtnMan";
 import ShoppingCart from "../btn/ShoppingCart";
 import FavoritCheck from "../btn/FavoritCheck";
-import Topbar from "../components/Topbar";
-import { Footer } from "react-daisyui";
 
 const SubDetailWoman = () => {
   return (
@@ -75,8 +73,8 @@ const SubDetailWoman = () => {
             <hr />
             <div className="buy-btn-box flex">
               <div className="buy">
-                <Link to="/Buy_man">
-                  <Buybtn />
+                <Link to="/BuyWoman">
+                  <BuybtnMan />
                 </Link>
               </div>
               <div className="cart">
