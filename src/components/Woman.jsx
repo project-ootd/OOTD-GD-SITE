@@ -14,7 +14,6 @@ const Woman = () => {
       });
       console.log(data.data);
       setPrd(data.data);
-      setShowing(true);
     };
     getData();
   }, []);
