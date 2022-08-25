@@ -28,7 +28,7 @@ const Ring = () => {
                 </div>
               </div>
               <div className="prod-name">
-                <Link to="/sub_detail_man">
+                <Link to="/RSBP">
                   심플베이직 각인 Love Me 10K Gold 커플링 LRW19011T
                 </Link>
               </div>
