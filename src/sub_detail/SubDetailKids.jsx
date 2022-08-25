@@ -63,7 +63,7 @@ const SubDetailKids = () => {
                       <Link to="/">쿠폰받기</Link>
                     </div>
                   </div>
-                  <p className="p3">최대 1,592원</p>
+                  <p className="p3">최대 650원</p>
                 </div>
               </div>
             </div>

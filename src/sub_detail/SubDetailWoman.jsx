@@ -37,10 +37,10 @@ const SubDetailWoman = () => {
                 </div>
                 <div className="text2">
                   <p className="p1">CHJShop / CHJT-001</p>
-                  <p className="p2">5.9천 회 이상</p>
-                  <p className="p3">300개 이상</p>
+                  <p className="p2">9.9천 회 이상</p>
+                  <p className="p3">600개 이상</p>
                   <p className="p4">
-                    ★★★★★ <span>4.7</span>
+                    ★★★★★ <span>5</span>
                   </p>
                 </div>
               </div>
@@ -66,7 +66,7 @@ const SubDetailWoman = () => {
                       <Link to="/">쿠폰받기</Link>
                     </div>
                   </div>
-                  <p className="p3">최대 1,592원</p>
+                  <p className="p3">최대 1,250원</p>
                 </div>
               </div>
             </div>

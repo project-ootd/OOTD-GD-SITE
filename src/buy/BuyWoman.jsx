@@ -58,7 +58,7 @@ const BuyWoman = (args) => {
                 <br />
                 {/* <span className="badge badge-ghost badge-sm"></span> */}
               </td>
-              <td>37,800원</td>
+              <td>25,000원</td>
               <th>
                 <button
                   className="btn btn-ghost btn-mg"
@@ -115,7 +115,7 @@ const BuyWoman = (args) => {
                     fontWeight: "bold",
                   }}
                 >
-                  37,800원
+                  25,000원
                 </th>
                 {/* <span className="badge badge-ghost badge-lg"></span> */}
               </td>

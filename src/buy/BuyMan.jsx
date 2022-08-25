@@ -60,7 +60,7 @@ const BuyMan = (args) => {
                 <br />
                 {/* <span className="badge badge-ghost badge-sm"></span> */}
               </td>
-              <td>53,000원</td>
+              <td>29,900원</td>
               <th>
                 <button
                   className="btn btn-ghost btn-mg"
@@ -117,7 +117,7 @@ const BuyMan = (args) => {
                     fontWeight: "bold",
                   }}
                 >
-                  53,000원
+                  29,900원
                 </th>
                 {/* <span className="badge badge-ghost badge-lg"></span> */}
               </td>

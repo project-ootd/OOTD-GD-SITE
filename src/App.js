@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "tailwindcss/tailwind.css";
 // import Join from "./Page/Join";
 // import axios from "axios";
@@ -16,15 +16,6 @@ function App() {
       <MainPG />
 
       <Footer />
-
-      {/* <Topbar />
-      <MainPG /> */}
-
-      {/* <Buy /> */}
-      {/* 
-      <Popup />
-
-      <Footer /> */}
 
       <Popup />
     </div>
