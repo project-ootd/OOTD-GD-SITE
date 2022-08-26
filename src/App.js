@@ -8,16 +8,14 @@ import Footer from "./components/Footer";
 import Popup from "./components/Pop-up";
 
 function App() {
+  console.log("test");
   return (
     <div>
       <Topbar />
       <MainPG />
 
-<<<<<<< HEAD
-=======
       <Footer />
 
->>>>>>> b60c32fc76e73078f35b3f19e87ce3b196e6ca30
       <Popup />
     </div>
   );
