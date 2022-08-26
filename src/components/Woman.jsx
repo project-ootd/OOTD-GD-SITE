@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/subscss/Woman.scss";
 import { Link } from "react-router-dom";
+import axios from "axios";
+const Woman = ({ prd }) => {
+  console.log(prd);
+  const [showing, setShowing] = useState(false);
 
-const Woman = () => {
   return (
     <>
       <section>
@@ -25,17 +28,28 @@ const Woman = () => {
                 />
 
                 <div className="ico-view">
-                  <Link to="/WSBP">
+                  <Link to="/SubDetailMan">
                     <i className="fas fa-search" />
                   </Link>
                 </div>
               </div>
-
               <div className="prod-name">
-                <Link to="/WSBP">TSHIRT BELLE DE JOUR_GREY GREEN</Link>
+                <Link to="/WSBP">{prd.length > 0 && prd[0].prdName}</Link>
               </div>
+              {/* {console.log(prd)} */}
+              {/* {prd.map((prdPrice) => {
+                return <div className="prod-price"> {prd[2].prdPrice}</div>
+              })} */}
 
-              <div className="prod-price">37,800</div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[0].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
+
               <div className="free-del">
                 <span />
               </div>
@@ -50,8 +64,15 @@ const Woman = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name"> TSHIRT FLOWERMARDI_OATMEAL BLACK</div>
-              <div className="prod-price">40,500</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[1].prdName}
+              </div>
+              <div className="prod-price">
+                {prd.length > 0 &&
+                  prd[1].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              </div>
             </li>
             <li className="cell">
               <div className="img-box">
@@ -63,8 +84,15 @@ const Woman = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">TSHIRT UNIV_OATMEAL BLACK</div>
-              <div className="prod-price">40,500</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[2].prdName}
+              </div>
+              <div className="prod-price">
+                {prd.length > 0 &&
+                  prd[2].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              </div>
             </li>
             <li className="cell">
               <div className="img-box">
@@ -76,8 +104,15 @@ const Woman = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name"> TSHIRT FLOWERMARDI_IVORY NAVY</div>
-              <div className="prod-price">37,800</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[3].prdName}
+              </div>
+              <div className="prod-price">
+                {prd.length > 0 &&
+                  prd[3].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              </div>
             </li>
             <li className="cell">
               <div className="img-box">
@@ -224,7 +259,7 @@ const Woman = () => {
               <div className="prod-price">23,400</div>
             </li>
             <li className="cell">
-              <Link to="/Sub_detail">
+              <Link to="/Sub_detail_man">
                 <div className="img-box">
                   <img
                     src="https://image.msscdn.net/images/goods_img/20220527/2588114/2588114_2_500.jpg?t=20220527162558"

@@ -2,7 +2,6 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import { RecoilRoot } from "recoil";
-// import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Test1 from "./TestFile/TestBae";
@@ -24,32 +23,30 @@ import ScrollToTop from "./components/ScrollToTop";
 
 const root = createRoot(document.getElementById("root"));
 
-setInterval(() => {
-  root.render(
-    <React.StrictMode>
-      <RecoilRoot>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/RGDP" element={<RGDP />} />
-            <Route path="/KGDP" element={<KGDP />} />
-            <Route path="/BuyMan" element={<BuyMan />} />
-            <Route path="/BuyWoman" element={<BuyWoman />} />
-            <Route path="/BuyKids" element={<BuyKids />} />
-            <Route path="/BuyRing" element={<BuyRing />} />
-            <Route path="/MGDP" element={<MGDP />} />
-            <Route path="/" element={<App />} />
-            <Route path="/Test1" element={<Test1 />} />
-            <Route path="/SubDetailMan" element={<SubDetailMan />} />
-            <Route path="/KSBP" element={<KSBP />} />
-            <Route path="/WSBP" element={<WSBP />} />
-            <Route path="/RSBP" element={<RSBP />} />
-            <Route path="/WGDP" element={<WGDP />} />
-            <Route path="/Join" element={<Join />} />
-            <Route path="/Carousel" element={<Carousel />} />
-          </Routes>
-          <ScrollToTop /> {/* 화면 전환시 맨 위에서 시작 */}
-        </BrowserRouter>
-      </RecoilRoot>
-    </React.StrictMode>
-  );
-}, 1000);
+root.render(
+  <React.StrictMode>
+    <RecoilRoot>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/RGDP" element={<RGDP />} />
+          <Route path="/KGDP" element={<KGDP />} />
+          <Route path="/BuyMan" element={<BuyMan />} />
+          <Route path="/BuyWoman" element={<BuyWoman />} />
+          <Route path="/BuyKids" element={<BuyKids />} />
+          <Route path="/BuyRing" element={<BuyRing />} />
+          <Route path="/MGDP" element={<MGDP />} />
+          <Route path="/Test1" element={<Test1 />} />
+          <Route path="/SubDetailMan" element={<SubDetailMan />} />
+          <Route path="/KSBP" element={<KSBP />} />
+          <Route path="/WSBP" element={<WSBP />} />
+          <Route path="/RSBP" element={<RSBP />} />
+          <Route path="/WGDP" element={<WGDP />} />
+          <Route path="/Join" element={<Join />} />
+          <Route path="/Carousel" element={<Carousel />} />
+        </Routes>
+        <ScrollToTop /> {/* 화면 전환시 맨 위에서 시작 */}
+      </BrowserRouter>
+    </RecoilRoot>
+  </React.StrictMode>
+);
