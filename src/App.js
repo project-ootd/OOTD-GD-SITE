@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "tailwindcss/tailwind.css";
 
 import Carousel from "./components/Carousel";
@@ -13,6 +13,11 @@ function App() {
       <Topbar />
       <MainPG />
 
+<<<<<<< HEAD
+=======
+      <Footer />
+
+>>>>>>> b60c32fc76e73078f35b3f19e87ce3b196e6ca30
       <Popup />
     </div>
   );

@@ -26,6 +26,9 @@ const Topbar = () => {
                     <Link to="#">SUMMER</Link>
                     <ul>
                       <li>
+                        <Link to="#">TOP</Link>
+                      </li>
+                      <li>
                         <Link to="#">BOTTOM</Link>
                       </li>
                     </ul>

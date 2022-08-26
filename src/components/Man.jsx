@@ -27,6 +27,7 @@ const Man = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
+
               <div className="prod-name">
                 <Link to="/SubDetailMan">
                   하이커 섀도우 피그먼트 반팔티 다크 블루

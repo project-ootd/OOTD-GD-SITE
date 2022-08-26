@@ -1,6 +1,4 @@
 import React from "react";
-import "../styles/sub_detail/SubDetailMan.scss";
-
 import { Link } from "react-router-dom";
 import Buybtn from "../btn/BuybtnMan";
 import ShoppingCart from "../btn/ShoppingCart";
@@ -35,7 +33,7 @@ const SubDetailKids = () => {
                   <p className="p4">구매후기</p>
                 </div>
                 <div className="text2">
-                  <p className="p1">WHATITISNT / MG2202ST53BK</p>
+                  <p className="p1">UASKIdsShop / UASK-001</p>
                   <p className="p2">5.9천 회 이상</p>
                   <p className="p3">300개 이상</p>
                   <p className="p4">
@@ -65,7 +63,7 @@ const SubDetailKids = () => {
                       <Link to="/">쿠폰받기</Link>
                     </div>
                   </div>
-                  <p className="p3">최대 1,592원</p>
+                  <p className="p3">최대 650원</p>
                 </div>
               </div>
             </div>

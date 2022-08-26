@@ -1,7 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "../styles/subscss/Pop-up.scss";
 const Popup = () => {
-  const [row, Setrow] = useState("curr");
+  // const [row, Setrow] = useState("curr");
   const [active, setActive] = useState(true);
 
   return (
@@ -24,13 +24,10 @@ const Popup = () => {
           >
             ✕
           </label>
-          <h3 className="text-lg font-bold">
-            가을 맞이 특별 여름 의류 세일!!!!
-          </h3>
+          <h3 className="text-lg font-bold">4조 가상의 쇼핑몰 사이트 만들기</h3>
           <p className="py-4">
-            가을을 이긴하지만 아직까지 더운 날이 이어지는 관계로 여름 의류를
-            30%세일 판매하기로 했습니다. 기존의 의류들을 정리하고 더 좋은 겨울
-            옷들로 여러분들을 맞이 하겠습니다.
+            조원 : 최흥진,유안상,봉하늘,배상운 <br />
+            간단(?)한 쇼핑몰 페이지를 만들어 보았습니다.
           </p>
         </div>
       </div>

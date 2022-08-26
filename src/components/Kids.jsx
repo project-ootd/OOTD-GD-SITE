@@ -10,7 +10,7 @@ const Kids = () => {
         </div>
         <div className="main-pic">
           <img
-            src="https://zesty1.jpg3.kr/HARA14/new_popup/jk_main_0808_05.jpg"
+            src="https://search.pstatic.net/sunny/?src=http%3A%2F%2Fimg.theqoo.net%2Fimg%2FJGmXb.jpg&type=sc960_832"
             alt=""
           />
         </div>

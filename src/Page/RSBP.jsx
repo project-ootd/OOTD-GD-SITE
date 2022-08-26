@@ -1,16 +1,16 @@
 import React from "react";
 import Footer from "../components/Footer";
-import Kids from "../components/Kids";
 import Topbar from "../components/Topbar";
+import SubDetailAC from "../sub_detail/SubDetailAC";
 
-const KGDP = () => {
+const WSBP = () => {
   return (
     <div>
       <Topbar />
-      <Kids />
+      <SubDetailAC />
       <Footer />
     </div>
   );
 };
 
-export default KGDP;
+export default WSBP;

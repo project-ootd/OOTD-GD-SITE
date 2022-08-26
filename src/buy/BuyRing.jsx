@@ -1,10 +1,12 @@
 import React from "react";
+
 import "../styles/buy/BuyMan.scss";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
+
 import { Link } from "react-router-dom";
 
-const BuyMan = (args) => {
+const BuyRing = (args) => {
   return (
     <>
       <Topbar />
@@ -40,18 +42,16 @@ const BuyMan = (args) => {
                   <div className="avatar">
                     <div className="mask mask-squircle w-12 h-12">
                       <img
-                        src="https://image.msscdn.net/images/goods_img/20220509/2545522/2545522_1_big.jpg"
+                        src="https://image.msscdn.net/images/goods_img/20201204/1713630/1713630_1_500.jpg?t=20201204105700"
                         alt="Avatar Tailwind CSS Component"
                       />
                     </div>
                   </div>
                   <div>
                     <div className="font-bold">
-                      쿨맥스 브이넥 반팔 니트 [블랙]
+                      심플베이직 각인 10K Gold 커플링{" "}
                     </div>
-                    <div className="text-sm opacity-50">
-                      Coolmax V-neck short-sleeve knit [Black]
-                    </div>
+                    <div className="text-sm opacity-50">LRW19011T</div>
                   </div>
                 </div>
               </td>
@@ -60,7 +60,7 @@ const BuyMan = (args) => {
                 <br />
                 {/* <span className="badge badge-ghost badge-sm"></span> */}
               </td>
-              <td>29,900원</td>
+              <td>99,000원</td>
               <th>
                 <button
                   className="btn btn-ghost btn-mg"
@@ -117,7 +117,7 @@ const BuyMan = (args) => {
                     fontWeight: "bold",
                   }}
                 >
-                  29,900원
+                  99,000원
                 </th>
                 {/* <span className="badge badge-ghost badge-lg"></span> */}
               </td>
@@ -130,7 +130,7 @@ const BuyMan = (args) => {
               <th />
               <th></th>
               <th>
-                <Link to="/SubDetailMan">
+                <Link to="/RSBP">
                   <button class="btn">돌아가기</button>
                 </Link>
               </th>
@@ -150,4 +150,4 @@ const BuyMan = (args) => {
   );
 };
 
-export default BuyMan;
+export default BuyRing;

@@ -20,7 +20,6 @@ const Login = () => {
     setPw(e.target.value);
   };
 
-
   return (
     <nav className="login">
       {/*  로그인/회원가입 버튼  */}
@@ -61,6 +60,7 @@ const Login = () => {
             maxLength={14}
             autoComplete="off"
           />
+          <span>&nbsp;</span>
           <input
             type="password"
             placeholder="Password"
@@ -76,7 +76,7 @@ const Login = () => {
             maxLength={16}
             autoComplete="off"
           />
-
+          <span>&nbsp;</span>
           <button
             onClick={async () => {
               const data = await axios({
@@ -95,6 +95,7 @@ const Login = () => {
           >
             Login
           </button>
+          <span>&nbsp;</span>
           <Link to="/Join">
             <button>JOIN</button>
           </Link>
