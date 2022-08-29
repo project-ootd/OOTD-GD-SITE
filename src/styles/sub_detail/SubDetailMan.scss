@@ -28,8 +28,8 @@ a {
 }
 
 .title_name {
-  width: 1020px;
-  margin: 50px auto 30px;
+  width: 1225px;
+  margin: 60px auto 10px;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -49,8 +49,13 @@ a {
 }
 
 .sub_box .product-text {
-  margin: 10% 4%;
+  margin: 10% 4% 3%;
   width: 40%;
+}
+
+.sub_box .product-text h2 {
+  margin: 10px 0;
+  font-size: 25px;
 }
 
 // .sub_box  .text-wrap > h2 {
@@ -64,6 +69,12 @@ a {
 
 .sub_box .text-wrap > .text-box1 > .text1 {
   width: 30%;
+}
+
+.sub_box .text-wrap > .text-box1,
+.text-box2 > .text1,
+.text2 > p {
+  margin: 5px 0;
 }
 
 .sub_box .text-wrap > .text-box1 > .text2 {
