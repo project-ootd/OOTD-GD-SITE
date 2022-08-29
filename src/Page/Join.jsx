@@ -12,15 +12,15 @@ const Join = (args) => {
   const [user, setUser] = useState([]);
 
   const joinbtn = async () => {
-    if (id.length == 0) {
+    if (id.length === 0) {
       alert("아이디 없음");
       return;
     }
-    if (pw.length == 0) {
+    if (pw.length === 0) {
       alert("비번 없음");
       return;
     }
-    if (name.length == 0) {
+    if (name.length === 0) {
       alert("이름 없음");
       return;
     }

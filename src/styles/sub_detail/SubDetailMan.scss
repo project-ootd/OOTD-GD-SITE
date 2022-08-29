@@ -29,7 +29,7 @@ a {
 
 .title_name {
   width: 1225px;
-  margin: 60px auto 10px;
+  margin: 70px auto 15px;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -49,7 +49,7 @@ a {
 }
 
 .sub_box .product-text {
-  margin: 10% 4% 3%;
+  margin: 0% 4% 3%;
   width: 40%;
 }
 
@@ -71,10 +71,11 @@ a {
   width: 30%;
 }
 
-.sub_box .text-wrap > .text-box1,
-.text-box2 > .text1,
-.text2 > p {
-  margin: 5px 0;
+.sub_box .text-wrap > .text-box1 > .text1 > p,
+.sub_box .text-wrap > .text-box1 > .text2 > p,
+.sub_box .text-wrap > .text-box2 > .text1 > p,
+.sub_box .text-wrap > .text-box2 > .text2 > p {
+  margin: 15px 0;
 }
 
 .sub_box .text-wrap > .text-box1 > .text2 {
@@ -106,8 +107,13 @@ a {
   font-size: 1rem;
 }
 
+.sub_box .price-wrap > .text-box1 > .text1 > p,
+.sub_box .price-wrap > .text-box1 > .text2 > p {
+  margin: 15px 0;
+}
+
 .sub_box .price-wrap > .text-box1 > .text1 > .p3 {
-  margin-top: 50px;
+  margin-top: 63px;
 }
 
 .coupon-btn {
