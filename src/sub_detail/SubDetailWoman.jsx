@@ -6,14 +6,17 @@ import BuybtnMan from "../btn/BuybtnMan";
 import ShoppingCart from "../btn/ShoppingCart";
 import FavoritCheck from "../btn/FavoritCheck";
 
-const SubDetailWoman = () => {
+const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice }) => {
   return (
     <>
       <div>
+        {console.log("prdIdddd", prdId)}
+        {console.log("prdName", prdName)}
+        {console.log("prdPrice", prdPrice)}
         <p className="title_name">
           {" "}
-          TSHIRT BELLE DE JOUR_GREY GREEN{" "}
-          <span>TSHIRT BELLE DE JOUR_GREY GREEN</span>
+          {prdName}
+          <span>{prdEName}</span>
         </p>
         <div className="sub_box flex">
           <div className="img-box">
@@ -36,7 +39,7 @@ const SubDetailWoman = () => {
                   <p className="p4">구매후기</p>
                 </div>
                 <div className="text2">
-                  <p className="p1">CHJShop / CHJT-001</p>
+                  <p className="p1">{prdId}</p>
                   <p className="p2">9.9천 회 이상</p>
                   <p className="p3">600개 이상</p>
                   <p className="p4">
@@ -57,7 +60,7 @@ const SubDetailWoman = () => {
                   <p className="p3">OOTD 적립금</p>
                 </div>
                 <div className="text2">
-                  <p className="p1">37,800</p>
+                  <p className="p1">{prdPrice}</p>
                   <div className="p2">
                     {" "}
                     20,000원 ~ 25,000원

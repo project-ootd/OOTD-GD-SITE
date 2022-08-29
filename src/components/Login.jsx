@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import UserIcon from "../components/UserIcon";
@@ -6,9 +6,6 @@ import { useRecoilState } from "recoil";
 import { authenticatedState } from "../recoil/authState";
 
 const Login = () => {
-  const [user, setUser] = useState([]);
-  const [chk, setChk] = useState(false);
-
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
   const [authenticated, setAuthenticated] = useRecoilState(authenticatedState);

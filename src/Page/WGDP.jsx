@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import App from "../App";
 import axios from "axios";
 import Woman from "../components/Woman";
 import Topbar from "../components/Topbar";
