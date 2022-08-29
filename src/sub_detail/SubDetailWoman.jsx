@@ -6,13 +6,13 @@ import BuybtnMan from "../btn/BuybtnMan";
 import ShoppingCart from "../btn/ShoppingCart";
 import FavoritCheck from "../btn/FavoritCheck";
 
-const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice }) => {
+const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   return (
     <>
       <div>
-        {console.log("prdIdddd", prdId)}
+        {/* {console.log("prdIdddd", prdId)}
         {console.log("prdName", prdName)}
-        {console.log("prdPrice", prdPrice)}
+        {console.log("prdPrice", prdPrice)} */}
         <p className="title_name">
           {" "}
           {prdName}
@@ -20,10 +20,7 @@ const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice }) => {
         </p>
         <div className="sub_box flex">
           <div className="img-box">
-            <img
-              src="https://image.msscdn.net/images/goods_img/20200701/1503346/1503346_1_500.jpg?t=20220401110908"
-              alt=""
-            />
+            <img src={prdImg} alt="" />
           </div>
 
           <div className="product-text">
@@ -60,7 +57,13 @@ const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice }) => {
                   <p className="p3">OOTD 적립금</p>
                 </div>
                 <div className="text2">
-                  <p className="p1">{prdPrice}</p>
+                  <p className="p1">
+                    {/* {prdPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} */}
+                    {/* {prdPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} */}
+                    {parseInt(prdPrice)
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                  </p>
                   <div className="p2">
                     {" "}
                     20,000원 ~ 25,000원
