@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/subscss/Woman.scss";
 import { Link } from "react-router-dom";
-import axios from "axios";
 const Woman = ({ prd }) => {
-  console.log(prd);
-  const [showing, setShowing] = useState(false);
+  // console.log(prd);
 
   return (
     <>
@@ -34,7 +32,11 @@ const Woman = ({ prd }) => {
                 </div>
               </div>
               <div className="prod-name">
-                <Link to="/WSBP">{prd.length > 0 && prd[0].prdName}</Link>
+                <Link to="/WSBP" state={{ data: "W001" }}>
+                  {/* <Link to={{ pathname: "/WSBP", state: { data: "test1" } }}> */}
+                  {/* <Link to={"/WSBP"} state={{ data: prd[0].prdName }}> */}
+                  {prd.length > 0 && prd[0].prdName}
+                </Link>
               </div>
               {/* {console.log(prd)} */}
               {/* {prd.map((prdPrice) => {
@@ -65,13 +67,13 @@ const Woman = ({ prd }) => {
                 </div>
               </div>
               <div className="prod-name">
-                {prd.length > 0 && prd[1].prdName}
+                {/* {prd.length > 0 && prd[1].prdName} */}
               </div>
               <div className="prod-price">
-                {prd.length > 0 &&
+                {/* {prd.length > 0 &&
                   prd[1].prdPrice
                     .toString()
-                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} */}
               </div>
             </li>
             <li className="cell">
@@ -85,13 +87,13 @@ const Woman = ({ prd }) => {
                 </div>
               </div>
               <div className="prod-name">
-                {prd.length > 0 && prd[2].prdName}
+                {/* {prd.length > 0 && prd[2].prdName} */}
               </div>
               <div className="prod-price">
-                {prd.length > 0 &&
+                {/* {prd.length > 0 &&
                   prd[2].prdPrice
                     .toString()
-                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} */}
               </div>
             </li>
             <li className="cell">
@@ -105,13 +107,13 @@ const Woman = ({ prd }) => {
                 </div>
               </div>
               <div className="prod-name">
-                {prd.length > 0 && prd[3].prdName}
+                {/* {prd.length > 0 && prd[3].prdName} */}
               </div>
               <div className="prod-price">
-                {prd.length > 0 &&
+                {/* {prd.length > 0 &&
                   prd[3].prdPrice
                     .toString()
-                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} */}
               </div>
             </li>
             <li className="cell">
