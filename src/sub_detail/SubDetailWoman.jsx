@@ -13,6 +13,7 @@ const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
         {/* {console.log("prdIdddd", prdId)}
         {console.log("prdName", prdName)}
         {console.log("prdPrice", prdPrice)} */}
+        {console.log("prdImg", prdImg)}
         <p className="title_name">
           {" "}
           {prdName}
@@ -20,7 +21,7 @@ const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
         </p>
         <div className="sub_box flex">
           <div className="img-box">
-            <img src={prdImg} alt="" />
+            <img src={prdImg} alt="img" />
           </div>
 
           <div className="product-text">
