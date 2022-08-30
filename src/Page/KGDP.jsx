@@ -14,7 +14,6 @@ const KGDP = () => {
       });
       console.log("data", data.data);
       setPrd(data.data);
-      // console.log(prd[2].prdName);
     };
     getData();
   }, []);
