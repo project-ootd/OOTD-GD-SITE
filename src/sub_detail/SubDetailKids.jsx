@@ -4,7 +4,7 @@ import Buybtn from "../btn/BuybtnMan";
 import ShoppingCart from "../btn/ShoppingCart";
 import FavoritCheck from "../btn/FavoritCheck";
 
-const SubDetailKids = () => {
+const SubDetailKids = ({ prdName, prdEname, prdPrice, prdImg }) => {
   return (
     <>
       <div>
