@@ -24,7 +24,7 @@ const Join = (args) => {
       alert("이름 없음");
       return;
     }
-    const data = await axios({
+    await axios({
       url: `http://localhost:4000/test1`,
       method: "POST",
       data: {

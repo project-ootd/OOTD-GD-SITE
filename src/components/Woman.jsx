@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/subscss/Woman.scss";
 import { Link } from "react-router-dom";
 const Woman = ({ prd }) => {
-  // console.log(prd);
+  // console.log({ prd });
 
   return (
     <>
