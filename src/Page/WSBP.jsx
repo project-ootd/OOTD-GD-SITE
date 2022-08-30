@@ -13,25 +13,27 @@ const WSBP = () => {
   const [prdEName, setPrdEName] = useState("");
   const [prdPrice, setPrdPrice] = useState("");
   const [prdId, setPrdId] = useState("");
+  const [prdImg, setPrdImg] = useState("");
 
-  useEffect(() => {
-    const getData = async () => {
-      const data = await axios({
-        url: `http://localhost:4000/product`,
-        method: "POST",
-        data: { prdId },
-      });
-      // console.log("prdid", prdId);
+  // useEffect(() => {
+  const getData = async () => {
+    const data = await axios({
+      url: `http://localhost:4000/product`,
+      method: "POST",
+      data: { prdId },
+    });
+    // console.log("prdid", prdId);
 
-      // console.log(data.data);
+    // console.log(data.data);
 
-      setPrdId(location.state.data);
-      setPrdName(data.data.prdName);
-      setPrdEName(data.data.prdEName);
-      setPrdPrice(data.data.prdPrice);
-    };
-    getData();
-  }, []);
+    setPrdId(location.state.data);
+    setPrdName(data.data.prdName);
+    setPrdEName(data.data.prdEName);
+    setPrdPrice(data.data.prdPrice);
+    setPrdImg(data.data.prdimg);
+  };
+  getData();
+  // }, []);
 
   return (
     <div>
@@ -41,6 +43,7 @@ const WSBP = () => {
         prdName={prdName}
         prdEName={prdEName}
         prdPrice={prdPrice}
+        prdImg={prdImg}
       />
       <Footer />
     </div>

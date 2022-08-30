@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/subscss/Kids.scss";
-const Kids = () => {
+const Kids = ({ prd }) => {
   return (
     <div>
       <section>
@@ -27,9 +27,16 @@ const Kids = () => {
                 </div>
               </div>
               <div className="prod-name">
-                <Link to="/KSBP">제나플리츠스커트</Link>
+                <Link to="/KSBP">{prd.length > 0 && prd[0].prdName}</Link>
               </div>
-              <div className="prod-price">16,900</div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[0].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
               <div className="free-del">
                 <span />
               </div>
@@ -44,8 +51,18 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name"> 로스터데님셔츠자켓</div>
-              <div className="prod-price">28,900</div>
+              <div className="prod-name">
+                {" "}
+                {prd.length > 0 && prd[1].prdName}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[1].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
             </li>
             <li className="cell">
               <div className="img-box">
@@ -57,8 +74,17 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">할리데이카라티</div>
-              <div className="prod-price">29,900</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[2].prdName}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[2].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
             </li>
             <li className="cell">
               <div className="img-box">
@@ -70,8 +96,17 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">루디스ST카라티</div>
-              <div className="prod-price">22,800</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[3].prdName}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[3].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
             </li>
             <li className="cell">
               <div className="img-box">
@@ -83,8 +118,17 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">바나멜빵바지 </div>
-              <div className="prod-price">32,800</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[4].prdName}{" "}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[4].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
             </li>
             <li className="cell">
               <div className="img-box">
@@ -96,8 +140,17 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">테론니트베스트</div>
-              <div className="prod-price">24,800</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[5].prdName}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[5].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
             </li>
             <li className="cell">
               <div className="img-box">
@@ -109,8 +162,17 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">위캔드롱카라원피스티 </div>
-              <div className="prod-price">22,800</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[6].prdName}{" "}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[6].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
               <div className="free-del">
                 <span />
               </div>
@@ -125,8 +187,17 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">케일라맨투맨 </div>
-              <div className="prod-price">18,900</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[7].prdName}{" "}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[7].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
             </li>
             <li className="cell">
               <div className="img-box">
@@ -138,8 +209,17 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">시스템상하SET</div>
-              <div className="prod-price">34,800</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[8].prdName}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[8].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
               <div className="free-del">
                 <span />
               </div>
@@ -154,8 +234,17 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">인투스페이스상하SET </div>
-              <div className="prod-price">38,900</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[9].prdName}{" "}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[9].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
               <div className="free-del">
                 <span />
               </div>
@@ -170,8 +259,17 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">파르페파자마상하SET</div>
-              <div className="prod-price">24,900</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[10].prdName}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[10].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
             </li>
             <li className="cell">
               <div className="img-box">
@@ -183,8 +281,17 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">도리스파자마SET</div>
-              <div className="prod-price">24,900</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[11].prdName}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[11].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
               <div className="free-del">
                 <span />
               </div>
@@ -199,8 +306,17 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">페이스심볼파자마SET </div>
-              <div className="prod-price">24,900</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[12].prdName}{" "}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[12].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
             </li>
             <li className="cell">
               <div className="img-box">
@@ -212,8 +328,17 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">스마일닷뽀송파자마SET </div>
-              <div className="prod-price">37,900</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[13].prdName}{" "}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[13].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
             </li>
             <li className="cell">
               <Link to="/Sub_detail_man">
@@ -228,8 +353,17 @@ const Kids = () => {
                 </div>
               </Link>
 
-              <div className="prod-name">브레니파자마SET</div>
-              <div className="prod-price">24,900</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[14].prdName}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[14].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
               <div className="free-del">
                 <span />
               </div>
@@ -244,8 +378,17 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">메이지파자마SET</div>
-              <div className="prod-price">24,900</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[15].prdName}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[15].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
               <div className="free-del">
                 <span />
               </div>
@@ -260,8 +403,17 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">다람쥐실내복</div>
-              <div className="prod-price">14,900</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[16].prdName}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[16].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
             </li>
             <li className="cell">
               <div className="img-box">
@@ -274,8 +426,17 @@ const Kids = () => {
                 </div>
               </div>
 
-              <div className="prod-name">랫두잇실내복</div>
-              <div className="prod-price">14,900</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[17].prdName}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[17].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
               <div className="free-del">
                 <span />
               </div>
@@ -290,8 +451,17 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">홀릭도트실내복</div>
-              <div className="prod-price">14,900</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[18].prdName}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[18].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
               <div className="free-del">
                 <span />
               </div>
@@ -306,8 +476,17 @@ const Kids = () => {
                   <i className="fas fa-search" />
                 </div>
               </div>
-              <div className="prod-name">레인보우실내복</div>
-              <div className="prod-price">14,900</div>
+              <div className="prod-name">
+                {prd.length > 0 && prd[19].prdName}
+              </div>
+              {prd.length > 0 && (
+                <div className="prod-price">
+                  {" "}
+                  {prd[19].prdPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </div>
+              )}
               <div className="free-del">
                 <span />
               </div>
