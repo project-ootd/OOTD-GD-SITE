@@ -4,20 +4,17 @@ import Buybtn from "../btn/BuybtnMan";
 import ShoppingCart from "../btn/ShoppingCart";
 import FavoritCheck from "../btn/FavoritCheck";
 
-const SubDetailKids = ({ prdName, prdEname, prdPrice, prdImg }) => {
+const SubDetailKids = ({ prdName, prdEname, prdPrice, prdImg, prdId }) => {
   return (
     <>
       <div>
         <p className="title_name">
           {" "}
-          제나플리츠스커트 <span>JENA PLITS SKURT</span>
+          {prdName} <span>{prdEname}</span>
         </p>
         <div className="sub_box flex">
           <div className="img-box">
-            <img
-              src="https://jkids.co.kr/shopimages/verysweet/0030020003613.jpg?1660785967"
-              alt=""
-            />
+            <img src={prdImg} alt="" />
           </div>
 
           <div className="product-text">
@@ -33,7 +30,7 @@ const SubDetailKids = ({ prdName, prdEname, prdPrice, prdImg }) => {
                   <p className="p4">구매후기</p>
                 </div>
                 <div className="text2">
-                  <p className="p1">UASKIdsShop / UASK-001</p>
+                  <p className="p1">{prdId}</p>
                   <p className="p2">5.9천 회 이상</p>
                   <p className="p3">300개 이상</p>
                   <p className="p4">
@@ -54,7 +51,12 @@ const SubDetailKids = ({ prdName, prdEname, prdPrice, prdImg }) => {
                   <p className="p3">OOTD 적립금</p>
                 </div>
                 <div className="text2">
-                  <p className="p1">16,900원</p>
+                  <p className="p1">
+                    {" "}
+                    {parseInt(prdPrice)
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                  </p>
                   <div className="p2">
                     {" "}
                     10,000원 ~ 13,000원
