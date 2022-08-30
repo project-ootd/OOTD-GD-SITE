@@ -22,11 +22,17 @@ const Login = () => {
       {/*  로그인/회원가입 버튼  */}
 
       {authenticated ? (
-        <div>
+        <div
+          style={{
+            display: "flex",
+          }}
+        >
           <div
             style={{
-              display: "inline-block",
+              display: "flex",
               fontSize: "30px",
+              alignItems: "center",
+              margin: "0 8px 0 0",
             }}
           >
             <UserIcon />
@@ -35,7 +41,7 @@ const Login = () => {
             onClick={() => {
               setAuthenticated(false);
             }}
-            style={{ display: "inline-block" }}
+            style={{ display: "flex", alignItems: "center" }}
           >
             logout
           </button>

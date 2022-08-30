@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "../styles/Topbar.scss";
 import { Link } from "react-router-dom";
 import Login from "./Login";
 import { BsEye } from "react-icons/bs";
 
 const Topbar = () => {
+  const [prd, setPrd] = useState([]);
+  useEffect(() => {
+    const getData = async () => {
+      const data = await axios({
+        url: `http://localhost:4000/test2`,
+        method: "GET",
+      });
+      // console.log("data", data.data);
+      setPrd(data.data);
+      // console.log(prd[2].prdName);
+    };
+    getData();
+  }, []);
+
   return (
     <div className="top-bar">
       <header>
@@ -20,6 +35,7 @@ const Topbar = () => {
           <div className="menu-box-1">
             <ul>
               <li>
+                {/* <Link to="/WGDP" state={{ prd: prd, prdNo: "K" }}> */}
                 <Link to="/MGDP">MAN</Link>
                 <ul>
                   <li>
@@ -47,7 +63,20 @@ const Topbar = () => {
                 </ul>
               </li>
               <li>
-                <Link to="/WGDP">WOMAN</Link>
+                {/* {console.log("link", prd)} */}
+                {/* <Link
+                  to={{
+                    pathname: url,
+                    state: {
+                      prd: prd,
+                      prdNo: "W",
+                    },
+                  }}
+                > */}
+                <Link to="/WGDP" state={{ prd: prd, prdNo: "W" }}>
+                  {/* // <Link to="/WGDP" state={prd}> */}
+                  WOMAN
+                </Link>
                 <ul>
                   <li>
                     <Link to="#">SUMMER</Link>
