@@ -17,7 +17,7 @@ const Kids = ({ prd }) => {
         <div className="list-box-1 con">
           <ul className="row">
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[0].prdid}>
+              <Link to="/KSBP" state={{ data: "K001" }}>
                 <div className="img-box">
                   <img src={prd.length > 0 && prd[0].prdImg} alt="" />
                   <div className="ico-view">

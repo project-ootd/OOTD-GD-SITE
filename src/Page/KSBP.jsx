@@ -6,17 +6,25 @@ import SubDetailKids from "../sub_detail/SubDetailKids";
 import axios from "axios";
 
 const KSBP = () => {
-  const [prdName, SetprdName] = useState("");
-  const [prdEname, SetPrdEname] = useState("");
-  const [prdImg, SetImg] = useState("");
-  const [prdPrice, SetprdPrice] = useState("");
-  useEffect(() => {
-    const getData = async () => {
-      const data = await axios({
-        url: `http://localhost:4000/`,
-      });
-    };
-  });
+  const location = useLocation();
+  const [prdName, setPrdName] = useState("");
+  const [prdEname, setPrdEName] = useState("");
+  const [prdImg, setPrdImg] = useState("");
+  const [prdPrice, setPrdPrice] = useState("");
+  const [prdId, setPrdId] = useState("");
+
+  const getData = async () => {
+    const data = await axios({
+      url: `http://localhost:4000/`,
+      method: "POST",
+      data: { prdId },
+    });
+    setPrdId(location.state.data);
+    setPrdName(data.data.prdName);
+    setPrdEName(data.data.prdEName);
+    setPrdPrice(data.data.prdPrice);
+    setPrdImg(data.data.prdImg);
+  };
 
   return (
     <div>
@@ -26,6 +34,7 @@ const KSBP = () => {
         prdImg={prdImg}
         prdEname={prdEname}
         prdPrice={prdPrice}
+        prdId={prdId}
       />
       <Footer />
     </div>
