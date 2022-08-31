@@ -19,7 +19,7 @@ const Kids = ({ prd }) => {
             <li className="cell">
               <Link to="/KSBP" state={{ data: "K001" }}>
                 <div className="img-box">
-                  <img src={prd.length > 0 && prd[0].prdImg} alt="" />
+                  <img src={prd.length > 0 ? prd[0].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -41,12 +41,9 @@ const Kids = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[1].prdid}>
+              <Link to="/KSBP" state={{ data: "K002" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0020020004543.jpg?1660036965"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[1].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -67,12 +64,9 @@ const Kids = ({ prd }) => {
             </li>
 
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[2].prdid}>
+              <Link to="/KSBP" state={{ data: "K003" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0020010031963.jpg?1659673460"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[2].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -91,12 +85,9 @@ const Kids = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[3].prdid}>
+              <Link to="/KSBP" state={{ data: "K004" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0020010031863.gif?1658821663"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[3].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -115,12 +106,9 @@ const Kids = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[4].prdid}>
+              <Link to="/KSBP" state={{ data: "K005" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0040020008053.jpg?1658196323"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[4].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -139,12 +127,9 @@ const Kids = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[5].prdid}>
+              <Link to="/KSBP" state={{ data: "K006" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0010020001453.gif?1658976887"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[5].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -163,12 +148,9 @@ const Kids = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[6].prdid}>
+              <Link to="/KSBP" state={{ data: "K007" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0020010031873.jpg?1658822079"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[6].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -190,12 +172,9 @@ const Kids = ({ prd }) => {
               </div>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[7].prdid}>
+              <Link to="/KSBP" state={{ data: "K008" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0020010031733.jpg?1657851482"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[7].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -214,12 +193,9 @@ const Kids = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[8].prdid}>
+              <Link to="/KSBP" state={{ data: "K009" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0090010013983.jpg?1661231705"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[8].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -241,12 +217,9 @@ const Kids = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[9].prdid}>
+              <Link to="/KSBP" state={{ data: "K010" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0090010013973.jpg?1661231113"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[9].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -268,12 +241,9 @@ const Kids = ({ prd }) => {
               </div>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[10].prdid}>
+              <Link to="/KSBP" state={{ data: "K011" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0140010005393.jpg?1661229779"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[10].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -292,12 +262,9 @@ const Kids = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[11].prdid}>
+              <Link to="/KSBP" state={{ data: "K012" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0140010004973.jpg?1656316446"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[11].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -319,12 +286,9 @@ const Kids = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[12].prdid}>
+              <Link to="/KSBP" state={{ data: "K013" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0140010004943.jpg?1656294505"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[12].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -343,12 +307,9 @@ const Kids = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[13].prdid}>
+              <Link to="/KSBP" state={{ data: "K014" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0140010004873.jpg?1656293202"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[13].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -367,12 +328,9 @@ const Kids = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[14].prdid}>
+              <Link to="/KSBP" state={{ data: "K015" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0140010005193.jpg?1656292853"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[14].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -395,12 +353,9 @@ const Kids = ({ prd }) => {
               </div>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[15].prdid}>
+              <Link to="/KSBP" state={{ data: "K016" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0140010004963.jpg?1656292572"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[15].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -422,12 +377,9 @@ const Kids = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[16].prdid}>
+              <Link to="/KSBP" state={{ data: "K017" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0140010005043.jpg?1656291917"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[16].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -446,12 +398,9 @@ const Kids = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[17].prdid}>
+              <Link to="/KSBP" state={{ data: "K018" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0140010005033.jpg?1656292240"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[17].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -474,12 +423,9 @@ const Kids = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[18].prdid}>
+              <Link to="/KSBP" state={{ data: "K019" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0140010005163.jpg?1656294715"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[18].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -501,12 +447,9 @@ const Kids = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/KSBP" state={prd.length > 0 && prd[19].prdid}>
+              <Link to="/KSBP" state={{ data: "K020" }}>
                 <div className="img-box">
-                  <img
-                    src="https://jkids.co.kr/shopimages/verysweet/0140010005003.jpg?1656293071"
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[19].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
