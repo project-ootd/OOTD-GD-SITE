@@ -6,7 +6,7 @@ import { BsEye } from "react-icons/bs";
 import { Link } from "react-router-dom";
 // import { Router } from "express";
 
-const Topbar = ({ prd }) => {
+const Topbar = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [prd, setPrd] = useState([]);
   useEffect(() => {
@@ -44,7 +44,9 @@ const Topbar = ({ prd }) => {
           <div className="menu-box-1">
             <ul>
               <li>
-                <Link to={`/WGDP/M`}>MAN</Link>
+                <Link to={`/MGDP`} state={{ prd: prd, prdNo: "M" }}>
+                  MAN
+                </Link>
                 <ul>
                   <li>
                     SUMMER
@@ -84,7 +86,10 @@ const Topbar = ({ prd }) => {
                 </ul>
               </li>
               <li>
-                <Link to="/KGDP" state={{ prd: prd, prdNo: "K" }}>
+                <Link
+                  to={`/KGDP/${prd.category}/K`}
+                  state={{ prd: prd, prdNo: "K" }}
+                >
                   KIDS
                 </Link>
                 <ul>
