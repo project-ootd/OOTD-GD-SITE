@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "tailwindcss/tailwind.css";
+import { useParams } from "react-router-dom";
 import Topbar from "./components/Topbar";
 import MainPG from "./components/MainPG";
 import Footer from "./components/Footer";
@@ -10,6 +11,7 @@ import Popup from "./components/Pop-up";
 // Woman 페이지 state 배열로 못 넣는지 물어보기
 
 function App() {
+  let { params } = useParams();
   const [prd, setPrd] = useState([]);
 
   const [isLoading, setIsLoading] = useState(true);
@@ -34,11 +36,11 @@ function App() {
   return (
     <div>
       <Topbar prd={prd} />
+
       <MainPG />
+      <Popup />
 
       <Footer />
-
-      <Popup />
     </div>
   );
 }

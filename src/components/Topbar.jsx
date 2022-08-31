@@ -84,7 +84,9 @@ const Topbar = ({ prd }) => {
                 </ul>
               </li>
               <li>
-                <Link to="/KGDP">KIDS</Link>
+                <Link to="/KGDP" state={{ prd: prd, prdNo: "K" }}>
+                  KIDS
+                </Link>
                 <ul>
                   <li>
                     SUMMER
