@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/subscss/Woman.scss";
 import { Link } from "react-router-dom";
 const Woman = ({ prd }) => {
-  // console.log(prd);
+  // console.log({ prd });
 
   return (
     <>
@@ -21,8 +21,13 @@ const Woman = ({ prd }) => {
             <li className="cell">
               <Link to="/WSBP" state={{ data: "W001" }}>
                 <div className="img-box">
+                  {console.log(prd.length)}
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20200701/1503346/1503346_1_500.jpg?t=20220401110908"
+                    src={
+                      prd.length > 0
+                        ? prd[0].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
 
@@ -58,7 +63,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W002" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220329/2453555/2453555_1_500.jpg?t=20220331173218"
+                    src={
+                      prd.length > 0
+                        ? prd[1].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -82,7 +91,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W003" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220329/2453502/2453502_1_500.jpg?t=20220405102956"
+                    src={
+                      prd.length > 0
+                        ? prd[2].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -106,7 +119,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W004" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/prd_img/20220329/2453556/detail_2453556_3_500.jpg"
+                    src={
+                      prd.length > 0
+                        ? prd[3].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -130,7 +147,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W005" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220329/2453552/2453552_1_500.jpg?t=20220331173345"
+                    src={
+                      prd.length > 0
+                        ? prd[4].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -154,7 +175,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W006" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220420/2503701/2503701_2_500.jpg?t=20220426143913"
+                    src={
+                      prd.length > 0
+                        ? prd[5].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -178,7 +203,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W007" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220211/2354451/2354451_2_500.jpg?t=20220426145355"
+                    src={
+                      prd.length > 0
+                        ? prd[6].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -206,7 +235,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W008" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220211/2354455/2354455_2_500.jpg?t=20220426145321"
+                    src={
+                      prd.length > 0
+                        ? prd[7].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -230,7 +263,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W009" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220211/2354445/2354445_2_500.jpg?t=20220426144329"
+                    src={
+                      prd.length > 0
+                        ? prd[8].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -257,7 +294,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W010" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220420/2503745/2503745_2_500.jpg?t=20220426143633"
+                    src={
+                      prd.length > 0
+                        ? prd[9].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -284,7 +325,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W011" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220527/2588169/2588169_2_500.jpg?t=20220527163630"
+                    src={
+                      prd.length > 0
+                        ? prd[10].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -308,7 +353,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W012" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220527/2587926/2587926_2_500.jpg?t=20220527154906"
+                    src={
+                      prd.length > 0
+                        ? prd[11].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -335,7 +384,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W013" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220527/2587896/2587896_1_500.jpg?t=20220527154737"
+                    src={
+                      prd.length > 0
+                        ? prd[12].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -359,7 +412,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W014" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220527/2588100/2588100_2_500.jpg?t=20220527161848"
+                    src={
+                      prd.length > 0
+                        ? prd[13].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -383,7 +440,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W015" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220527/2588114/2588114_2_500.jpg?t=20220527162558"
+                    src={
+                      prd.length > 0
+                        ? prd[14].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -411,7 +472,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W016" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220527/2588111/2588111_2_500.jpg?t=20220527162419"
+                    src={
+                      prd.length > 0
+                        ? prd[15].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -438,7 +503,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W017" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220527/2588174/2588174_2_500.jpg?t=20220527163722"
+                    src={
+                      prd.length > 0
+                        ? prd[16].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -462,7 +531,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W018" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220527/2588038/2588038_2_500.jpg?t=20220527161437"
+                    src={
+                      prd.length > 0
+                        ? prd[17].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -490,7 +563,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W019" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220527/2588101/2588101_2_500.jpg?t=20220527161923"
+                    src={
+                      prd.length > 0
+                        ? prd[18].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -517,7 +594,11 @@ const Woman = ({ prd }) => {
               <Link to="/WSBP" state={{ data: "W020" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220527/2588120/2588120_2_500.jpg?t=20220527162743"
+                    src={
+                      prd.length > 0
+                        ? prd[19].prdimg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">

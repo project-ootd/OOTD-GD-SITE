@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "../styles/Topbar.scss";
-import { Link } from "react-router-dom";
 import Login from "./Login";
 import { BsEye } from "react-icons/bs";
+import { Link } from "react-router-dom";
+// import { Router } from "express";
 
-const Topbar = () => {
+const Topbar = ({ prd }) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [prd, setPrd] = useState([]);
+  useEffect(() => {
+    const getData = async () => {
+      const data = await axios({
+        url: `http://localhost:4000/test2`,
+        method: "GET",
+      });
+      // console.log("data", data.data);
+      setPrd(data.data);
+      setIsLoading(false);
+      // console.log(prd[2].prdName);
+    };
+    getData();
+  }, []);
+
+  if (isLoading) {
+    return <>Loading...</>;
+  }
+
+  // console.log(prd);
+
   return (
     <div className="top-bar">
       <header>
@@ -20,55 +44,41 @@ const Topbar = () => {
           <div className="menu-box-1">
             <ul>
               <li>
-                <Link to="/MGDP">MAN</Link>
+                <Link to={`/WGDP/M`}>MAN</Link>
                 <ul>
                   <li>
-                    <Link to="#">SUMMER</Link>
+                    SUMMER
                     <ul>
-                      <li>
-                        <Link to="#">TOP</Link>
-                      </li>
-                      <li>
-                        <Link to="#">BOTTOM</Link>
-                      </li>
+                      <li>TOP</li>
+                      <li>BOTTOM</li>
                     </ul>
                   </li>
                   <li>
-                    <Link to="#">WINTER</Link>
+                    WINTER
                     <ul>
-                      <li>
-                        <Link to="#">TOP</Link>
-                      </li>
-                      <li>
-                        <Link to="#">BOTTOM</Link>
-                      </li>
+                      <li>TOP</li>
+                      <li>BOTTOM</li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li>
-                <Link to="/WGDP">WOMAN</Link>
+                <Link to="/WGDP" state={{ prd: prd, prdNo: "W" }}>
+                  WOMAN
+                </Link>
                 <ul>
                   <li>
-                    <Link to="#">SUMMER</Link>
+                    SUMMER
                     <ul>
-                      <li>
-                        <Link to="#">TOP</Link>
-                      </li>
-                      <li>
-                        <Link to="#">BOTTOM</Link>
-                      </li>
+                      <li>TOP</li>
+                      <li>BOTTOM</li>
                     </ul>
                   </li>
                   <li>
-                    <Link to="#">WINTER</Link>
+                    WINTER
                     <ul>
-                      <li>
-                        <Link to="#">TOP</Link>
-                      </li>
-                      <li>
-                        <Link to="#">BOTTOM</Link>
-                      </li>
+                      <li>TOP</li>
+                      <li>BOTTOM</li>
                     </ul>
                   </li>
                 </ul>
@@ -77,25 +87,17 @@ const Topbar = () => {
                 <Link to="/KGDP">KIDS</Link>
                 <ul>
                   <li>
-                    <Link to="#">SUMMER</Link>
+                    SUMMER
                     <ul>
-                      <li>
-                        <Link to="#">TOP</Link>
-                      </li>
-                      <li>
-                        <Link to="#">BOTTOM</Link>
-                      </li>
+                      <li>TOP</li>
+                      <li>BOTTOM</li>
                     </ul>
                   </li>
                   <li>
-                    <Link to="#">WINTER</Link>
+                    WINTER
                     <ul>
-                      <li>
-                        <Link to="#">TOP</Link>
-                      </li>
-                      <li>
-                        <Link to="#">BOTTOM</Link>
-                      </li>
+                      <li>TOP</li>
+                      <li>BOTTOM</li>
                     </ul>
                   </li>
                 </ul>
@@ -104,25 +106,17 @@ const Topbar = () => {
                 <Link to="/RGDP">ACCESSORY</Link>
                 <ul>
                   <li>
-                    <Link to="#">RING</Link>
+                    RING
                     <ul>
-                      <li>
-                        <Link to="#">GOLD</Link>
-                      </li>
-                      <li>
-                        <Link to="#">DIAMOND</Link>
-                      </li>
+                      <li>GOLD</li>
+                      <li>DIAMOND</li>
                     </ul>
                   </li>
                   <li>
-                    <Link to="#">NECKLACE</Link>
+                    NECKLACE
                     <ul>
-                      <li>
-                        <Link to="#">GOLD</Link>
-                      </li>
-                      <li>
-                        <Link to="#">DIAMOND</Link>
-                      </li>
+                      <li>GOLD</li>
+                      <li>DIAMOND</li>
                     </ul>
                   </li>
                 </ul>

@@ -3,26 +3,40 @@ import axios from "axios";
 import Woman from "../components/Woman";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
+import { useLocation, useParams } from "react-router-dom";
 
 const WGDP = () => {
-  const [prd, setPrd] = useState([]);
+  const location = useLocation();
+  const params = useParams();
+  console.log(params, params);
+  // console.log("location", location.state);
+  const prdno = location.state.prdNo;
+  // console.log("prdno123", prdno);
+  const [wprd, setWprd] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const getData = async () => {
       const data = await axios({
-        url: `http://localhost:4000/test2`,
-        method: "GET",
+        url: `http://localhost:4000/prdlist`,
+        method: "POST",
+        data: { prdno },
       });
-      // console.log("data", data.data);
-      setPrd(data.data);
-      // console.log(prd[2].prdName);
+
+      setWprd(data.data);
+      setIsLoading(false);
     };
     getData();
   }, []);
 
+  if (isLoading) {
+    return <>Loading...</>;
+  }
+
   return (
     <>
-      <Topbar />
-      <Woman prd={prd} />
+      <Topbar prd={wprd} />
+      <Woman prd={wprd} />
       <Footer />
     </>
   );

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Topbar from "../components/Topbar";
 import SubDetailWoman from "../sub_detail/SubDetailWoman";
