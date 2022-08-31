@@ -30,7 +30,7 @@ const WSBP = () => {
     setPrdName(data.data.prdName);
     setPrdEName(data.data.prdEName);
     setPrdPrice(data.data.prdPrice);
-    setPrdImg(data.data.prdImg);
+    setPrdImg(data.data.prdimg);
   };
   getData();
   // }, []);

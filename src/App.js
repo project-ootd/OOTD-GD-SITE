@@ -7,10 +7,12 @@ import Footer from "./components/Footer";
 import Popup from "./components/Pop-up";
 
 // WGDP 페이지 prdno 에러
-// Woman 페이지 state, img에 배열로 못 넣는지 물어보기
+// Woman 페이지 state 배열로 못 넣는지 물어보기
 
 function App() {
   const [prd, setPrd] = useState([]);
+
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const getData = async () => {
       const data = await axios({
@@ -19,10 +21,15 @@ function App() {
       });
       // console.log("data", data.data);
       setPrd(data.data);
+      setIsLoading(false);
       // console.log(prd[2].prdName);
     };
     getData();
   }, []);
+
+  if (isLoading) {
+    return <>Loading...</>;
+  }
 
   return (
     <div>

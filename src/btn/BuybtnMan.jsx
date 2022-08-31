@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BiWon } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import "../styles/subscss/Buybtn.scss";
