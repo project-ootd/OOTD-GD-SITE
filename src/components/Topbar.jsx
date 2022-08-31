@@ -1,10 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "../styles/Topbar.scss";
-import { Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams,
+} from "react-router-dom";
 import Login from "./Login";
 import { BsEye } from "react-icons/bs";
 
 const Topbar = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [prd, setPrd] = useState([]);
+  useEffect(() => {
+    const getData = async () => {
+      const data = await axios({
+        url: `http://localhost:4000/test2`,
+        method: "GET",
+      });
+      // console.log("data", data.data);
+      setPrd(data.data);
+      setIsLoading(false);
+      // console.log(prd[2].prdName);
+    };
+    getData();
+  }, []);
+
+  if (isLoading) {
+    return <>Loading...</>;
+  }
+
   return (
     <div className="top-bar">
       <header>
@@ -20,7 +47,11 @@ const Topbar = () => {
           <div className="menu-box-1">
             <ul>
               <li>
-                <Link to="/MGDP">MAN</Link>
+                {/* <Link to="/WGDP" state={{ prd: prd, prdNo: "K" }}> */}
+                {/* <Link to="/MGDP"> */}
+                <Link to="/WGDP" state={{ prd: prd, prdNo: "M" }}>
+                  MAN
+                </Link>
                 <ul>
                   <li>
                     <Link to="#">SUMMER</Link>
@@ -47,7 +78,20 @@ const Topbar = () => {
                 </ul>
               </li>
               <li>
-                <Link to="/WGDP">WOMAN</Link>
+                {/* {console.log("link", prd)} */}
+                {/* <Link
+                  to={{
+                    pathname: url,
+                    state: {
+                      prd: prd,
+                      prdNo: "W",
+                    },
+                  }}
+                > */}
+                <Link to="/WGDP" state={{ prd: prd, prdNo: "W" }}>
+                  {/* // <Link to="/WGDP" state={prd}> */}
+                  WOMAN
+                </Link>
                 <ul>
                   <li>
                     <Link to="#">SUMMER</Link>

@@ -22,12 +22,17 @@ const Login = () => {
       {/*  로그인/회원가입 버튼  */}
 
       {authenticated ? (
-        <div style={{ display: "flex" }}>
+        <div
+          style={{
+            display: "flex",
+          }}
+        >
           <div
             style={{
               display: "flex",
               fontSize: "30px",
               alignItems: "center",
+              margin: "0 8px 0 0",
             }}
           >
             <UserIcon />
