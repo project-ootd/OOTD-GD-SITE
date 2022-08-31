@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../styles/Topbar.scss";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-} from "react-router-dom";
 import Login from "./Login";
 import { BsEye } from "react-icons/bs";
+import { Link } from "react-router-dom";
+// import { Router } from "express";
 
-const Topbar = () => {
+const Topbar = ({ prd }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [prd, setPrd] = useState([]);
   useEffect(() => {
@@ -32,6 +27,8 @@ const Topbar = () => {
     return <>Loading...</>;
   }
 
+  // console.log(prd);
+
   return (
     <div className="top-bar">
       <header>
@@ -47,72 +44,41 @@ const Topbar = () => {
           <div className="menu-box-1">
             <ul>
               <li>
-                {/* <Link to="/WGDP" state={{ prd: prd, prdNo: "K" }}> */}
-                {/* <Link to="/MGDP"> */}
-                <Link to="/WGDP" state={{ prd: prd, prdNo: "M" }}>
-                  MAN
-                </Link>
+                <Link to={`/WGDP/M`}>MAN</Link>
                 <ul>
                   <li>
-                    <Link to="#">SUMMER</Link>
+                    SUMMER
                     <ul>
-                      <li>
-                        <Link to="#">TOP</Link>
-                      </li>
-                      <li>
-                        <Link to="#">BOTTOM</Link>
-                      </li>
+                      <li>TOP</li>
+                      <li>BOTTOM</li>
                     </ul>
                   </li>
                   <li>
-                    <Link to="#">WINTER</Link>
+                    WINTER
                     <ul>
-                      <li>
-                        <Link to="#">TOP</Link>
-                      </li>
-                      <li>
-                        <Link to="#">BOTTOM</Link>
-                      </li>
+                      <li>TOP</li>
+                      <li>BOTTOM</li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li>
-                {/* {console.log("link", prd)} */}
-                {/* <Link
-                  to={{
-                    pathname: url,
-                    state: {
-                      prd: prd,
-                      prdNo: "W",
-                    },
-                  }}
-                > */}
                 <Link to="/WGDP" state={{ prd: prd, prdNo: "W" }}>
-                  {/* // <Link to="/WGDP" state={prd}> */}
                   WOMAN
                 </Link>
                 <ul>
                   <li>
-                    <Link to="#">SUMMER</Link>
+                    SUMMER
                     <ul>
-                      <li>
-                        <Link to="#">TOP</Link>
-                      </li>
-                      <li>
-                        <Link to="#">BOTTOM</Link>
-                      </li>
+                      <li>TOP</li>
+                      <li>BOTTOM</li>
                     </ul>
                   </li>
                   <li>
-                    <Link to="#">WINTER</Link>
+                    WINTER
                     <ul>
-                      <li>
-                        <Link to="#">TOP</Link>
-                      </li>
-                      <li>
-                        <Link to="#">BOTTOM</Link>
-                      </li>
+                      <li>TOP</li>
+                      <li>BOTTOM</li>
                     </ul>
                   </li>
                 </ul>
@@ -121,25 +87,17 @@ const Topbar = () => {
                 <Link to="/KGDP">KIDS</Link>
                 <ul>
                   <li>
-                    <Link to="#">SUMMER</Link>
+                    SUMMER
                     <ul>
-                      <li>
-                        <Link to="#">TOP</Link>
-                      </li>
-                      <li>
-                        <Link to="#">BOTTOM</Link>
-                      </li>
+                      <li>TOP</li>
+                      <li>BOTTOM</li>
                     </ul>
                   </li>
                   <li>
-                    <Link to="#">WINTER</Link>
+                    WINTER
                     <ul>
-                      <li>
-                        <Link to="#">TOP</Link>
-                      </li>
-                      <li>
-                        <Link to="#">BOTTOM</Link>
-                      </li>
+                      <li>TOP</li>
+                      <li>BOTTOM</li>
                     </ul>
                   </li>
                 </ul>
@@ -148,25 +106,17 @@ const Topbar = () => {
                 <Link to="/RGDP">ACCESSORY</Link>
                 <ul>
                   <li>
-                    <Link to="#">RING</Link>
+                    RING
                     <ul>
-                      <li>
-                        <Link to="#">GOLD</Link>
-                      </li>
-                      <li>
-                        <Link to="#">DIAMOND</Link>
-                      </li>
+                      <li>GOLD</li>
+                      <li>DIAMOND</li>
                     </ul>
                   </li>
                   <li>
-                    <Link to="#">NECKLACE</Link>
+                    NECKLACE
                     <ul>
-                      <li>
-                        <Link to="#">GOLD</Link>
-                      </li>
-                      <li>
-                        <Link to="#">DIAMOND</Link>
-                      </li>
+                      <li>GOLD</li>
+                      <li>DIAMOND</li>
                     </ul>
                   </li>
                 </ul>
