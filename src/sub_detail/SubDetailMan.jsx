@@ -8,7 +8,7 @@ import FavoritCheck from "../btn/FavoritCheck";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
 
-const SubDetailMan = () => {
+const SubDetailMan = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   return (
     <>
       <Topbar />
