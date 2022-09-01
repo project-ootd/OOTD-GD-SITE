@@ -30,7 +30,7 @@ root.render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/RGDP" element={<RGDP />} />
-          <Route path="/KGDP" element={<KGDP />} />
+          <Route path="/KIDS" element={<KGDP />} />
           <Route path="/BuyMan" element={<BuyMan />} />
           <Route path="/BuyWoman" element={<BuyWoman />} />
           <Route path="/BuyKids" element={<BuyKids />} />
@@ -42,7 +42,8 @@ root.render(
           <Route path="/WSBP" element={<WSBP />} />
           <Route path="/RSBP" element={<RSBP />} />
           <Route path="/WGDP" element={<WGDP />} />
-          <Route path="/WGDP/:number" component={<WGDP />} />
+          {/* <Route path="/MGDP/:number" element={<MGDP />}></Route> */}
+          <Route path="/WGDP/:number" element={<WGDP />}></Route>
           <Route path="/Join" element={<Join />} />
           <Route path="/Carousel" element={<Carousel />} />
         </Routes>

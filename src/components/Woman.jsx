@@ -12,7 +12,7 @@ const Woman = ({ prd }) => {
         </div>
         <div className="main-pic">
           <img
-            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzExMTRfMTQ0%2FMDAxNTEwNjI4MzI3MjQz.qj1sxYqHpSI70QFo4CDLEtZqHljHf-nE_P4XA5qbqPsg.m2AQGcQkwVpesYetoNvyN3WzNlA2hmkxJMlOGts6jQ4g.JPEG.banillamodels%2F2015091182355.jpg&type=sc960_832"
+            src={prd.length > 0 ? prd[20].prdImg : console.log("이미지 없음")}
             alt=""
           />
         </div>
@@ -25,7 +25,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[0].prdimg
+                        ? prd[0].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -65,7 +65,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[1].prdimg
+                        ? prd[1].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -93,7 +93,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[2].prdimg
+                        ? prd[2].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -121,7 +121,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[3].prdimg
+                        ? prd[3].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -149,7 +149,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[4].prdimg
+                        ? prd[4].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -177,7 +177,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[5].prdimg
+                        ? prd[5].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -205,7 +205,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[6].prdimg
+                        ? prd[6].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -237,7 +237,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[7].prdimg
+                        ? prd[7].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -265,7 +265,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[8].prdimg
+                        ? prd[8].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -296,7 +296,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[9].prdimg
+                        ? prd[9].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -327,7 +327,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[10].prdimg
+                        ? prd[10].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -355,7 +355,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[11].prdimg
+                        ? prd[11].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -386,7 +386,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[12].prdimg
+                        ? prd[12].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -414,7 +414,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[13].prdimg
+                        ? prd[13].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -442,7 +442,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[14].prdimg
+                        ? prd[14].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -474,7 +474,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[15].prdimg
+                        ? prd[15].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -505,7 +505,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[16].prdimg
+                        ? prd[16].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -533,7 +533,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[17].prdimg
+                        ? prd[17].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -565,7 +565,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[18].prdimg
+                        ? prd[18].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""
@@ -596,7 +596,7 @@ const Woman = ({ prd }) => {
                   <img
                     src={
                       prd.length > 0
-                        ? prd[19].prdimg
+                        ? prd[19].prdImg
                         : console.log("이미지 없음")
                     }
                     alt=""

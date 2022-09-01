@@ -6,7 +6,7 @@ import { BsEye } from "react-icons/bs";
 import { Link } from "react-router-dom";
 // import { Router } from "express";
 
-const Topbar = ({ prd }) => {
+const Topbar = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [prd, setPrd] = useState([]);
   useEffect(() => {
@@ -19,6 +19,7 @@ const Topbar = ({ prd }) => {
       setPrd(data.data);
       setIsLoading(false);
       // console.log(prd[2].prdName);
+      console.log("실행됨", prd[0].category);
     };
     getData();
   }, []);
@@ -44,7 +45,9 @@ const Topbar = ({ prd }) => {
           <div className="menu-box-1">
             <ul>
               <li>
-                <Link to={`/WGDP/M`}>MAN</Link>
+                <Link to={`/MGDP`} state={{ prd: prd, prdNo: "M" }}>
+                  MAN
+                </Link>
                 <ul>
                   <li>
                     SUMMER
@@ -63,7 +66,8 @@ const Topbar = ({ prd }) => {
                 </ul>
               </li>
               <li>
-                <Link to="/WGDP" state={{ prd: prd, prdNo: "W" }}>
+                <Link to={`/WGDP/W`}>
+                  {/* <Link to="/WGDP" state={{ prd: prd, prdNo: "W" }}> */}
                   WOMAN
                 </Link>
                 <ul>
@@ -84,7 +88,12 @@ const Topbar = ({ prd }) => {
                 </ul>
               </li>
               <li>
-                <Link to="/KGDP">KIDS</Link>
+                <Link
+                  to={`/${prd[0].category}`}
+                  state={{ prd: prd, prdNo: "K" }}
+                >
+                  KIDS
+                </Link>
                 <ul>
                   <li>
                     SUMMER
