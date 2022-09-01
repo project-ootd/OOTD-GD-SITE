@@ -18,10 +18,14 @@ const Man = ({ prd }) => {
         <div className="list-box-1 con">
           <ul className="row">
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M001" }}>
+              <Link to="/WSBP" state={{ data: "M001" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220509/2545522/2545522_1_500.jpg?t=20220519141825"
+                    src={
+                      prd.length > 0
+                        ? prd[0].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -46,10 +50,14 @@ const Man = ({ prd }) => {
             </li>
 
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M002" }}>
+              <Link to="/WSBP" state={{ data: "M002" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220420/2503002/2503002_1_500.jpg?t=20220506124346"
+                    src={
+                      prd.length > 0
+                        ? prd[1].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -58,12 +66,12 @@ const Man = ({ prd }) => {
                 </div>
                 <div className="prod-name">
                   {" "}
-                  {prd.length > 0 && prd[0].prdName}
+                  {prd.length > 0 && prd[1].prdName}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
-                    {prd[0].prdPrice
+                    {prd[1].prdPrice
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
@@ -74,10 +82,14 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M003" }}>
+              <Link to="/WSBP" state={{ data: "M003" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220420/2503004/2503004_1_500.jpg?t=20220506124131"
+                    src={
+                      prd.length > 0
+                        ? prd[2].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -85,12 +97,12 @@ const Man = ({ prd }) => {
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
+                  {prd.length > 0 && prd[2].prdName}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
-                    {prd[0].prdPrice
+                    {prd[2].prdPrice
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
@@ -101,10 +113,14 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M004" }}>
+              <Link to="/WSBP" state={{ data: "M004" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220509/2545524/2545524_1_500.jpg?t=20220519141924"
+                    src={
+                      prd.length > 0
+                        ? prd[3].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -112,12 +128,12 @@ const Man = ({ prd }) => {
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
+                  {prd.length > 0 && prd[3].prdName}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
-                    {prd[0].prdPrice
+                    {prd[3].prdPrice
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
@@ -128,10 +144,14 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M005" }}>
+              <Link to="/WSBP" state={{ data: "M005" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220509/2545536/2545536_1_500.jpg?t=20220519143344"
+                    src={
+                      prd.length > 0
+                        ? prd[4].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -139,12 +159,12 @@ const Man = ({ prd }) => {
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
+                  {prd.length > 0 && prd[4].prdName}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
-                    {prd[0].prdPrice
+                    {prd[4].prdPrice
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
@@ -155,10 +175,14 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M006" }}>
+              <Link to="/WSBP" state={{ data: "M006" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20190503/1033848/1033848_1_500.jpg?t=20220422133513"
+                    src={
+                      prd.length > 0
+                        ? prd[5].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -166,12 +190,12 @@ const Man = ({ prd }) => {
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
+                  {prd.length > 0 && prd[5].prdName}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
-                    {prd[0].prdPrice
+                    {prd[5].prdPrice
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
@@ -182,10 +206,14 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M007" }}>
+              <Link to="/WSBP" state={{ data: "M007" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20190503/1033849/1033849_1_500.jpg?t=20220422134200"
+                    src={
+                      prd.length > 0
+                        ? prd[6].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -193,12 +221,12 @@ const Man = ({ prd }) => {
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
+                  {prd.length > 0 && prd[6].prdName}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
-                    {prd[0].prdPrice
+                    {prd[6].prdPrice
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
@@ -209,10 +237,14 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M008" }}>
+              <Link to="/WSBP" state={{ data: "M008" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220422/2509149/2509149_1_500.jpg?t=20220422134408"
+                    src={
+                      prd.length > 0
+                        ? prd[7].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -220,12 +252,12 @@ const Man = ({ prd }) => {
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
+                  {prd.length > 0 && prd[7].prdName}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
-                    {prd[0].prdPrice
+                    {prd[7].prdPrice
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
@@ -236,10 +268,14 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M009" }}>
+              <Link to="/WSBP" state={{ data: "M009" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220422/2509172/2509172_1_500.jpg?t=20220422134428"
+                    src={
+                      prd.length > 0
+                        ? prd[8].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -247,12 +283,12 @@ const Man = ({ prd }) => {
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
+                  {prd.length > 0 && prd[8].prdName}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
-                    {prd[0].prdPrice
+                    {prd[8].prdPrice
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
@@ -263,10 +299,14 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M010" }}>
+              <Link to="/WSBP" state={{ data: "M010" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220422/2510184/2510184_1_500.jpg?t=20220429105158"
+                    src={
+                      prd.length > 0
+                        ? prd[9].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -274,12 +314,12 @@ const Man = ({ prd }) => {
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
+                  {prd.length > 0 && prd[9].prdName}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
-                    {prd[0].prdPrice
+                    {prd[9].prdPrice
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
@@ -290,10 +330,14 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M011" }}>
+              <Link to="/WSBP" state={{ data: "M011" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20190503/1033853/1033853_1_500.jpg?t=20220422135855"
+                    src={
+                      prd.length > 0
+                        ? prd[10].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -301,12 +345,12 @@ const Man = ({ prd }) => {
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
+                  {prd.length > 0 && prd[10].prdName}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
-                    {prd[0].prdPrice
+                    {prd[10].prdPrice
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
@@ -317,10 +361,14 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M012" }}>
+              <Link to="/WSBP" state={{ data: "M012" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20190503/1033854/1033854_1_500.jpg?t=20220422135928"
+                    src={
+                      prd.length > 0
+                        ? prd[11].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -328,12 +376,12 @@ const Man = ({ prd }) => {
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
+                  {prd.length > 0 && prd[11].prdName}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
-                    {prd[0].prdPrice
+                    {prd[11].prdPrice
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
@@ -344,10 +392,14 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M013" }}>
+              <Link to="/WSBP" state={{ data: "M013" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20190607/1066104/1066104_1_500.jpg?t=20220422140034"
+                    src={
+                      prd.length > 0
+                        ? prd[12].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -355,12 +407,12 @@ const Man = ({ prd }) => {
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
+                  {prd.length > 0 && prd[12].prdName}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
-                    {prd[0].prdPrice
+                    {prd[12].prdPrice
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
@@ -371,10 +423,14 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M014" }}>
+              <Link to="/WSBP" state={{ data: "M014" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20200429/1427125/1427125_1_500.jpg?t=20220422140053"
+                    src={
+                      prd.length > 0
+                        ? prd[13].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -382,12 +438,12 @@ const Man = ({ prd }) => {
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
+                  {prd.length > 0 && prd[13].prdName}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
-                    {prd[0].prdPrice
+                    {prd[13].prdPrice
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
@@ -398,92 +454,14 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M015" }}>
+              <Link to="/WSBP" state={{ data: "M015" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20200429/1427126/1427126_1_500.jpg?t=20220422140129"
-                    alt=""
-                  />
-                  <div className="ico-view">
-                    <i className="fas fa-search" />
-                  </div>
-                </div>
-
-                <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
-                </div>
-                {prd.length > 0 && (
-                  <div className="prod-price">
-                    {" "}
-                    {prd[0].prdPrice
-                      .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                  </div>
-                )}
-                <div className="free-del">
-                  <span />
-                </div>
-              </Link>
-            </li>
-            <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M016" }}>
-                <div className="img-box">
-                  <img
-                    src="https://image.msscdn.net/images/goods_img/20220429/2532247/2532247_2_500.jpg?t=20220503145324"
-                    alt=""
-                  />
-                  <div className="ico-view">
-                    <i className="fas fa-search" />
-                  </div>
-                </div>
-                <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
-                </div>
-                {prd.length > 0 && (
-                  <div className="prod-price">
-                    {" "}
-                    {prd[0].prdPrice
-                      .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                  </div>
-                )}
-                <div className="free-del">
-                  <span />
-                </div>
-              </Link>
-            </li>
-            <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M017" }}>
-                <div className="img-box">
-                  <img
-                    src="https://image.msscdn.net/images/goods_img/20210622/2004880/2004880_5_500.jpg?t=20220504163412"
-                    alt=""
-                  />
-                  <div className="ico-view">
-                    <i className="fas fa-search" />
-                  </div>
-                </div>
-                <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
-                </div>
-                {prd.length > 0 && (
-                  <div className="prod-price">
-                    {" "}
-                    {prd[0].prdPrice
-                      .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                  </div>
-                )}
-                <div className="free-del">
-                  <span />
-                </div>
-              </Link>
-            </li>
-            <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M018" }}>
-                <div className="img-box">
-                  <img
-                    src="https://image.msscdn.net/images/goods_img/20220429/2532248/2532248_2_500.jpg?t=20220503145316"
+                    src={
+                      prd.length > 0
+                        ? prd[14].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -492,12 +470,12 @@ const Man = ({ prd }) => {
                 </div>
 
                 <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
+                  {prd.length > 0 && prd[14].prdName}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
-                    {prd[0].prdPrice
+                    {prd[14].prdPrice
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
@@ -508,10 +486,14 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M019" }}>
+              <Link to="/WSBP" state={{ data: "M016" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20210622/2004877/2004877_5_500.jpg?t=20220504163419"
+                    src={
+                      prd.length > 0
+                        ? prd[15].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -519,12 +501,12 @@ const Man = ({ prd }) => {
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
+                  {prd.length > 0 && prd[15].prdName}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
-                    {prd[0].prdPrice
+                    {prd[15].prdPrice
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
@@ -535,10 +517,14 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/SubDetailMan" state={{ data: "M020" }}>
+              <Link to="/WSBP" state={{ data: "M017" }}>
                 <div className="img-box">
                   <img
-                    src="https://image.msscdn.net/images/goods_img/20220429/2532256/2532256_2_500.jpg?t=20220503145238"
+                    src={
+                      prd.length > 0
+                        ? prd[16].prdImg
+                        : console.log("이미지 없음")
+                    }
                     alt=""
                   />
                   <div className="ico-view">
@@ -546,12 +532,106 @@ const Man = ({ prd }) => {
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[0].prdName}
+                  {prd.length > 0 && prd[16].prdName}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
-                    {prd[0].prdPrice
+                    {prd[16].prdPrice
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                  </div>
+                )}
+                <div className="free-del">
+                  <span />
+                </div>
+              </Link>
+            </li>
+            <li className="cell">
+              <Link to="/WSBP" state={{ data: "M018" }}>
+                <div className="img-box">
+                  <img
+                    src={
+                      prd.length > 0
+                        ? prd[17].prdImg
+                        : console.log("이미지 없음")
+                    }
+                    alt=""
+                  />
+                  <div className="ico-view">
+                    <i className="fas fa-search" />
+                  </div>
+                </div>
+
+                <div className="prod-name">
+                  {prd.length > 0 && prd[17].prdName}
+                </div>
+                {prd.length > 0 && (
+                  <div className="prod-price">
+                    {" "}
+                    {prd[17].prdPrice
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                  </div>
+                )}
+                <div className="free-del">
+                  <span />
+                </div>
+              </Link>
+            </li>
+            <li className="cell">
+              <Link to="/WSBP" state={{ data: "M019" }}>
+                <div className="img-box">
+                  <img
+                    src={
+                      prd.length > 0
+                        ? prd[18].prdImg
+                        : console.log("이미지 없음")
+                    }
+                    alt=""
+                  />
+                  <div className="ico-view">
+                    <i className="fas fa-search" />
+                  </div>
+                </div>
+                <div className="prod-name">
+                  {prd.length > 0 && prd[18].prdName}
+                </div>
+                {prd.length > 0 && (
+                  <div className="prod-price">
+                    {" "}
+                    {prd[18].prdPrice
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                  </div>
+                )}
+                <div className="free-del">
+                  <span />
+                </div>
+              </Link>
+            </li>
+            <li className="cell">
+              <Link to="/WSBP" state={{ data: "M020" }}>
+                <div className="img-box">
+                  <img
+                    src={
+                      prd.length > 0
+                        ? prd[19].prdImg
+                        : console.log("이미지 없음")
+                    }
+                    alt=""
+                  />
+                  <div className="ico-view">
+                    <i className="fas fa-search" />
+                  </div>
+                </div>
+                <div className="prod-name">
+                  {prd.length > 0 && prd[19].prdName}
+                </div>
+                {prd.length > 0 && (
+                  <div className="prod-price">
+                    {" "}
+                    {prd[19].prdPrice
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>

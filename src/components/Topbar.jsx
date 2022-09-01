@@ -15,11 +15,8 @@ const Topbar = () => {
         url: `http://localhost:4000/test2`,
         method: "GET",
       });
-      // console.log("data", data.data);
       setPrd(data.data);
       setIsLoading(false);
-      // console.log(prd[2].prdName);
-      console.log("실행됨", prd[0].category);
     };
     getData();
   }, []);
@@ -27,9 +24,6 @@ const Topbar = () => {
   if (isLoading) {
     return <>Loading...</>;
   }
-
-  // console.log(prd);
-
   return (
     <div className="top-bar">
       <header>
@@ -45,9 +39,7 @@ const Topbar = () => {
           <div className="menu-box-1">
             <ul>
               <li>
-                <Link to={`/MGDP`} state={{ prd: prd, prdNo: "M" }}>
-                  MAN
-                </Link>
+                <Link to={`/WGDP/M`}>MAN</Link>
                 <ul>
                   <li>
                     SUMMER
@@ -66,10 +58,7 @@ const Topbar = () => {
                 </ul>
               </li>
               <li>
-                <Link to={`/WGDP/W`}>
-                  {/* <Link to="/WGDP" state={{ prd: prd, prdNo: "W" }}> */}
-                  WOMAN
-                </Link>
+                <Link to={`/WGDP/W`}>WOMAN</Link>
                 <ul>
                   <li>
                     SUMMER
@@ -88,12 +77,7 @@ const Topbar = () => {
                 </ul>
               </li>
               <li>
-                <Link
-                  to={`/${prd[0].category}`}
-                  state={{ prd: prd, prdNo: "K" }}
-                >
-                  KIDS
-                </Link>
+                <Link to={`/WGDP/K`}>KIDS</Link>
                 <ul>
                   <li>
                     SUMMER

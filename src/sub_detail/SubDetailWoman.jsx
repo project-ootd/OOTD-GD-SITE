@@ -5,15 +5,26 @@ import { Link } from "react-router-dom";
 import BuybtnMan from "../btn/BuybtnMan";
 import ShoppingCart from "../btn/ShoppingCart";
 import FavoritCheck from "../btn/FavoritCheck";
+import { useRecoilState } from "recoil";
+import { authenticatedState } from "../recoil/authState";
+import axios from "axios";
 
 const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
+  const [authenticated, setAuthenticated] = useRecoilState(authenticatedState);
+
+  const cartAdd = async () => {
+    await axios({
+      url: `http://localhost:4000/cart`,
+      method: "POST",
+      data: {
+        prdId,
+      },
+    });
+  };
+
   return (
     <>
       <div>
-        {/* {console.log("prdIdddd", prdId)}
-        {console.log("prdName", prdName)}
-        {console.log("prdPrice", prdPrice)} */}
-        {console.log("prdImg", prdImg)}
         <p className="title_name">
           {" "}
           {prdName}
@@ -80,9 +91,17 @@ const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
             <hr />
             <div className="buy-btn-box flex">
               <div className="buy">
-                <Link to="/BuyWoman">
+                {console.log(authenticated)}
+                {authenticated == true ? (
+                  <Link to={`/BuyWoman/${prdId}`} onClick={cartAdd}>
+                    <BuybtnMan />
+                  </Link>
+                ) : (
+                  console.log("로그인이 필요합니다.")
+                )}
+                {/* <Link to="/BuyWoman">
                   <BuybtnMan />
-                </Link>
+                </Link> */}
               </div>
               <div className="cart">
                 <ShoppingCart />

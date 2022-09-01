@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/buy/BuyMan.scss";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 const BuyWoman = (args) => {
+  const [prdId, setPrdId] = useState("");
+
   return (
     <>
       <Topbar />
       <div
         className="overflow-x-auto w-full"
-        style={{ width: "50%", margin: "15vh auto" }}
+        style={{ width: "60%", margin: "15vh auto" }}
       >
         <table className="table w-full">
           {/* head */}
@@ -24,7 +26,7 @@ const BuyWoman = (args) => {
               <th>상품명</th>
               <th>수량</th>
               <th>가격</th>
-              <th />
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -59,14 +61,14 @@ const BuyWoman = (args) => {
                 {/* <span className="badge badge-ghost badge-sm"></span> */}
               </td>
               <td>25,000원</td>
-              <th>
+              <td>
                 <button
                   className="btn btn-ghost btn-mg"
                   style={{ color: "red" }}
                 >
                   삭제
                 </button>
-              </th>
+              </td>
             </tr>
 
             {/* row 4 */}
@@ -92,7 +94,7 @@ const BuyWoman = (args) => {
               <td style={{ fontSize: "1rem", fontWeight: "bold" }}>
                 총 수량
                 <br />
-                <th
+                <div
                   style={{
                     textAlign: "center",
                     color: "red",
@@ -101,13 +103,13 @@ const BuyWoman = (args) => {
                   }}
                 >
                   1
-                </th>
+                </div>
                 {/* <span className="badge badge-ghost badge-sm"></span> */}
               </td>
               <td style={{ fontSize: "1rem", fontWeight: "bold" }}>
                 총 가격
                 <br />
-                <th
+                <div
                   style={{
                     textAlign: "center",
                     color: "red",
@@ -116,7 +118,7 @@ const BuyWoman = (args) => {
                   }}
                 >
                   25,000원
-                </th>
+                </div>
                 {/* <span className="badge badge-ghost badge-lg"></span> */}
               </td>
               <th></th>
@@ -129,14 +131,17 @@ const BuyWoman = (args) => {
               <th></th>
               <th>
                 <Link to="/WSBP">
-                  <button class="btn">돌아가기</button>
+                  <button className="btn">돌아가기</button>
                 </Link>
               </th>
-              <th>
-                <button class="btn btn-secondary" style={{ marginLeft: "0" }}>
+              <td>
+                <button
+                  className="btn btn-secondary"
+                  style={{ marginLeft: "0" }}
+                >
                   구매하기
                 </button>
-              </th>
+              </td>
 
               <th />
             </tr>
