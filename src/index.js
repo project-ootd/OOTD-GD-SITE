@@ -42,7 +42,8 @@ root.render(
           <Route path="/WSBP" element={<WSBP />} />
           <Route path="/RSBP" element={<RSBP />} />
           <Route path="/WGDP" element={<WGDP />} />
-          <Route path="/WGDP/:number" component={<WGDP />} />
+          {/* <Route path="/MGDP/:number" element={<MGDP />}></Route> */}
+          <Route path="/WGDP/:number" element={<WGDP />}></Route>
           <Route path="/Join" element={<Join />} />
           <Route path="/Carousel" element={<Carousel />} />
         </Routes>
