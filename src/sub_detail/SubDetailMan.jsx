@@ -15,15 +15,12 @@ const SubDetailMan = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
       <div>
         <p className="title_name">
           {" "}
-          하이커 섀도우 피그먼트 반팔티 다크 블루{" "}
-          <span>HIKER SHADOW PIGMENT OVER FIT TEE DARK BLUE</span>
+          {prdName}
+          <span>{prdEName}</span>
         </p>
         <div className="sub_box flex">
           <div className="img-box">
-            <img
-              src="https://image.msscdn.net/images/goods_img/20220509/2545522/2545522_1_500.jpg?t=20220519141825"
-              alt="Avatar Tailwind CSS Component"
-            />
+            <img src={prdImg} alt="Avatar Tailwind CSS Component" />
           </div>
 
           <div className="product-text">
@@ -39,7 +36,7 @@ const SubDetailMan = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
                   <p className="p4">구매후기</p>
                 </div>
                 <div className="text2">
-                  <p className="p1">WHATITISNT / MG2202ST53BK</p>
+                  <p className="p1">{prdId}</p>
                   <p className="p2">5.9천 회 이상</p>
                   <p className="p3">300개 이상</p>
                   <p className="p4">
@@ -60,7 +57,7 @@ const SubDetailMan = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
                   <p className="p3">OOTD 적립금</p>
                 </div>
                 <div className="text2">
-                  <p className="p1">39,000원</p>
+                  <p className="p1">{prdPrice}</p>
                   <div className="p2">
                     {" "}
                     27,358 ~ 29,900원 <br />

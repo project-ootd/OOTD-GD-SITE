@@ -33,6 +33,7 @@ root.render(
           <Route path="/KIDS" element={<KGDP />} />
           <Route path="/BuyMan" element={<BuyMan />} />
           <Route path="/BuyWoman" element={<BuyWoman />} />
+          <Route path="/BuyWoman/:prdid" element={<BuyWoman />} />
           <Route path="/BuyKids" element={<BuyKids />} />
           <Route path="/BuyRing" element={<BuyRing />} />
           <Route path="/MGDP" element={<MGDP />} />
