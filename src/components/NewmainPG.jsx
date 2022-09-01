@@ -52,7 +52,7 @@ const NewmainPG = () => {
         <div className="event">
           <ul className="event-top">
             <li>
-              <Link to="#">EVENT</Link>
+              <Link to="/TestBae">EVENT</Link>
             </li>
           </ul>
           <ul className="event-list">

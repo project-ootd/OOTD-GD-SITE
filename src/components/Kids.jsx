@@ -1,7 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../styles/subscss/Kids.scss";
 const Kids = ({ prd }) => {
+  const { id } = useParams();
+  console.log("prd", prd);
+  console.log("아이디", id);
   return (
     <div>
       <section>

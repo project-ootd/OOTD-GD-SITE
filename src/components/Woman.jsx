@@ -3,13 +3,14 @@ import "../styles/subscss/Woman.scss";
 import { Link } from "react-router-dom";
 const Woman = ({ prd }) => {
   // console.log({ prd });
-
+  console.log("prd", prd);
   return (
     <>
       <section>
         <div className="sub-menu">
           <h1>Woman</h1>
         </div>
+        {/* 키즈 빼고 메인 사진 변경해줘야함  */}
         <div className="main-pic">
           <img
             src={prd.length > 0 ? prd[20].prdImg : console.log("이미지 없음")}

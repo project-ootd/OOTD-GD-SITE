@@ -3,8 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import { RecoilRoot } from "recoil";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Test1 from "./TestFile/TestBae";
+import TestBae from "./TestFile/TestBae";
 import SubDetailMan from "./sub_detail/SubDetailMan";
 import Join from "./Page/Join";
 import WGDP from "./Page/WGDP";
@@ -28,6 +27,7 @@ root.render(
     <RecoilRoot>
       <BrowserRouter>
         <Routes>
+          <Route path="/TestBae" element={<TestBae />} />
           <Route path="/" element={<App />} />
           <Route path="/RGDP" element={<RGDP />} />
           <Route path="/KIDS" element={<KGDP />} />
@@ -36,14 +36,12 @@ root.render(
           <Route path="/BuyKids" element={<BuyKids />} />
           <Route path="/BuyRing" element={<BuyRing />} />
           <Route path="/MGDP" element={<MGDP />} />
-          <Route path="/Test1" element={<Test1 />} />
           <Route path="/SubDetailMan" element={<SubDetailMan />} />
           <Route path="/KSBP" element={<KSBP />} />
           <Route path="/WSBP" element={<WSBP />} />
           <Route path="/RSBP" element={<RSBP />} />
           <Route path="/WGDP" element={<WGDP />} />
-          {/* <Route path="/MGDP/:number" element={<MGDP />}></Route> */}
-          <Route path="/WGDP/:number" element={<WGDP />}></Route>
+          <Route path="/WGDP/:number" component={<WGDP />} />
           <Route path="/Join" element={<Join />} />
           <Route path="/Carousel" element={<Carousel />} />
         </Routes>

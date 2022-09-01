@@ -3,7 +3,8 @@ import axios from "axios";
 import "../styles/Topbar.scss";
 import Login from "./Login";
 import { BsEye } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { BiSearchAlt } from "react-icons/bi";
+import { Link, useParams } from "react-router-dom";
 // import { Router } from "express";
 
 const Topbar = () => {
@@ -19,7 +20,6 @@ const Topbar = () => {
       setPrd(data.data);
       setIsLoading(false);
       // console.log(prd[2].prdName);
-      console.log("실행됨", prd[0].category);
     };
     getData();
   }, []);
@@ -88,10 +88,7 @@ const Topbar = () => {
                 </ul>
               </li>
               <li>
-                <Link
-                  to={`/${prd[0].category}`}
-                  state={{ prd: prd, prdNo: "K" }}
-                >
+                <Link to={`/WGDP/K`} state={{ prd: prd, prdNo: "K" }}>
                   KIDS
                 </Link>
                 <ul>
