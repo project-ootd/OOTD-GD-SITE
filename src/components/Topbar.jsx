@@ -19,6 +19,7 @@ const Topbar = () => {
       setPrd(data.data);
       setIsLoading(false);
       // console.log(prd[2].prdName);
+      console.log("실행됨", prd[0].category);
     };
     getData();
   }, []);
@@ -87,7 +88,7 @@ const Topbar = () => {
               </li>
               <li>
                 <Link
-                  to={`/KGDP/${prd.category}/K`}
+                  to={`/${prd[0].category}`}
                   state={{ prd: prd, prdNo: "K" }}
                 >
                   KIDS

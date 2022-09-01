@@ -30,7 +30,7 @@ root.render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/RGDP" element={<RGDP />} />
-          <Route path="/KGDP" element={<KGDP />} />
+          <Route path="/KIDS" element={<KGDP />} />
           <Route path="/BuyMan" element={<BuyMan />} />
           <Route path="/BuyWoman" element={<BuyWoman />} />
           <Route path="/BuyKids" element={<BuyKids />} />
