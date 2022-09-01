@@ -66,7 +66,8 @@ const Topbar = () => {
                 </ul>
               </li>
               <li>
-                <Link to="/WGDP" state={{ prd: prd, prdNo: "W" }}>
+                <Link to={`/WGDP/W`}>
+                  {/* <Link to="/WGDP" state={{ prd: prd, prdNo: "W" }}> */}
                   WOMAN
                 </Link>
                 <ul>
