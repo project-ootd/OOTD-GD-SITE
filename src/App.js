@@ -6,6 +6,8 @@ import Topbar from "./components/Topbar";
 import MainPG from "./components/MainPG";
 import Footer from "./components/Footer";
 import Popup from "./components/Pop-up";
+import NoticeBoard from "./board/NoticeBoard";
+import NoticePost from "./board/NoticePost";
 
 // WGDP 페이지 prdno 에러
 // Woman 페이지 state 배열로 못 넣는지 물어보기
@@ -35,11 +37,8 @@ function App() {
 
   return (
     <div>
-      <Topbar prd={prd} />
-
+      <Topbar />
       <MainPG />
-      <Popup />
-
       <Footer />
     </div>
   );
