@@ -3,10 +3,21 @@ import { BiWon } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import "../styles/subscss/Buybtn.scss";
 import BuyMan from "../buy/BuyMan";
+import axios from "axios";
 
-function Buybtn_man() {
+function Buybtn_man({ prdId, userId }) {
+  const cartAdd = async () => {
+    const data = await axios({
+      url: `http://localhost:4000/cart`,
+      method: "POST",
+      data: {
+        prdId,
+        userId,
+      },
+    });
+  };
   return (
-    <div>
+    <div onClick={cartAdd}>
       <button className="sell">
         <div className="won">
           <BiWon />

@@ -15,7 +15,6 @@ const KGDP = () => {
         method: "POST",
         data: { prdno },
       });
-      console.log("data", data.data);
       setPrd(data.data);
     };
     getData();

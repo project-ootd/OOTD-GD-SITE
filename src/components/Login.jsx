@@ -6,8 +6,10 @@ import { useRecoilState } from "recoil";
 import { authenticatedState } from "../recoil/authState";
 
 const Login = () => {
-  const [id, setId] = useState("");
-  const [pw, setPw] = useState("");
+  let sessionStorage = window.sessionStorage;
+  let [savedLoginId, setSavedLoginId] = useState("");
+  let [id, setId] = useState("");
+  let [pw, setPw] = useState("");
   const [authenticated, setAuthenticated] = useRecoilState(authenticatedState);
 
   const idChange = (e) => {
@@ -87,10 +89,13 @@ const Login = () => {
                 method: "POST",
                 data: { id, pw },
               });
-              console.log(data.data);
               if (data.data === true) {
                 alert("로그인 성공");
                 setAuthenticated(true);
+
+                sessionStorage.setItem("id", id);
+
+                setSavedLoginId(sessionStorage.getItem("id"));
               } else {
                 alert("로그인 실패");
               }
@@ -104,13 +109,6 @@ const Login = () => {
           </Link>
         </div>
       )}
-      {/* <button
-        onClick={() => {
-          console.log(authenticated);
-        }}
-      >
-        check
-      </button> */}
     </nav>
   );
 };

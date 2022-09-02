@@ -12,12 +12,16 @@ import axios from "axios";
 const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   const [authenticated, setAuthenticated] = useRecoilState(authenticatedState);
 
+  let sessionStorage = window.sessionStorage;
+  const userId = sessionStorage.getItem("id");
+
   const cartAdd = async () => {
     await axios({
       url: `http://localhost:4000/cart`,
       method: "POST",
       data: {
         prdId,
+        userId,
       },
     });
   };
@@ -93,8 +97,12 @@ const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
               <div className="buy">
                 {console.log(authenticated)}
                 {authenticated == true ? (
-                  <Link to={`/BuyWoman/${prdId}`} onClick={cartAdd}>
-                    <BuybtnMan />
+                  <Link to={`/BuyWoman/${prdId}`}>
+                    <BuybtnMan
+                      cartAdd={cartAdd}
+                      prdId={prdId}
+                      userId={userId}
+                    />
                   </Link>
                 ) : (
                   console.log("로그인이 필요합니다.")

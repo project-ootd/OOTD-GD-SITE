@@ -21,7 +21,6 @@ const Woman = ({ prd }) => {
             <li className="cell">
               <Link to="/WSBP" state={{ data: "W001" }}>
                 <div className="img-box">
-                  {console.log(prd.length)}
                   <img
                     src={
                       prd.length > 0

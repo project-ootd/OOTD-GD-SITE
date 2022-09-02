@@ -34,7 +34,6 @@ const Join = (args) => {
       },
     });
     setUser(id, pw, name);
-    console.log("data : " + id, pw, name);
     alert("회원가입 성공!");
   };
 
