@@ -50,17 +50,17 @@ const Topbar = () => {
                 </Link>
                 <ul>
                   <li>
-                    SUMMER
+                   <Link to={`/`}>SUMMER</Link> 
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                    <li><Link to={`/`}>TOP</Link></li>
+                      <li><Link to={`/`}>BOTTOM</Link></li>
                     </ul>
                   </li>
                   <li>
-                    WINTER
+                  <Link to={`/`}>WINTER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li><Link to={`/`}>TOP</Link></li>
+                      <li><Link to={`/`}>BOTTOM</Link></li>
                     </ul>
                   </li>
                 </ul>
@@ -72,17 +72,17 @@ const Topbar = () => {
                 </Link>
                 <ul>
                   <li>
-                    SUMMER
+                  <Link to={`/`}>SUMMER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li><Link to={`/`}>TOP</Link></li>
+                      <li><Link to={`/`}>BOTTOM</Link></li>
                     </ul>
                   </li>
                   <li>
-                    WINTER
+                  <Link to={`/`}>WINTER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li><Link to={`/`}>TOP</Link></li>
+                      <li><Link to={`/`}>BOTTOM</Link></li>
                     </ul>
                   </li>
                 </ul>
@@ -93,17 +93,17 @@ const Topbar = () => {
                 </Link>
                 <ul>
                   <li>
-                    SUMMER
+                  <Link to={`/`}>SUMMER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li><Link to={`/`}>TOP</Link></li>
+                      <li><Link to={`/`}>BOTTOM</Link></li>
                     </ul>
                   </li>
                   <li>
-                    WINTER
+                  <Link to={`/`}>WINTER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li><Link to={`/`}>TOP</Link></li>
+                      <li><Link to={`/`}>BOTTOM</Link></li>
                     </ul>
                   </li>
                 </ul>
@@ -112,17 +112,17 @@ const Topbar = () => {
                 <Link to="/RGDP">ACCESSORY</Link>
                 <ul>
                   <li>
-                    RING
+                  <Link to={`/`}>RING</Link>
                     <ul>
-                      <li>GOLD</li>
-                      <li>DIAMOND</li>
+                      <li><Link to={`/`}>GOLD</Link></li>
+                      <li><Link to={`/`}>DIAMOND</Link></li>
                     </ul>
                   </li>
                   <li>
-                    NECKLACE
+                  <Link to={`/`}>NECKLACE</Link>
                     <ul>
-                      <li>GOLD</li>
-                      <li>DIAMOND</li>
+                      <li><Link to={`/`}>GOLD</Link></li>
+                      <li><Link to={`/`}>DIAMOND</Link></li>
                     </ul>
                   </li>
                 </ul>
