@@ -21,27 +21,27 @@ const NewmainPG = () => {
       </section>
       {/*  공지사항  */}
       <article className="con con2">
-        <div className="announce">
-          <ul className="announce-top">
+        <div className="notice">
+          <ul className="notice-top">
             <li>
-              <Link to="#">ANNOUNCE</Link>
+              <Link to={`/`}>NOTICE</Link>
             </li>
           </ul>
-          <ul className="announce-list">
+          <ul className="notice-list">
             <li>
-              <Link to="#">5. 침수로 인한 배송지연 안내</Link>
+              <Link to={`/`}>5. 침수로 인한 배송지연 안내</Link>
             </li>
             <li>
-              <Link to="#">4. 상담센터 증설 안내</Link>
+              <Link to={`/`}>4. 상담센터 증설 안내</Link>
             </li>
             <li>
-              <Link to="#">3. 서비스 확장에 따른 임시휴무 안내</Link>
+              <Link to={`/`}>3. 서비스 확장에 따른 임시휴무 안내</Link>
             </li>
             <li>
-              <Link to="#">2. 입고 지연 안내</Link>
+              <Link to={`/`}>2. 입고 지연 안내</Link>
             </li>
             <li>
-              <Link to="#">
+              <Link to={`/`}>
                 1. 인터넷 쇼핑몰 입점 안내(쿠팡, G-market, Amazon)
               </Link>
             </li>
@@ -51,24 +51,24 @@ const NewmainPG = () => {
         <div className="event">
           <ul className="event-top">
             <li>
-              <Link to="#">EVENT</Link>
+              <Link to={`/`}>EVENT</Link>
             </li>
           </ul>
           <ul className="event-list">
             <li>
-              <Link to="#">5. 수영복 특가할인행사(8/1~8/15)</Link>
+              <Link to={`/`}>5. 수영복 특가할인행사(8/1~8/15)</Link>
             </li>
             <li>
-              <Link to="#">4. 여름맞이 할인행사(7/1~7/14)</Link>
+              <Link to={`/`}>4. 여름맞이 할인행사(7/1~7/14)</Link>
             </li>
             <li>
-              <Link to="#">3. 여름방학맞이 키즈상품 할인행사(6/1~6/20)</Link>
+              <Link to={`/`}>3. 여름방학맞이 키즈상품 할인행사(6/1~6/20)</Link>
             </li>
             <li>
-              <Link to="#">2. 가입자 100만 돌파기념 할인행사(5/20~5/31)</Link>
+              <Link to={`/`}>2. 가입자 100만 돌파기념 할인행사(5/20~5/31)</Link>
             </li>
             <li>
-              <Link to="#">1. 새분기 새학기맞이 행사(3/2~3/15)</Link>
+              <Link to={`/`}>1. 새분기 새학기맞이 행사(3/2~3/15)</Link>
             </li>
           </ul>
         </div>
