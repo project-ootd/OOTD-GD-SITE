@@ -6,9 +6,9 @@ import "../styles/board/NoticePost.scss";
 const NoticePost = () => {
   return (
     <>
-      <section>
+     
         <h1 style={{ color: "white" }}>공지사항 등록</h1>
-      </section>
+      
 
       <CKEditor
         className="Editor"
