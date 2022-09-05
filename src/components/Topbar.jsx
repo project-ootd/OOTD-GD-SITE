@@ -3,6 +3,7 @@ import axios from "axios";
 import "../styles/Topbar.scss";
 import Login from "./Login";
 import { BsEye } from "react-icons/bs";
+// import { BiSearchAlt } from "react-icons/bi";
 import { Link } from "react-router-dom";
 // import { Router } from "express";
 
@@ -42,17 +43,25 @@ const Topbar = () => {
                 <Link to={`/WGDP/M`}>MAN</Link>
                 <ul>
                   <li>
-                    SUMMER
+                    <Link to={`/`}>SUMMER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li>
+                        <Link to={`/`}>TOP</Link>
+                      </li>
+                      <li>
+                        <Link to={`/`}>BOTTOM</Link>
+                      </li>
                     </ul>
                   </li>
                   <li>
-                    WINTER
+                    <Link to={`/`}>WINTER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li>
+                        <Link to={`/`}>TOP</Link>
+                      </li>
+                      <li>
+                        <Link to={`/`}>BOTTOM</Link>
+                      </li>
                     </ul>
                   </li>
                 </ul>
@@ -61,17 +70,25 @@ const Topbar = () => {
                 <Link to={`/WGDP/W`}>WOMAN</Link>
                 <ul>
                   <li>
-                    SUMMER
+                    <Link to={`/`}>SUMMER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li>
+                        <Link to={`/`}>TOP</Link>
+                      </li>
+                      <li>
+                        <Link to={`/`}>BOTTOM</Link>
+                      </li>
                     </ul>
                   </li>
                   <li>
-                    WINTER
+                    <Link to={`/`}>WINTER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li>
+                        <Link to={`/`}>TOP</Link>
+                      </li>
+                      <li>
+                        <Link to={`/`}>BOTTOM</Link>
+                      </li>
                     </ul>
                   </li>
                 </ul>
@@ -80,17 +97,25 @@ const Topbar = () => {
                 <Link to={`/WGDP/K`}>KIDS</Link>
                 <ul>
                   <li>
-                    SUMMER
+                    <Link to={`/`}>SUMMER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li>
+                        <Link to={`/`}>TOP</Link>
+                      </li>
+                      <li>
+                        <Link to={`/`}>BOTTOM</Link>
+                      </li>
                     </ul>
                   </li>
                   <li>
-                    WINTER
+                    <Link to={`/`}>WINTER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li>
+                        <Link to={`/`}>TOP</Link>
+                      </li>
+                      <li>
+                        <Link to={`/`}>BOTTOM</Link>
+                      </li>
                     </ul>
                   </li>
                 </ul>
@@ -99,17 +124,25 @@ const Topbar = () => {
                 <Link to="/RGDP">ACCESSORY</Link>
                 <ul>
                   <li>
-                    RING
+                    <Link to={`/`}>RING</Link>
                     <ul>
-                      <li>GOLD</li>
-                      <li>DIAMOND</li>
+                      <li>
+                        <Link to={`/`}>GOLD</Link>
+                      </li>
+                      <li>
+                        <Link to={`/`}>DIAMOND</Link>
+                      </li>
                     </ul>
                   </li>
                   <li>
-                    NECKLACE
+                    <Link to={`/`}>NECKLACE</Link>
                     <ul>
-                      <li>GOLD</li>
-                      <li>DIAMOND</li>
+                      <li>
+                        <Link to={`/`}>GOLD</Link>
+                      </li>
+                      <li>
+                        <Link to={`/`}>DIAMOND</Link>
+                      </li>
                     </ul>
                   </li>
                 </ul>

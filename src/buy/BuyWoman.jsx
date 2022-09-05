@@ -77,8 +77,8 @@ const BuyWoman = (args) => {
                 <td>{prdEName}</td>
               </tr>
             ))} */}
-            {cart.map((cart) => (
-              <tr>
+            {cart.map((cart, index) => (
+              <tr key={index}>
                 <th>
                   <label>
                     <input type="checkbox" className="checkbox" />

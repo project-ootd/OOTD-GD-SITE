@@ -13,12 +13,14 @@ const Sub_detail_man = () => {
     <div>
       <Topbar />
       <p className="title_name">
-        {" "}
-        쿨맥스 브이넥 반팔 니트 [블랙]{" "}
+        {/* 한글 상품명 = mySQL product 테이블 > prdName */}
+        {" "}쿨맥스 브이넥 반팔 니트 [블랙]{" "} 
+        {/* 영문 상품명 */}
         <span>Coolmax V-neck short-sleeve knit [Black]</span>
       </p>
       <div className="sub_box flex">
         <div className="img-box">
+          {/* 상품 이미지 */}
           <img
             src="https://image.msscdn.net/images/goods_img/20220601/2594411/2594411_1_500.jpg?t=20220601075542"
             alt=""
@@ -58,6 +60,7 @@ const Sub_detail_man = () => {
                 <p className="p2">OOTD 회원가</p>
                 <p className="p3">OOTD 적립금</p>
               </div>
+              {/* mySQL product 테이블 > prdPrice */}
               <div className="text2">
                 <p className="p1">53,000원</p>
                 <div className="p2">
