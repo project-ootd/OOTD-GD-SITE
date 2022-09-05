@@ -19,7 +19,7 @@ import BuyRing from "./buy/BuyRing";
 import BuyMan from "./buy/BuyMan";
 import Carousel from "./components/Carousel";
 import ScrollToTop from "./components/ScrollToTop";
-
+import SearchPage from "./Page/SearchPage";
 const root = createRoot(document.getElementById("root"));
 
 root.render(
@@ -28,6 +28,7 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="/TestBae" element={<TestBae />} />
+          <Route path="/SearchPage" element={<SearchPage />} />
           <Route path="/" element={<App />} />
           <Route path="/RGDP" element={<RGDP />} />
           <Route path="/KIDS" element={<KGDP />} />
