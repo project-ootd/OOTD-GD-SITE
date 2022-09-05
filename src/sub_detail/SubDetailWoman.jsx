@@ -8,6 +8,7 @@ import FavoritCheck from "../btn/FavoritCheck";
 import { useRecoilState } from "recoil";
 import { authenticatedState } from "../recoil/authState";
 import axios from "axios";
+import CartList from "../components/CartList";
 
 const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   const [authenticated, setAuthenticated] = useRecoilState(authenticatedState);
@@ -28,7 +29,7 @@ const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
 
   return (
     <>
-      <div>
+      <div className="detail_wrap">
         <p className="title_name">
           {" "}
           {prdName}
@@ -95,8 +96,8 @@ const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
             <hr />
             <div className="buy-btn-box flex">
               <div className="buy">
-                {console.log(authenticated)}
-                {authenticated == true ? (
+                {/* {console.log(authenticated)} */}
+                {authenticated === true ? (
                   <Link to={`/BuyWoman/${prdId}`}>
                     <BuybtnMan
                       cartAdd={cartAdd}
@@ -107,6 +108,8 @@ const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
                 ) : (
                   console.log("로그인이 필요합니다.")
                 )}
+
+                <BuybtnMan CartList={CartList} />
                 {/* <Link to="/BuyWoman">
                   <BuybtnMan />
                 </Link> */}

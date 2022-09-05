@@ -45,7 +45,7 @@ const BuyWoman = (args) => {
     getData();
   }, []);
 
-  console.log("cart", cart);
+  // console.log("cart", cart);
 
   return (
     <>
