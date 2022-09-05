@@ -3,8 +3,8 @@ import axios from "axios";
 import "../styles/Topbar.scss";
 import Login from "./Login";
 import { BsEye } from "react-icons/bs";
-// import { BiSearchAlt } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { BiSearchAlt } from "react-icons/bi";
+import { Link, useParams } from "react-router-dom";
 // import { Router } from "express";
 
 const Topbar = () => {
