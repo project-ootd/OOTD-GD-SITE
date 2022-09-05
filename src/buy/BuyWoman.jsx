@@ -4,6 +4,7 @@ import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import BuyListItem from "./BuyListItem";
 
 const BuyWoman = (args) => {
   let sessionStorage = window.sessionStorage;
@@ -19,7 +20,7 @@ const BuyWoman = (args) => {
 
   const params = useParams();
 
-  const prdno = params.prdId;
+  const prdid = params.prdId;
 
   useEffect(() => {
     const getData = async () => {
@@ -29,8 +30,8 @@ const BuyWoman = (args) => {
         data: { userId },
       });
 
-      console.log("data console", data.data);
-      // console.log("userId", userId);
+      // console.log("data console", data.data);
+
       setCart(data.data);
 
       setPrdId(data.data.prdId);
@@ -38,14 +39,18 @@ const BuyWoman = (args) => {
       setPrdEName(data.data.prdEName);
       setPrdPrice(data.data.prdPrice);
       setPrdImg(data.data.prdImg);
-
-      // setPrdId(data.data);
-      // setIsLoading(false);
     };
     getData();
-  }, []);
+  }, [userId]);
 
-  // console.log("cart", cart);
+  const onToggle = async (userId) => {
+    await axios.patch(`http://localhost:4000/check/${userId}/${prdid}`);
+    setCart((cart) =>
+      cart.map((cart) =>
+        cart.userId === userId ? { ...cart, checked: !cart.checked } : cart
+      )
+    );
+  };
 
   return (
     <>
@@ -77,44 +82,14 @@ const BuyWoman = (args) => {
                 <td>{prdEName}</td>
               </tr>
             ))} */}
-            {cart.map((cart, index) => (
-              <tr key={index}>
-                <th>
-                  <label>
-                    <input type="checkbox" className="checkbox" />
-                  </label>
-                </th>
-                <td>
-                  <div className="flex items-center space-x-3">
-                    <div className="avatar">
-                      <div className="mask mask-squircle w-12 h-12">
-                        <img src={prdImg} alt="Avatar Tailwind CSS Component" />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="font-bold">{cart.prdId}</div>
-                      <div className="text-sm opacity-50">{prdName}</div>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  1
-                  <br />
-                  {/* <span className="badge badge-ghost badge-sm"></span> */}
-                </td>
-                <td>
-                  {/* {prdPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} */}
-                </td>
-                <td>
-                  <button
-                    className="btn btn-ghost btn-mg"
-                    style={{ color: "red" }}
-                  >
-                    삭제
-                  </button>
-                </td>
-              </tr>
-            ))}
+            {cart.map((cart, index) => {
+              return (
+                <BuyListItem cart={cart} key={index} onToggle={onToggle} />
+                // <li cart={cart} key={index}>
+                //   {cart.prdId}
+                // </li>
+              );
+            })}
             {/* ))} */}
 
             {/* row 4 */}

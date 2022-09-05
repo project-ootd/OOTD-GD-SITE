@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiWon } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import "../styles/subscss/Buybtn.scss";
 import BuyMan from "../buy/BuyMan";
 import axios from "axios";
 
-function Buybtn_man({ prdId, userId }) {
+function BuybtnMan({ prdId, userId }) {
+  const [dup, setDup] = useState(false);
+  const [addCart, setAddCart] = useState("");
   const cartAdd = async () => {
     const data = await axios({
       url: `http://localhost:4000/cart`,
@@ -15,6 +17,8 @@ function Buybtn_man({ prdId, userId }) {
         userId,
       },
     });
+    setAddCart(data.data);
+    console.log(addCart);
   };
   return (
     <div onClick={cartAdd}>
@@ -27,4 +31,4 @@ function Buybtn_man({ prdId, userId }) {
     </div>
   );
 }
-export default Buybtn_man;
+export default BuybtnMan;
