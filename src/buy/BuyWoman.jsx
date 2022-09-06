@@ -10,17 +10,11 @@ const BuyWoman = (args) => {
   let sessionStorage = window.sessionStorage;
   const userId = sessionStorage.getItem("id");
 
-  const [prdId, setPrdId] = useState("");
-  const [prdName, setPrdName] = useState("");
-  const [prdEName, setPrdEName] = useState("");
-  const [prdPrice, setPrdPrice] = useState("");
-  const [prdImg, setPrdImg] = useState("");
-
   const [cart, setCart] = useState([]);
 
   const params = useParams();
 
-  const prdid = params.prdId;
+  const prdId = params.prdId;
 
   useEffect(() => {
     const getData = async () => {
@@ -33,21 +27,17 @@ const BuyWoman = (args) => {
       // console.log("data console", data.data);
 
       setCart(data.data);
-
-      setPrdId(data.data.prdId);
-      setPrdName(data.data.prdName);
-      setPrdEName(data.data.prdEName);
-      setPrdPrice(data.data.prdPrice);
-      setPrdImg(data.data.prdImg);
     };
     getData();
   }, [userId]);
 
-  const onToggle = async (userId) => {
-    await axios.patch(`http://localhost:4000/check/${userId}/${prdid}`);
+  const onToggle = async (userId, prdId) => {
+    await axios.patch(`http://localhost:4000/check/${userId}/${prdId}`);
     setCart((cart) =>
       cart.map((cart) =>
-        cart.userId === userId ? { ...cart, checked: !cart.checked } : cart
+        cart.userId === userId && cart.prdId === prdId
+          ? { ...cart, checked: !cart.checked }
+          : cart
       )
     );
   };

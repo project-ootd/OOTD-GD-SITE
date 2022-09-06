@@ -98,22 +98,16 @@ const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
             <hr />
             <div className="buy-btn-box flex">
               <div className="buy">
-                {/* {console.log(authenticated)} */}
+                <BuybtnMan />
+              </div>
+              <div className="cart">
                 {authenticated === true ? (
                   <Link to={`/BuyWoman/${prdId}`}>
-                    <BuybtnMan prdId={prdId} userId={userId} />
+                    <ShoppingCart prdId={prdId} userId={userId} />
                   </Link>
                 ) : (
                   console.log("로그인이 필요합니다.")
                 )}
-
-                {/* <BuybtnMan CartList={CartList} /> */}
-                {/* <Link to="/BuyWoman">
-                  <BuybtnMan />
-                </Link> */}
-              </div>
-              <div className="cart">
-                <ShoppingCart />
               </div>
               <div className="heart">
                 <FavoritCheck />

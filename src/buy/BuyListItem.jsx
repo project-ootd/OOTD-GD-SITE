@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import cn from "classnames";
 import { MdCheckBoxOutlineBlank, MdCheckBox } from "react-icons/md";
+import { FaRegMinusSquare, FaRegPlusSquare } from "react-icons/fa";
 
 const BuyListItem = ({ cart, index, onToggle }) => {
   let sessionStorage = window.sessionStorage;
@@ -12,13 +13,15 @@ const BuyListItem = ({ cart, index, onToggle }) => {
   const [list, setList] = useState("");
 
   const { checked } = cart;
+  let { count, setCount } = useState("");
+  const { countlist, setCountList } = useState("");
 
-  //   useEffect(() => {
+  // const { amount, setAmount } = useState("");
 
   useEffect(() => {
     const getData = async () => {
       setPrdId(cart.prdId);
-      console.log("prdId", cart.prdId);
+      // console.log("prdId", cart.prdId);
       const data = await axios({
         url: `http://localhost:4000/cartList2`,
         method: "POST",
@@ -27,27 +30,45 @@ const BuyListItem = ({ cart, index, onToggle }) => {
         },
       });
       setList(data.data);
-      console.log("list", data.data);
     };
     getData();
   }, [prdId]);
-  //   }, []);
+
+  const amountPlus = async (prdId) => {
+    count = cart.amount;
+    console.log("받아옴", prdId);
+    setCount = count + 1;
+    console.log("저장", setCount);
+    await axios.patch(`http://localhost:4000/amount/${prdId}`, prdId, setCount);
+    // const data = await axios({
+    //   url: `http://localhost:4000/amount/${prdId}`,
+    //   method: "PATCH",
+    //   data: {
+    //     prdId,
+    //     setCount,
+    //   },
+    // });
+    // setCountList(data.data);
+    // console.log("countlist", countlist);
+  };
+
   return (
     <tr key={index}>
       <th>
-        <label>
-          <div
-            className={cn("checkbox", { checked: checked })}
-            onClick={() => {
-              onToggle(userId);
-            }}
-          >
-            {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
-            {/* <input type="checkbox" className="checkbox" /> */}
-            {/* <div className="text">{text}</div> */}
-          </div>
-          {/* <input type="checkbox" className="checkbox" /> */}
-        </label>
+        <div
+          className={cn("checkbox1", { checked: checked })}
+          onClick={() => {
+            onToggle(userId, prdId);
+          }}
+        >
+          {checked ? (
+            <MdCheckBox className="checkbox" />
+          ) : (
+            // <input type="checkbox" className="checkbox" value={""} checked />
+            <MdCheckBoxOutlineBlank className="checkbox" />
+            // <input type="checkbox" className="checkbox" value={""} />
+          )}
+        </div>
       </th>
       <td>
         <div className="flex items-center space-x-3">
@@ -63,10 +84,23 @@ const BuyListItem = ({ cart, index, onToggle }) => {
         </div>
       </td>
       <td>
-        1
+        <div className="minus">
+          <FaRegMinusSquare />
+        </div>
+        {cart.amount}
+        <div
+          className="plus"
+          onClick={() => {
+            amountPlus(prdId);
+          }}
+        >
+          <FaRegPlusSquare />
+        </div>
+
         <br />
         {/* <span className="badge badge-ghost badge-sm"></span> */}
       </td>
+      <td>{list.prdPrice}</td>
       {/* <td>{list.prdPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</td> */}
       <td>
         <button className="btn btn-ghost btn-mg" style={{ color: "red" }}>
