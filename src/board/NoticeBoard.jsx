@@ -60,7 +60,7 @@ const NoticeBoard = () => {
     // );
     try {
       const data = await axios({
-        url: `http://localhost:4000/notices/${id}`,
+        url: `http://localhost:4000/notices/checked/${id}`,
         method: "PATCH",
         data: {
           text,
@@ -108,7 +108,7 @@ const NoticeBoard = () => {
 
   return (
     <NoticeTemplate>
-      <NoticeInsert onInsert={onInsert} />
+      {/* <NoticeInsert onInsert={onInsert} /> */}
       <NoticeList
         notices={notices}
         onRemove={onRemove}

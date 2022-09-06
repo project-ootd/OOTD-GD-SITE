@@ -19,6 +19,8 @@ import BuyRing from "./buy/BuyRing";
 import BuyMan from "./buy/BuyMan";
 import Carousel from "./components/Carousel";
 import ScrollToTop from "./components/ScrollToTop";
+import NoticePost from "./board/NoticePost";
+import NoticeBoard from "./board/NoticeBoard";
 
 const root = createRoot(document.getElementById("root"));
 
@@ -44,6 +46,8 @@ root.render(
           <Route path="/WGDP/:number" component={<WGDP />} />
           <Route path="/Join" element={<Join />} />
           <Route path="/Carousel" element={<Carousel />} />
+          <Route path="/NoticePost" element={<NoticePost />} />
+          <Route path="/NoticeBoard" element={<NoticeBoard />} />
         </Routes>
         <ScrollToTop /> {/* 화면 전환시 맨 위에서 시작 */}
       </BrowserRouter>

@@ -32,7 +32,7 @@ const Topbar = () => {
 
   return (
     <div className="top-bar">
-      <header>
+      <header className="top-bar-header">
         <h1>
           <div>
             <Link to="/">

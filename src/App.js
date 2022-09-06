@@ -13,29 +13,35 @@ import NoticePost from "./board/NoticePost";
 // Woman 페이지 state 배열로 못 넣는지 물어보기
 
 function App() {
-  // let { params } = useParams();
-  // const [prd, setPrd] = useState([]);
+  let { params } = useParams();
+  const [prd, setPrd] = useState([]);
 
-  // const [isLoading, setIsLoading] = useState(true);
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     const data = await axios({
-  //       url: `http://localhost:4000/test2`,
-  //       method: "GET",
-  //     });
-  //     // console.log("data", data.data);
-  //     setPrd(data.data);
-  //     setIsLoading(false);
-  //     // console.log(prd[2].prdName);
-  //   };
-  //   getData();
-  // }, []);
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const getData = async () => {
+      const data = await axios({
+        url: `http://localhost:4000/test2`,
+        method: "GET",
+      });
+      // console.log("data", data.data);
+      setPrd(data.data);
+      setIsLoading(false);
+      // console.log(prd[2].prdName);
+    };
+    getData();
+  }, []);
 
-  // if (isLoading) {
-  //   return <>Loading...</>;
-  // }
+  if (isLoading) {
+    return <>Loading...</>;
+  }
 
-  return <div>asdasdsadsadasdsadsadsadsadasdasdasdasdasdasdasdasdasdasd</div>;
+  return (
+    <div>
+      <Topbar />
+      <MainPG />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

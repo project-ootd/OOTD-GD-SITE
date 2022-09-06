@@ -49,13 +49,14 @@ a {
   margin: 0 20px;
 }
 
-.announce {
+.notice {
   display: inline-block;
 
   width: 49%;
   height: auto;
+  color: white;
 }
-.announce-top {
+.notice-top {
   display: inline-block;
   font-weight: bold;
   font-size: 1.3rem;
@@ -63,11 +64,12 @@ a {
   color: white;
 }
 
-.announce-list > li {
+.notice-list > li {
   margin-top: 5px;
 }
 
 .event {
+  color: white;
   display: inline-block;
   width: 40%;
   height: auto;

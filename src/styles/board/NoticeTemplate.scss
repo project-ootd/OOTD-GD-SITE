@@ -1,11 +1,11 @@
 .NoticeTemplate {
-  width: 512px;
+  width: 70%;
   margin: 6rem auto 0 auto;
   border-radius: 4px;
   overflow: hidden;
 }
 .app-title {
-  background: #9c88ff;
+  background: gray;
   color: white;
   height: 4rem;
   font-size: 1.5rem;
@@ -15,4 +15,15 @@
 }
 .content {
   background: white;
+}
+
+.Notice-Template-btn {
+  display: block;
+  margin: auto;
+  margin-top: 1.5rem;
+  background-color: gray;
+}
+
+.Notice-subtitle {
+  background-color: white;
 }

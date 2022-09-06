@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/MainPG.scss";
 import { Link } from "react-router-dom";
 
-const NewmainPG = () => {
+const MainPG = () => {
   return (
     <div>
       <link
@@ -21,13 +21,13 @@ const NewmainPG = () => {
       </section>
       {/*  공지사항  */}
       <article className="con con2">
-        <div className="announce">
-          <ul className="announce-top">
+        <div className="notice">
+          <ul className="notice-top">
             <li>
-              <Link to="#">ANNOUNCE</Link>
+              <Link to={`/NoticeBoard`}>Notice</Link>
             </li>
           </ul>
-          <ul className="announce-list">
+          <ul className="notice-list">
             <li>
               <Link to="#">5. 침수로 인한 배송지연 안내</Link>
             </li>
@@ -78,4 +78,4 @@ const NewmainPG = () => {
     </div>
   );
 };
-export default NewmainPG;
+export default MainPG;

@@ -60,7 +60,7 @@ const Join = (args) => {
 
   return (
     <body style={{ height: "100vh" }}>
-      <div>
+      <div className="join-div">
         <Topbar />
         <h1>회원가입</h1>
 

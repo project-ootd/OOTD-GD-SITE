@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "EarlyFontDiary";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "EarlyFontDiary";
+  background-color: black;
+}
+
 body,
 html {
   overflow-x: hidden;
@@ -16,11 +29,12 @@ a {
 
 .top-bar {
   display: inline-block;
+  border: 5px solid red;
 }
 /* 노말라이즈 끝 */
 
 /* top-bar 시작 */
-header {
+.top-bar-header {
   z-index: 999;
   position: fixed;
   top: 0;
@@ -34,11 +48,7 @@ header {
   align-items: center;
 }
 
-body {
-  padding-top: 50px;
-}
-
-header > h1 > div {
+.top-bar-header > h1 > div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,6 +68,7 @@ header > h1 > div {
   justify-content: space-between;
   padding: 0 20px;
   margin-left: 350px;
+  border: 5px solid red;
 }
 
 /* 1차 메뉴 아이템 */

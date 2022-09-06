@@ -26,8 +26,9 @@ const NoticeListItem = ({
         }}
       >
         {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
-        <div className="text">{text}</div>
       </div>
+      <div className="NoticeNumber">{id}</div>
+      <div className="text">{text}</div>
       <div
         className="edit"
         onClick={() => {

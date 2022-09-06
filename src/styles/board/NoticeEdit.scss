@@ -7,6 +7,7 @@
   z-index: 5;
   background-color: rgba(0, 0, 0, 0.548);
 }
+
 .noticeedit__insert {
   position: absolute;
   top: 50%;
@@ -18,6 +19,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
   h2 {
     box-sizing: border-box;
     width: 100%;
@@ -27,6 +29,7 @@
     background-color: #9c88ff;
     color: white;
   }
+
   input {
     margin: 2rem 0;
     padding: 0.3rem;

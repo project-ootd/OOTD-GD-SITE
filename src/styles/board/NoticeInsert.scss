@@ -1,6 +1,7 @@
 .NoticeInsert {
   display: flex;
   background: #495057;
+
   input {
     width: 100%;
     background: none;
@@ -14,7 +15,7 @@
       color: #dee2e6;
     }
   }
-  button {
+  .Insert-button {
     background: none;
     outline: none;
     border: none;
