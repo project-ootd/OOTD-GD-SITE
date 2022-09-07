@@ -4,14 +4,17 @@ import "../styles/board/NoticeEdit.scss";
 
 const NoticeEdit = ({ selectedNotice, onUpdate, onInsertToggle }) => {
   const [value, setValue] = useState("");
+
   const onChange = (e) => {
     setValue(e.target.value);
   };
+
   const onSubmit = (e) => {
     e.preventDefault();
     onUpdate(selectedNotice.id, value);
     setValue("");
   };
+
   useEffect(() => {
     setValue(selectedNotice.text);
   }, [selectedNotice]);

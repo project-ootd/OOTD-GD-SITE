@@ -29,7 +29,6 @@ a {
 
 .top-bar {
   display: inline-block;
-  border: 5px solid red;
 }
 /* 노말라이즈 끝 */
 
@@ -60,15 +59,16 @@ a {
 
 /* top-bar > menu-box */
 .menu-box-1 {
+  display: block;
+  margin-left: 250px;
 }
 
 .menu-box-1 > ul {
-  width: 500px;
+  width: 800px;
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
-  margin-left: 350px;
-  border: 5px solid red;
+  margin: auto;
 }
 
 /* 1차 메뉴 아이템 */

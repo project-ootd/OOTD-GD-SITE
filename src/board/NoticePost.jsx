@@ -33,9 +33,9 @@ const NoticePost = () => {
           console.log("Focus.", editor);
         }}
       />
+
       <article className="Notice-btn">
         <button class="btn">등록</button>
-
         <Link to={`/NoticeBoard`}>
           <button class="btn">돌아가기</button>
         </Link>

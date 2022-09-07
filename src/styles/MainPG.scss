@@ -43,6 +43,7 @@ a {
   color: white;
   z-index: 2;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .con {
@@ -51,7 +52,6 @@ a {
 
 .notice {
   display: inline-block;
-
   width: 49%;
   height: auto;
   color: white;

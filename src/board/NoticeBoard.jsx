@@ -60,7 +60,7 @@ const NoticeBoard = () => {
     // );
     try {
       const data = await axios({
-        url: `http://localhost:4000/notices/checked/${id}`,
+        url: `http://localhost:4000/notices/${id}`,
         method: "PATCH",
         data: {
           text,
