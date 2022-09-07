@@ -13,8 +13,9 @@ const BuyListItem = ({ cart, index, onToggle }) => {
   const [list, setList] = useState("");
 
   const { checked } = cart;
-  let { count, setCount } = useState("");
-  const { countlist, setCountList } = useState("");
+  let [count, setCount] = useState("");
+  // let { num, setNum } = useState("");
+  const [countlist, setCountList] = useState(cart.amount);
 
   // const { amount, setAmount } = useState("");
 
@@ -34,27 +35,28 @@ const BuyListItem = ({ cart, index, onToggle }) => {
     getData();
   }, [prdId]);
 
+  // count = cart.amount;
   const amountPlus = async (prdId) => {
-    count = cart.amount;
-    console.log("받아옴", prdId);
-    setCount = count + 1;
-    console.log("저장", setCount);
-    await axios.patch(`http://localhost:4000/amount/${prdId}`, prdId, setCount);
-    // const data = await axios({
-    //   url: `http://localhost:4000/amount/${prdId}`,
-    //   method: "PATCH",
-    //   data: {
-    //     prdId,
-    //     setCount,
-    //   },
-    // });
-    // setCountList(data.data);
-    // console.log("countlist", countlist);
+    setCount = countlist + 1;
+    const data = await axios.patch(`http://localhost:4000/amount/${prdId}`, {
+      setCount,
+    });
+
+    setCountList(data.data.amount);
+  };
+
+  const amountMinus = async (prdId) => {
+    setCount = countlist - 1;
+    const data = await axios.patch(`http://localhost:4000/amount/${prdId}`, {
+      setCount,
+    });
+
+    setCountList(data.data.amount);
   };
 
   return (
     <tr key={index}>
-      <th>
+      <td>
         <div
           className={cn("checkbox1", { checked: checked })}
           onClick={() => {
@@ -69,7 +71,7 @@ const BuyListItem = ({ cart, index, onToggle }) => {
             // <input type="checkbox" className="checkbox" value={""} />
           )}
         </div>
-      </th>
+      </td>
       <td>
         <div className="flex items-center space-x-3">
           <div className="avatar">
@@ -83,11 +85,17 @@ const BuyListItem = ({ cart, index, onToggle }) => {
           </div>
         </div>
       </td>
+      <td>{list.prdPrice}</td>
       <td>
-        <div className="minus">
+        <div
+          className="minus"
+          onClick={() => {
+            amountMinus(prdId);
+          }}
+        >
           <FaRegMinusSquare />
         </div>
-        {cart.amount}
+        {countlist}
         <div
           className="plus"
           onClick={() => {
@@ -100,7 +108,7 @@ const BuyListItem = ({ cart, index, onToggle }) => {
         <br />
         {/* <span className="badge badge-ghost badge-sm"></span> */}
       </td>
-      <td>{list.prdPrice}</td>
+      <td>{list.prdPrice * countlist}</td>
       {/* <td>{list.prdPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</td> */}
       <td>
         <button className="btn btn-ghost btn-mg" style={{ color: "red" }}>

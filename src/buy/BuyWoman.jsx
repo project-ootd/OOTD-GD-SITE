@@ -59,6 +59,7 @@ const BuyWoman = (args) => {
                 </label>
               </th>
               <th>상품명</th>
+              <th>단가</th>
               <th>수량</th>
               <th>가격</th>
               <th></th>
@@ -102,6 +103,7 @@ const BuyWoman = (args) => {
                   </div>
                 </div>
               </td>
+              <td></td>
               <td style={{ fontSize: "1rem", fontWeight: "bold" }}>
                 총 수량
                 <br />
@@ -134,9 +136,6 @@ const BuyWoman = (args) => {
               </td>
               <th></th>
             </tr>
-          </tbody>
-          {/* foot */}
-          <tfoot>
             <tr>
               <th />
               <th></th>
@@ -145,6 +144,7 @@ const BuyWoman = (args) => {
                   <button className="btn">돌아가기</button>
                 </Link>
               </th>
+              <th></th>
               <td>
                 <button
                   className="btn btn-secondary"
@@ -156,7 +156,8 @@ const BuyWoman = (args) => {
 
               <th />
             </tr>
-          </tfoot>
+          </tbody>
+          {/* foot */}
         </table>
       </div>
       <Footer />
