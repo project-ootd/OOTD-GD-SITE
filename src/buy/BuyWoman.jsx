@@ -11,6 +11,8 @@ const BuyWoman = (args) => {
   const userId = sessionStorage.getItem("id");
 
   const [cart, setCart] = useState([]);
+  const [amount, setAmount] = useState("");
+  const [countList, setCountList] = useState(0);
 
   const params = useParams();
 
@@ -27,9 +29,40 @@ const BuyWoman = (args) => {
       // console.log("data console", data.data);
 
       setCart(data.data);
+      let count = 0;
+      data.data.map((item, index) => {
+        count += item.amount;
+      });
+      setCountList(count);
     };
     getData();
   }, [userId]);
+
+  useEffect(() => {
+    const SumAmount = async () => {
+      const data = await axios({
+        url: `http://localhost:4000/SumAmount`,
+        method: "POST",
+        data: { userId },
+      });
+
+      setAmount(data.data.amount);
+    };
+    SumAmount();
+  }, [userId]);
+
+  useEffect(() => {
+    const SumAmount = async () => {
+      const data = await axios({
+        url: `http://localhost:4000/SumAmount`,
+        method: "POST",
+        data: { userId },
+      });
+
+      setAmount(data.data.amount);
+    };
+    SumAmount();
+  }, [countList]);
 
   const onToggle = async (userId, prdId) => {
     await axios.patch(`http://localhost:4000/check/${userId}/${prdId}`);
@@ -73,9 +106,15 @@ const BuyWoman = (args) => {
                 <td>{prdEName}</td>
               </tr>
             ))} */}
-            {cart.map((cart, index) => {
+            {cart.map((item, index) => {
               return (
-                <BuyListItem cart={cart} key={index} onToggle={onToggle} />
+                <BuyListItem
+                  item={item}
+                  key={index}
+                  onToggle={onToggle}
+                  countList={countList}
+                  setCountList={setCountList}
+                />
                 // <li cart={cart} key={index}>
                 //   {cart.prdId}
                 // </li>
@@ -85,11 +124,12 @@ const BuyWoman = (args) => {
 
             {/* row 4 */}
             <tr>
-              <th>
+              <td>
                 <label>
                   <span></span>
                 </label>
-              </th>
+              </td>
+              <td></td>
               <td>
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
@@ -103,23 +143,33 @@ const BuyWoman = (args) => {
                   </div>
                 </div>
               </td>
-              <td></td>
-              <td style={{ fontSize: "1rem", fontWeight: "bold" }}>
+              <td
+                style={{
+                  fontSize: "1rem",
+                  fontWeight: "bold",
+                  textAlign: "center",
+                }}
+              >
                 총 수량
                 <br />
                 <div
                   style={{
-                    textAlign: "center",
                     color: "red",
                     fontSize: "1rem",
                     fontWeight: "bold",
                   }}
                 >
-                  1
+                  {countList}
                 </div>
                 {/* <span className="badge badge-ghost badge-sm"></span> */}
               </td>
-              <td style={{ fontSize: "1rem", fontWeight: "bold" }}>
+              <td
+                style={{
+                  fontSize: "1rem",
+                  fontWeight: "bold",
+                  textAlign: "center",
+                }}
+              >
                 총 가격
                 <br />
                 <div
@@ -134,17 +184,18 @@ const BuyWoman = (args) => {
                 </div>
                 {/* <span className="badge badge-ghost badge-lg"></span> */}
               </td>
-              <th></th>
+
+              <td></td>
             </tr>
             <tr>
-              <th />
-              <th></th>
-              <th>
+              <td></td>
+              <td></td>
+              <td>
                 <Link to="/WSBP">
                   <button className="btn">돌아가기</button>
                 </Link>
-              </th>
-              <th></th>
+              </td>
+              <td></td>
               <td>
                 <button
                   className="btn btn-secondary"
@@ -154,7 +205,7 @@ const BuyWoman = (args) => {
                 </button>
               </td>
 
-              <th />
+              <td></td>
             </tr>
           </tbody>
           {/* foot */}

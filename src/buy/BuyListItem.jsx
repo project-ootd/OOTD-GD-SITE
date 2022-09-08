@@ -5,54 +5,33 @@ import cn from "classnames";
 import { MdCheckBoxOutlineBlank, MdCheckBox } from "react-icons/md";
 import { FaRegMinusSquare, FaRegPlusSquare } from "react-icons/fa";
 
-const BuyListItem = ({ cart, index, onToggle }) => {
+const BuyListItem = ({ item, index, onToggle, countList, setCountList }) => {
   let sessionStorage = window.sessionStorage;
   const userId = sessionStorage.getItem("id");
 
-  const [prdId, setPrdId] = useState("");
+  console.log(item.prdId);
   const [list, setList] = useState("");
 
-  const { checked } = cart;
-  let [count, setCount] = useState("");
-  // let { num, setNum } = useState("");
-  const [countlist, setCountList] = useState(cart.amount);
-
-  // const { amount, setAmount } = useState("");
+  const [count, setCount] = useState(item.amount);
+  const { checked } = item;
 
   useEffect(() => {
     const getData = async () => {
-      setPrdId(cart.prdId);
+      console.log(item.amount);
       // console.log("prdId", cart.prdId);
       const data = await axios({
         url: `http://localhost:4000/cartList2`,
         method: "POST",
         data: {
-          prdId,
+          prdId: item.prdId,
+          count,
         },
       });
       setList(data.data);
+      console.log(data.data);
     };
     getData();
-  }, [prdId]);
-
-  // count = cart.amount;
-  const amountPlus = async (prdId) => {
-    setCount = countlist + 1;
-    const data = await axios.patch(`http://localhost:4000/amount/${prdId}`, {
-      setCount,
-    });
-
-    setCountList(data.data.amount);
-  };
-
-  const amountMinus = async (prdId) => {
-    setCount = countlist - 1;
-    const data = await axios.patch(`http://localhost:4000/amount/${prdId}`, {
-      setCount,
-    });
-
-    setCountList(data.data.amount);
-  };
+  }, [item, count]);
 
   return (
     <tr key={index}>
@@ -60,7 +39,7 @@ const BuyListItem = ({ cart, index, onToggle }) => {
         <div
           className={cn("checkbox1", { checked: checked })}
           onClick={() => {
-            onToggle(userId, prdId);
+            onToggle(userId, item.prdId);
           }}
         >
           {checked ? (
@@ -86,29 +65,66 @@ const BuyListItem = ({ cart, index, onToggle }) => {
         </div>
       </td>
       <td>{list.prdPrice}</td>
-      <td>
+      <td
+        style={{
+          display: "flex",
+        }}
+      >
         <div
           className="minus"
-          onClick={() => {
-            amountMinus(prdId);
+          style={{
+            display: "flex",
+            width: "30px",
+            height: "48px",
+            alignItems: "center",
+            justifyContent: "center",
           }}
+          onClick={() => {}}
         >
           <FaRegMinusSquare />
         </div>
-        {countlist}
+        <div
+          style={{
+            display: "flex",
+            width: "30px",
+            height: "48px",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {count}
+        </div>
         <div
           className="plus"
-          onClick={() => {
-            amountPlus(prdId);
+          style={{
+            display: "flex",
+            width: "30px",
+            height: "48px",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+          onClick={async () => {
+            const data = await axios({
+              url: `http://localhost:4000/amount/${item.prdId}`,
+              method: "PATCH",
+              data: { count: count + 1 },
+            });
+            setCount(count + 1);
           }}
         >
           <FaRegPlusSquare />
         </div>
-
+        <button
+          onClick={() => {
+            console.log(count);
+          }}
+        >
+          click
+        </button>
         <br />
         {/* <span className="badge badge-ghost badge-sm"></span> */}
       </td>
-      <td>{list.prdPrice * countlist}</td>
+      <td>{list.prdPrice * count}</td>
       {/* <td>{list.prdPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</td> */}
       <td>
         <button className="btn btn-ghost btn-mg" style={{ color: "red" }}>
