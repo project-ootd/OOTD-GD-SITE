@@ -1,15 +1,24 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { Children, useState } from "react";
 import { useEffect } from "react";
 import cn from "classnames";
 import { MdCheckBoxOutlineBlank, MdCheckBox } from "react-icons/md";
 import { FaRegMinusSquare, FaRegPlusSquare } from "react-icons/fa";
 
-const BuyListItem = ({ item, index, onToggle, countList, setCountList }) => {
+const BuyListItem = ({
+  item,
+  index,
+  onToggle,
+  countList,
+  setCountList,
+  Children,
+  totalprice,
+  setTotalprice,
+}) => {
   let sessionStorage = window.sessionStorage;
   const userId = sessionStorage.getItem("id");
 
-  console.log(item.prdId);
+  // console.log(item.prdId);
   const [list, setList] = useState("");
 
   const [count, setCount] = useState(item.amount);
@@ -17,7 +26,7 @@ const BuyListItem = ({ item, index, onToggle, countList, setCountList }) => {
 
   useEffect(() => {
     const getData = async () => {
-      console.log(item.amount);
+      // console.log("amount", item.amount);
       // console.log("prdId", cart.prdId);
       const data = await axios({
         url: `http://localhost:4000/cartList2`,
@@ -28,7 +37,7 @@ const BuyListItem = ({ item, index, onToggle, countList, setCountList }) => {
         },
       });
       setList(data.data);
-      console.log(data.data);
+      // console.log(data.data);
     };
     getData();
   }, [item, count]);
@@ -79,7 +88,16 @@ const BuyListItem = ({ item, index, onToggle, countList, setCountList }) => {
             alignItems: "center",
             justifyContent: "center",
           }}
-          onClick={() => {}}
+          onClick={async () => {
+            const data = await axios({
+              url: `http://localhost:4000/amount/${item.prdId}`,
+              method: "PATCH",
+              data: { count: count - 1 },
+            });
+            setCount(count - 1);
+            setCountList(countList - 1);
+            setTotalprice(countList * list.prdPrice);
+          }}
         >
           <FaRegMinusSquare />
         </div>
@@ -110,17 +128,12 @@ const BuyListItem = ({ item, index, onToggle, countList, setCountList }) => {
               data: { count: count + 1 },
             });
             setCount(count + 1);
+            setCountList(countList + 1);
+            setTotalprice(count * list.prdPrice);
           }}
         >
           <FaRegPlusSquare />
         </div>
-        <button
-          onClick={() => {
-            console.log(count);
-          }}
-        >
-          click
-        </button>
         <br />
         {/* <span className="badge badge-ghost badge-sm"></span> */}
       </td>

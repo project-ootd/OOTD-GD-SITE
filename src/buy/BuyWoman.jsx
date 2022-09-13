@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Children, useEffect, useState } from "react";
 import "../styles/buy/BuyMan.scss";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
@@ -12,6 +12,7 @@ const BuyWoman = (args) => {
 
   const [cart, setCart] = useState([]);
   const [amount, setAmount] = useState("");
+  const [totalprice, setTotalprice] = useState(0);
   const [countList, setCountList] = useState(0);
 
   const params = useParams();
@@ -39,30 +40,24 @@ const BuyWoman = (args) => {
   }, [userId]);
 
   useEffect(() => {
-    const SumAmount = async () => {
+    const getData = async () => {
       const data = await axios({
-        url: `http://localhost:4000/SumAmount`,
+        url: `http://localhost:4000/cartlist`,
         method: "POST",
         data: { userId },
       });
 
-      setAmount(data.data.amount);
-    };
-    SumAmount();
-  }, [userId]);
+      // console.log("data console", data.data);
 
-  useEffect(() => {
-    const SumAmount = async () => {
-      const data = await axios({
-        url: `http://localhost:4000/SumAmount`,
-        method: "POST",
-        data: { userId },
+      setCart(data.data);
+      let count = 0;
+      data.data.map((item, index) => {
+        count += item.amount;
       });
-
-      setAmount(data.data.amount);
+      setCountList(count);
     };
-    SumAmount();
-  }, [countList]);
+    getData();
+  }, [totalprice]);
 
   const onToggle = async (userId, prdId) => {
     await axios.patch(`http://localhost:4000/check/${userId}/${prdId}`);
@@ -114,6 +109,9 @@ const BuyWoman = (args) => {
                   onToggle={onToggle}
                   countList={countList}
                   setCountList={setCountList}
+                  Children={Children}
+                  totalprice={totalprice}
+                  setTotalprice={setTotalprice}
                 />
                 // <li cart={cart} key={index}>
                 //   {cart.prdId}
@@ -180,7 +178,7 @@ const BuyWoman = (args) => {
                     fontWeight: "bold",
                   }}
                 >
-                  25,000원
+                  {totalprice}원
                 </div>
                 {/* <span className="badge badge-ghost badge-lg"></span> */}
               </td>
