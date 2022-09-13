@@ -8,6 +8,8 @@ import FavoritCheck from "../btn/FavoritCheck";
 import { useRecoilState } from "recoil";
 import { authenticatedState } from "../recoil/authState";
 import axios from "axios";
+import CartList from "../components/CartList";
+import BuyWoman from "../buy/BuyWoman";
 
 const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   const [authenticated, setAuthenticated] = useRecoilState(authenticatedState);
@@ -24,11 +26,12 @@ const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
         userId,
       },
     });
+    console.log("구매함");
   };
 
   return (
     <>
-      <div>
+      <div className="detail_wrap">
         <p className="title_name">
           {" "}
           {prdName}
@@ -95,24 +98,16 @@ const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
             <hr />
             <div className="buy-btn-box flex">
               <div className="buy">
-                {console.log(authenticated)}
-                {authenticated == true ? (
+                <BuybtnMan />
+              </div>
+              <div className="cart">
+                {authenticated === true ? (
                   <Link to={`/BuyWoman/${prdId}`}>
-                    <BuybtnMan
-                      cartAdd={cartAdd}
-                      prdId={prdId}
-                      userId={userId}
-                    />
+                    <ShoppingCart prdId={prdId} userId={userId} />
                   </Link>
                 ) : (
                   console.log("로그인이 필요합니다.")
                 )}
-                {/* <Link to="/BuyWoman">
-                  <BuybtnMan />
-                </Link> */}
-              </div>
-              <div className="cart">
-                <ShoppingCart />
               </div>
               <div className="heart">
                 <FavoritCheck />

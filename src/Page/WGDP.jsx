@@ -10,7 +10,7 @@ import Kids from "../components/Kids";
 const WGDP = () => {
   const location = useLocation();
   const params = useParams();
-  console.log("params", params.number);
+  // console.log("params", params.number);
   const prdno = params.number;
   // console.log("location", location.state);
   // const prdno = location.state.prdNo;
