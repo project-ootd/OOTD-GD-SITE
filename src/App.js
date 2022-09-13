@@ -38,7 +38,11 @@ function App() {
   return (
     <div>
       <Topbar />
+<<<<<<< Updated upstream
       <MainPG />
+=======
+      <NoticeBoard />
+>>>>>>> Stashed changes
       <Footer />
     </div>
   );
