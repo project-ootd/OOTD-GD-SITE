@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useState } from "react";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
-import "../styles/Join.scss";
 
 const Join = (args) => {
   const [id, setJoinId] = useState("");
@@ -34,7 +33,6 @@ const Join = (args) => {
       },
     });
     setUser(id, pw, name);
-    console.log("data : " + id, pw, name);
     alert("회원가입 성공!");
   };
 

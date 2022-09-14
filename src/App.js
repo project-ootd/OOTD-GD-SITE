@@ -12,6 +12,9 @@ import NoticePost from "./board/NoticePost";
 // WGDP 페이지 prdno 에러
 // Woman 페이지 state 배열로 못 넣는지 물어보기
 
+//Board 관련 에러시 아래 명령어 터미널에 적용
+//npm install --save @ckeditor/ckeditor5-react @ckeditor/ckeditor5-build-classic
+
 function App() {
   let { params } = useParams();
   const [prd, setPrd] = useState([]);

@@ -3,8 +3,9 @@ import axios from "axios";
 import "../styles/Topbar.scss";
 import Login from "./Login";
 import { BsEye } from "react-icons/bs";
-import { BiSearchAlt } from "react-icons/bi";
+
 import { Link, useParams } from "react-router-dom";
+
 // import { Router } from "express";
 
 const Topbar = () => {
@@ -16,10 +17,8 @@ const Topbar = () => {
         url: `http://localhost:4000/test2`,
         method: "GET",
       });
-      // console.log("data", data.data);
       setPrd(data.data);
       setIsLoading(false);
-      // console.log(prd[2].prdName);
     };
     getData();
   }, []);
@@ -27,14 +26,11 @@ const Topbar = () => {
   if (isLoading) {
     return <>Loading...</>;
   }
-
-  // console.log(prd);
-
   return (
-    <div className="top-bar">
-      <header>
+    <div className="top-bar-sub">
+      <header className="top-header">
         <h1>
-          <div>
+          <div className="move-home">
             <Link to="/">
               <BsEye />{" "}
             </Link>{" "}
@@ -45,84 +41,109 @@ const Topbar = () => {
           <div className="menu-box-1">
             <ul>
               <li>
-                <Link to={`/MGDP`} state={{ prd: prd, prdNo: "M" }}>
-                  MAN
-                </Link>
+                <Link to={`/GoodsList/M`}>MAN</Link>
                 <ul>
                   <li>
-                    SUMMER
+                    <Link to={`/`}>SUMMER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li>
+                        <Link to={`/`}>TOP</Link>
+                      </li>
+                      <li>
+                        <Link to={`/`}>BOTTOM</Link>
+                      </li>
                     </ul>
                   </li>
                   <li>
-                    WINTER
+                    <Link to={`/`}>WINTER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li>
+                        <Link to={`/`}>TOP</Link>
+                      </li>
+                      <li>
+                        <Link to={`/`}>BOTTOM</Link>
+                      </li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li>
-                <Link to={`/WGDP/W`}>
-                  {/* <Link to="/WGDP" state={{ prd: prd, prdNo: "W" }}> */}
-                  WOMAN
-                </Link>
+                <Link to={`/GoodsList/W`}>WOMAN</Link>
                 <ul>
                   <li>
-                    SUMMER
+                    <Link to={`/`}>SUMMER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li>
+                        <Link to={`/`}>TOP</Link>
+                      </li>
+                      <li>
+                        <Link to={`/`}>BOTTOM</Link>
+                      </li>
                     </ul>
                   </li>
                   <li>
-                    WINTER
+                    <Link to={`/`}>WINTER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li>
+                        <Link to={`/`}>TOP</Link>
+                      </li>
+                      <li>
+                        <Link to={`/`}>BOTTOM</Link>
+                      </li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li>
-                <Link to={`/WGDP/K`} state={{ prd: prd, prdNo: "K" }}>
-                  KIDS
-                </Link>
+                <Link to={`/GoodsList/K`}>KIDS</Link>
                 <ul>
                   <li>
-                    SUMMER
+                    <Link to={`/`}>SUMMER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li>
+                        <Link to={`/`}>TOP</Link>
+                      </li>
+                      <li>
+                        <Link to={`/`}>BOTTOM</Link>
+                      </li>
                     </ul>
                   </li>
                   <li>
-                    WINTER
+                    <Link to={`/`}>WINTER</Link>
                     <ul>
-                      <li>TOP</li>
-                      <li>BOTTOM</li>
+                      <li>
+                        <Link to={`/`}>TOP</Link>
+                      </li>
+                      <li>
+                        <Link to={`/`}>BOTTOM</Link>
+                      </li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li>
-                <Link to="/RGDP">ACCESSORY</Link>
+                <Link to={`/GoodsList/R`}>ACCESSORY</Link>
                 <ul>
                   <li>
-                    RING
+                    <Link to={`/`}>RING</Link>
                     <ul>
-                      <li>GOLD</li>
-                      <li>DIAMOND</li>
+                      <li>
+                        <Link to={`/`}>GOLD</Link>
+                      </li>
+                      <li>
+                        <Link to={`/`}>DIAMOND</Link>
+                      </li>
                     </ul>
                   </li>
                   <li>
-                    NECKLACE
+                    <Link to={`/`}>NECKLACE</Link>
                     <ul>
-                      <li>GOLD</li>
-                      <li>DIAMOND</li>
+                      <li>
+                        <Link to={`/`}>GOLD</Link>
+                      </li>
+                      <li>
+                        <Link to={`/`}>DIAMOND</Link>
+                      </li>
                     </ul>
                   </li>
                 </ul>
@@ -130,6 +151,7 @@ const Topbar = () => {
             </ul>
           </div>
         </nav>
+
         <Login />
       </header>
     </div>

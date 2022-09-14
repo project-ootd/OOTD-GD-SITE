@@ -6,7 +6,11 @@ import {
   MdModeEditOutline,
 } from "react-icons/md";
 import cn from "classnames";
+<<<<<<< HEAD
 import "../styles/board/NoticeListItem.scss";
+=======
+// styles/board/NoticeListItem";
+>>>>>>> 23f3b7bcf61a439ff782bbb3aebeb8cc529caa6b
 
 const NoticeListItem = ({
   Notice,
@@ -26,9 +30,16 @@ const NoticeListItem = ({
         }}
       >
         {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
+<<<<<<< HEAD
         <div className="text">{text}</div>
       </div>
       <div
+=======
+      </div>
+      <div className="NoticeNumber">{id}</div>
+      <div className="text">{text}</div>
+      {/* <div
+>>>>>>> 23f3b7bcf61a439ff782bbb3aebeb8cc529caa6b
         className="edit"
         onClick={() => {
           onInsertToggle();
@@ -44,7 +55,12 @@ const NoticeListItem = ({
         }}
       >
         <MdRemoveCircleOutline />
+<<<<<<< HEAD
       </div>
+=======
+      </div> */}
+      <div className="NoticeListDate"></div>
+>>>>>>> 23f3b7bcf61a439ff782bbb3aebeb8cc529caa6b
     </li>
   );
 };

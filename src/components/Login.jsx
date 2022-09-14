@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import UserIcon from "../components/UserIcon";
+import UserIcon from "../icons/UserIcon";
 import { useRecoilState } from "recoil";
 import { authenticatedState } from "../recoil/authState";
+import { BiSearchAlt } from "react-icons/bi";
 
 const Login = () => {
-  const [id, setId] = useState("");
-  const [pw, setPw] = useState("");
+  let sessionStorage = window.sessionStorage;
+  let [savedLoginId, setSavedLoginId] = useState("");
+  let [id, setId] = useState("");
+  let [pw, setPw] = useState("");
   const [authenticated, setAuthenticated] = useRecoilState(authenticatedState);
 
   const idChange = (e) => {
@@ -20,7 +23,9 @@ const Login = () => {
   return (
     <nav className="login">
       {/*  로그인/회원가입 버튼  */}
-
+      <Link to="/SearchResultPage" className="Search">
+        <BiSearchAlt className="mirror" style={{ margin: "0 20" }} />
+      </Link>
       {authenticated ? (
         <div
           style={{
@@ -50,7 +55,7 @@ const Login = () => {
         <div>
           <input
             type="text"
-            placeholder="id"
+            placeholder="ID"
             name="id"
             value={id}
             onChange={idChange}
@@ -87,10 +92,13 @@ const Login = () => {
                 method: "POST",
                 data: { id, pw },
               });
-              console.log(data.data);
               if (data.data === true) {
                 alert("로그인 성공");
                 setAuthenticated(true);
+
+                sessionStorage.setItem("id", id);
+
+                setSavedLoginId(sessionStorage.getItem("id"));
               } else {
                 alert("로그인 실패");
               }
@@ -104,13 +112,6 @@ const Login = () => {
           </Link>
         </div>
       )}
-      {/* <button
-        onClick={() => {
-          console.log(authenticated);
-        }}
-      >
-        check
-      </button> */}
     </nav>
   );
 };
