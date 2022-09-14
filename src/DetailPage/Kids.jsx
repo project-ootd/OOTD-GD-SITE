@@ -1,49 +1,35 @@
 import React from "react";
+import { Link, useParams } from "react-router-dom";
 
-import { Link } from "react-router-dom";
-const Woman = ({ prd }) => {
-  // console.log({ prd });
-
+const Kids = ({ prd }) => {
+  const { id } = useParams();
+  console.log("prd", prd);
+  console.log("아이디", id);
   return (
-    <>
+    <div>
       <section>
         <div className="sub-menu">
-          <h1>Woman</h1>
+          <h1>KIDS</h1>
         </div>
         <div className="main-pic">
-          {/* <img
-            src={prd.length > 0 ? prd[20].prdImg : console.log("이미지 없음")}
+          <img
+            src="https://search.pstatic.net/sunny/?src=http%3A%2F%2Fimg.theqoo.net%2Fimg%2FJGmXb.jpg&type=sc960_832"
             alt=""
-          /> */}
+          />
         </div>
         <div className="list-box-1 con">
           <ul className="row">
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R001" }}>
+              <Link to="/DetailPage" state={{ data: "K001" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[0].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
-                  npm
+                  <img src={prd.length > 0 ? prd[0].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
                 </div>
                 <div className="prod-name">
-                  {/* <Link to={{ pathname: "/WSBP", state: { data: "test1" } }}> */}
-                  {/* <Link to={"/WSBP"} state={{ data: prd[0].prdName }}> */}
                   {prd.length > 0 && prd[0].prdName}
                 </div>
-                {/* {console.log(prd)} */}
-                {/* {prd.map((prdPrice) => {
-                return <div className="prod-price"> {prd[2].prdPrice}</div>
-              })} */}
-
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
@@ -52,28 +38,21 @@ const Woman = ({ prd }) => {
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
                 )}
-
                 <div className="free-del">
                   <span />
                 </div>
               </Link>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R002" }}>
+              <Link to="/DetailPage" state={{ data: "K002" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[1].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[1].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
                 </div>
                 <div className="prod-name">
+                  {" "}
                   {prd.length > 0 && prd[1].prdName}
                 </div>
                 {prd.length > 0 && (
@@ -86,17 +65,11 @@ const Woman = ({ prd }) => {
                 )}
               </Link>
             </li>
+
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R003" }}>
+              <Link to="/DetailPage" state={{ data: "K003" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[2].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[2].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -115,16 +88,9 @@ const Woman = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R004" }}>
+              <Link to="/DetailPage" state={{ data: "K004" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[3].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[3].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -143,22 +109,15 @@ const Woman = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R005" }}>
+              <Link to="/DetailPage" state={{ data: "K005" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[4].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[4].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[4].prdName}
+                  {prd.length > 0 && prd[4].prdName}{" "}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
@@ -171,16 +130,9 @@ const Woman = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R006" }}>
+              <Link to="/DetailPage" state={{ data: "K006" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[5].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[5].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -199,22 +151,15 @@ const Woman = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R007" }}>
+              <Link to="/DetailPage" state={{ data: "K007" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[6].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[6].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[6].prdName}
+                  {prd.length > 0 && prd[6].prdName}{" "}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
@@ -224,29 +169,21 @@ const Woman = ({ prd }) => {
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
                 )}
-                <div className="free-del">
-                  <span />
-                </div>
               </Link>
+              <div className="free-del">
+                <span />
+              </div>
             </li>
-
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R008" }}>
+              <Link to="/DetailPage" state={{ data: "K008" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[7].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[7].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[7].prdName}
+                  {prd.length > 0 && prd[7].prdName}{" "}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
@@ -259,16 +196,9 @@ const Woman = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R009" }}>
+              <Link to="/DetailPage" state={{ data: "K009" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[8].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[8].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -290,22 +220,15 @@ const Woman = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R010" }}>
+              <Link to="/DetailPage" state={{ data: "K010" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[9].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[9].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[9].prdName}
+                  {prd.length > 0 && prd[9].prdName}{" "}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
@@ -315,22 +238,15 @@ const Woman = ({ prd }) => {
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
                 )}
-                <div className="free-del">
-                  <span />
-                </div>
               </Link>
+              <div className="free-del">
+                <span />
+              </div>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R011" }}>
+              <Link to="/DetailPage" state={{ data: "K011" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[10].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[10].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -349,16 +265,9 @@ const Woman = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R012" }}>
+              <Link to="/DetailPage" state={{ data: "K012" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[11].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[11].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -380,22 +289,15 @@ const Woman = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R013" }}>
+              <Link to="/DetailPage" state={{ data: "K013" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[12].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[12].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[12].prdName}
+                  {prd.length > 0 && prd[12].prdName}{" "}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
@@ -408,22 +310,15 @@ const Woman = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R014" }}>
+              <Link to="/DetailPage" state={{ data: "K014" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[13].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[13].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
                 </div>
                 <div className="prod-name">
-                  {prd.length > 0 && prd[13].prdName}
+                  {prd.length > 0 && prd[13].prdName}{" "}
                 </div>
                 {prd.length > 0 && (
                   <div className="prod-price">
@@ -436,16 +331,9 @@ const Woman = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R015" }}>
+              <Link to="/DetailPage" state={{ data: "K015" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[14].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[14].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -462,22 +350,15 @@ const Woman = ({ prd }) => {
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
                 )}
-                <div className="free-del">
-                  <span />
-                </div>
               </Link>
+              <div className="free-del">
+                <span />
+              </div>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R016" }}>
+              <Link to="/DetailPage" state={{ data: "K016" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[15].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[15].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -499,16 +380,9 @@ const Woman = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R017" }}>
+              <Link to="/DetailPage" state={{ data: "K017" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[16].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[16].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -527,16 +401,9 @@ const Woman = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R018" }}>
+              <Link to="/DetailPage" state={{ data: "K018" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[17].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[17].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -559,16 +426,9 @@ const Woman = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R019" }}>
+              <Link to="/DetailPage" state={{ data: "K019" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[18].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[18].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -590,16 +450,9 @@ const Woman = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/RSBP" state={{ data: "R020" }}>
+              <Link to="/DetailPage" state={{ data: "K020" }}>
                 <div className="img-box">
-                  <img
-                    src={
-                      prd.length > 0
-                        ? prd[19].prdImg
-                        : console.log("이미지 없음")
-                    }
-                    alt=""
-                  />
+                  <img src={prd.length > 0 ? prd[19].prdImg : ""} alt="" />
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
@@ -623,7 +476,8 @@ const Woman = ({ prd }) => {
           </ul>
         </div>
       </section>
-    </>
+    </div>
   );
 };
-export default Woman;
+
+export default Kids;

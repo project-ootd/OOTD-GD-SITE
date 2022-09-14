@@ -23,7 +23,7 @@ const Login = () => {
   return (
     <nav className="login">
       {/*  로그인/회원가입 버튼  */}
-      <Link to="/SearchPage" className="Search">
+      <Link to="/SearchResultPage" className="Search">
         <BiSearchAlt className="mirror" style={{ margin: "0 20" }} />
       </Link>
       {authenticated ? (

@@ -3,7 +3,7 @@ import axios from "axios";
 import { BiSearchAlt } from "react-icons/bi";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
-import SearchListItem from "../components/SearchListItem";
+import SearchListItem from "../DetailPage/SearchListItem";
 const SearchPage = () => {
   const [arrSearch, setArrSearch] = useState([]);
   const [search, setSearch] = useState("");
