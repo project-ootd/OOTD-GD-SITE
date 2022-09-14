@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import "../styles/board/NoticeTemplate.scss";
-
-function NoticeTemplate({ children }) {
-  return (
-    <div className="NoticeTemplate">
-      <div className="app-title">Notice List</div>
-      <div className="content">{children}</div>
-    </div>
-=======
 // styles/board/NoticeTemplate";
 import { Link, useParams } from "react-router-dom";
 import Topbar from "../components/Topbar";
@@ -33,7 +23,6 @@ function NoticeTemplate({ children }) {
       </section>
       <Footer />
     </>
->>>>>>> 23f3b7bcf61a439ff782bbb3aebeb8cc529caa6b
   );
 }
 

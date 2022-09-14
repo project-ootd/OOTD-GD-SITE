@@ -1,10 +1,6 @@
 import React from "react";
 import NoticeListItem from "./NoticeListItem";
-<<<<<<< HEAD
 import "../styles/board/NoticeList.scss";
-=======
-// styles/board/NoticeList";
->>>>>>> 23f3b7bcf61a439ff782bbb3aebeb8cc529caa6b
 
 const NoticeList = ({
   notices,
