@@ -1,24 +1,25 @@
 import React from "react";
-import "../styles/Goods.scss";
-import { Link } from "react-router-dom";
 
-const Man = ({ prd }) => {
+import { Link } from "react-router-dom";
+const Woman = ({ prd }) => {
+  // console.log({ prd });
+
   return (
     <>
       <section>
         <div className="sub-menu">
-          <h1>Man</h1>
+          <h1>Woman</h1>
         </div>
         <div className="main-pic">
-          <img
-            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20120827_41%2Fsouth_monkey_1346009917900q3i71_JPEG%2Fmalemodelsphotos.jpg&type=sc960_832"
+          {/* <img
+            src={prd.length > 0 ? prd[20].prdImg : console.log("이미지 없음")}
             alt=""
-          />
+          /> */}
         </div>
         <div className="list-box-1 con">
           <ul className="row">
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M001" }}>
+              <Link to="/DetailPage" state={{ data: "R001" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -28,13 +29,21 @@ const Man = ({ prd }) => {
                     }
                     alt=""
                   />
+                  npm
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
                 </div>
                 <div className="prod-name">
+                  {/* <Link to={{ pathname: "/WSBP", state: { data: "test1" } }}> */}
+                  {/* <Link to={"/WSBP"} state={{ data: prd[0].prdName }}> */}
                   {prd.length > 0 && prd[0].prdName}
                 </div>
+                {/* {console.log(prd)} */}
+                {/* {prd.map((prdPrice) => {
+                return <div className="prod-price"> {prd[2].prdPrice}</div>
+              })} */}
+
                 {prd.length > 0 && (
                   <div className="prod-price">
                     {" "}
@@ -43,14 +52,14 @@ const Man = ({ prd }) => {
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
                 )}
+
                 <div className="free-del">
                   <span />
                 </div>
               </Link>
             </li>
-
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M002" }}>
+              <Link to="/DetailPage" state={{ data: "R002" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -65,7 +74,6 @@ const Man = ({ prd }) => {
                   </div>
                 </div>
                 <div className="prod-name">
-                  {" "}
                   {prd.length > 0 && prd[1].prdName}
                 </div>
                 {prd.length > 0 && (
@@ -76,13 +84,10 @@ const Man = ({ prd }) => {
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
                 )}
-                <div className="free-del">
-                  <span />
-                </div>
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M003" }}>
+              <Link to="/DetailPage" state={{ data: "R003" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -107,13 +112,10 @@ const Man = ({ prd }) => {
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
                 )}
-                <div className="free-del">
-                  <span />
-                </div>
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M004" }}>
+              <Link to="/DetailPage" state={{ data: "R004" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -138,13 +140,10 @@ const Man = ({ prd }) => {
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
                 )}
-                <div className="free-del">
-                  <span />
-                </div>
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M005" }}>
+              <Link to="/DetailPage" state={{ data: "R005" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -169,13 +168,10 @@ const Man = ({ prd }) => {
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
                 )}
-                <div className="free-del">
-                  <span />
-                </div>
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M006" }}>
+              <Link to="/DetailPage" state={{ data: "R006" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -200,13 +196,10 @@ const Man = ({ prd }) => {
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
                 )}
-                <div className="free-del">
-                  <span />
-                </div>
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M007" }}>
+              <Link to="/DetailPage" state={{ data: "R007" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -236,8 +229,9 @@ const Man = ({ prd }) => {
                 </div>
               </Link>
             </li>
+
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M008" }}>
+              <Link to="/DetailPage" state={{ data: "R008" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -262,13 +256,10 @@ const Man = ({ prd }) => {
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
                 )}
-                <div className="free-del">
-                  <span />
-                </div>
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M009" }}>
+              <Link to="/DetailPage" state={{ data: "R009" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -299,7 +290,7 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M010" }}>
+              <Link to="/DetailPage" state={{ data: "R010" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -330,7 +321,7 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M011" }}>
+              <Link to="/DetailPage" state={{ data: "R011" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -355,13 +346,10 @@ const Man = ({ prd }) => {
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
                 )}
-                <div className="free-del">
-                  <span />
-                </div>
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M012" }}>
+              <Link to="/DetailPage" state={{ data: "R012" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -392,7 +380,7 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M013" }}>
+              <Link to="/DetailPage" state={{ data: "R013" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -417,13 +405,10 @@ const Man = ({ prd }) => {
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
                 )}
-                <div className="free-del">
-                  <span />
-                </div>
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M014" }}>
+              <Link to="/DetailPage" state={{ data: "R014" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -448,13 +433,10 @@ const Man = ({ prd }) => {
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
                 )}
-                <div className="free-del">
-                  <span />
-                </div>
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M015" }}>
+              <Link to="/DetailPage" state={{ data: "R015" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -486,7 +468,7 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M016" }}>
+              <Link to="/DetailPage" state={{ data: "R016" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -517,7 +499,7 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M017" }}>
+              <Link to="/DetailPage" state={{ data: "R017" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -542,13 +524,10 @@ const Man = ({ prd }) => {
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </div>
                 )}
-                <div className="free-del">
-                  <span />
-                </div>
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M018" }}>
+              <Link to="/DetailPage" state={{ data: "R018" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -580,7 +559,7 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M019" }}>
+              <Link to="/DetailPage" state={{ data: "R019" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -611,7 +590,7 @@ const Man = ({ prd }) => {
               </Link>
             </li>
             <li className="cell">
-              <Link to="/WSBP" state={{ data: "M020" }}>
+              <Link to="/DetailPage" state={{ data: "R020" }}>
                 <div className="img-box">
                   <img
                     src={
@@ -647,5 +626,4 @@ const Man = ({ prd }) => {
     </>
   );
 };
-
-export default Man;
+export default Woman;

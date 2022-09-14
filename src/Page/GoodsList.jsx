@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Woman from "../components/Woman";
-import Man from "../components/Man";
+import Woman from "../DetailPage/Woman";
+import Ring from "../DetailPage/Ring";
+import Man from "../DetailPage/Man";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
 import { useLocation, useParams } from "react-router-dom";
-import Kids from "../components/Kids";
+import Kids from "../DetailPage/Kids";
 
-const WGDP = () => {
+const GoodsList = () => {
   const location = useLocation();
   const params = useParams();
   // console.log("params", params.number);
@@ -45,6 +46,8 @@ const WGDP = () => {
         <Woman prd={wprd} />
       ) : prdno === "K" ? (
         <Kids prd={wprd} />
+      ) : prdno === "R" ? (
+        <Ring prd={wprd} />
       ) : (
         <Man prd={wprd} />
       )}
@@ -53,4 +56,4 @@ const WGDP = () => {
     </>
   );
 };
-export default WGDP;
+export default GoodsList;

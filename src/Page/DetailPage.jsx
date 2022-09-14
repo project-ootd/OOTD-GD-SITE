@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Topbar from "../components/Topbar";
-import SubDetailWoman from "../sub_detail/SubDetailWoman";
+import DetailItem from "../DetailPage/DetailItem";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 
@@ -38,7 +38,7 @@ const WSBP = () => {
   return (
     <div>
       <Topbar />
-      <SubDetailWoman
+      <DetailItem
         prdId={prdId}
         prdName={prdName}
         prdEName={prdEName}

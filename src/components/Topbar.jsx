@@ -41,7 +41,7 @@ const Topbar = () => {
           <div className="menu-box-1">
             <ul>
               <li>
-                <Link to={`/WGDP/M`}>MAN</Link>
+                <Link to={`/GoodsList/M`}>MAN</Link>
                 <ul>
                   <li>
                     <Link to={`/`}>SUMMER</Link>
@@ -68,7 +68,7 @@ const Topbar = () => {
                 </ul>
               </li>
               <li>
-                <Link to={`/WGDP/W`}>WOMAN</Link>
+                <Link to={`/GoodsList/W`}>WOMAN</Link>
                 <ul>
                   <li>
                     <Link to={`/`}>SUMMER</Link>
@@ -95,7 +95,7 @@ const Topbar = () => {
                 </ul>
               </li>
               <li>
-                <Link to={`/WGDP/K`}>KIDS</Link>
+                <Link to={`/GoodsList/K`}>KIDS</Link>
                 <ul>
                   <li>
                     <Link to={`/`}>SUMMER</Link>
@@ -122,7 +122,7 @@ const Topbar = () => {
                 </ul>
               </li>
               <li>
-                <Link to={`/WGDP/R`}>ACCESSORY</Link>
+                <Link to={`/GoodsList/R`}>ACCESSORY</Link>
                 <ul>
                   <li>
                     <Link to={`/`}>RING</Link>
