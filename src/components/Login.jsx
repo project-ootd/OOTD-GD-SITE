@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import UserIcon from "../components/UserIcon";
+import UserIcon from "../icons/UserIcon";
 import { useRecoilState } from "recoil";
 import { authenticatedState } from "../recoil/authState";
 import { BiSearchAlt } from "react-icons/bi";
@@ -55,7 +55,7 @@ const Login = () => {
         <div>
           <input
             type="text"
-            placeholder="id"
+            placeholder="ID"
             name="id"
             value={id}
             onChange={idChange}

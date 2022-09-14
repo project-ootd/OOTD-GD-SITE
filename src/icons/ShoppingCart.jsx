@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import "../styles/subscss/ShoppingCart.scss";
 
 import axios from "axios";
 

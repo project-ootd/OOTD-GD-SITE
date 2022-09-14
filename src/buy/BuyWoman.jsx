@@ -1,5 +1,5 @@
 import React, { Children, useEffect, useState } from "react";
-import "../styles/buy/BuyMan.scss";
+
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
 import { Link, useParams } from "react-router-dom";

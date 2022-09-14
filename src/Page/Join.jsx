@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useState } from "react";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
-import "../styles/Join.scss";
 
 const Join = (args) => {
   const [id, setJoinId] = useState("");

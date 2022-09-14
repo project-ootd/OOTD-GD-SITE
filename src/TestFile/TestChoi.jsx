@@ -1,6 +1,5 @@
 import React from "react";
 import { Table, Checkbox, Mask, Badge, Button } from "react-daisyui";
-import "../styles/Test/TestChoi.scss";
 import Buybtn from "../btn/Buybtn";
 
 import { Link } from "react-router-dom";

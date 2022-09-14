@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../styles/subscss/TestBae.scss";
+
 import axios from "axios";
 import { BiSearchAlt } from "react-icons/bi";
 

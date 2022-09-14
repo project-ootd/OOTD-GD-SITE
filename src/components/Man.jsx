@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/subscss/Man.scss";
+import "../styles/Goods.scss";
 import { Link } from "react-router-dom";
 
 const Man = ({ prd }) => {

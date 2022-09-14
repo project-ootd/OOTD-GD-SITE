@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/board/NoticeContent.scss";
 
 const NoticeContent = () => {
   return (
