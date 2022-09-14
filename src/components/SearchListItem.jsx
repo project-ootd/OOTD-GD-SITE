@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/SearchListItem.scss";
+
 import { Link } from "react-router-dom";
 
 const SearchListItem = ({ arrSearch }) => {

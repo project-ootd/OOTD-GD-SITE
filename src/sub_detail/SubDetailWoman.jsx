@@ -1,15 +1,12 @@
 import React from "react";
-import "../styles/sub_detail/SubDetailMan.scss";
-
 import { Link } from "react-router-dom";
-import BuybtnMan from "../btn/BuybtnMan";
-import ShoppingCart from "../btn/ShoppingCart";
-import FavoritCheck from "../btn/FavoritCheck";
+import BuybtnMan from "../icons/BuybtnMan";
+import ShoppingCart from "../icons/ShoppingCart";
+import FavoritCheck from "../icons/FavoritCheck";
 import { useRecoilState } from "recoil";
 import { authenticatedState } from "../recoil/authState";
 import axios from "axios";
 import CartList from "../components/CartList";
-import BuyWoman from "../buy/BuyWoman";
 
 const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   const [authenticated, setAuthenticated] = useRecoilState(authenticatedState);

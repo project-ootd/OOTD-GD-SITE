@@ -27,10 +27,10 @@ const Topbar = () => {
     return <>Loading...</>;
   }
   return (
-    <div className="top-bar">
-      <header>
+    <div className="top-bar-sub">
+      <header className="top-header">
         <h1>
-          <div>
+          <div className="move-home">
             <Link to="/">
               <BsEye />{" "}
             </Link>{" "}

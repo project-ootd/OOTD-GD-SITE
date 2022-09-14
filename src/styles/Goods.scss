@@ -1,33 +1,14 @@
-body {
-  overflow-x: hidden;
-  background-color: black;
-}
-
-body,
-ul,
-li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .sub-menu {
   display: flex;
   overflow-x: hidden;
   margin-top: 5vh;
-
-  color: white;
+  color: inherit;
 }
 
 .sub-menu > h1 {
   margin-left: 15%;
   font-size: 1.7em;
-  color: white;
+  color: inherit;
   margin-top: 1.5vh;
 }
 
@@ -35,7 +16,7 @@ a {
 /*  */
 .main-pic {
   text-align: center;
-  margin-left: 33%;
+  margin: 0 30%;
 }
 
 /* 배너 및 상품 목록 */
@@ -56,6 +37,7 @@ a {
 .cell {
   float: left;
   box-sizing: border-box;
+  border: 5px solid white;
 }
 
 /* 커스텀 */
@@ -82,7 +64,7 @@ a {
   text-align: center;
   font-weight: bold;
   margin-top: 5px;
-  color: white;
+  color: inherit;
 }
 .list-box-1 .cell .prod-price {
   font-size: 1.2rem;
@@ -107,7 +89,7 @@ a {
   position: relative;
 }
 .list-box-1 .cell .img-box > .ico-view {
-  color: white;
+  color: inherit;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -115,7 +97,7 @@ a {
   opacity: 0;
   transition: opacity 1s;
   z-index: 1;
-  border: 2px solid white;
+  border: 2px solid inherit;
   border-radius: 10px;
   padding: 5px;
 }
@@ -150,8 +132,8 @@ a {
 .list-box-1 .cell .free-del > span::after {
   content: "무료배송";
   font-size: 0.8rem;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid inherit;
+  color: inherit;
   padding: 4px;
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/subscss/Ring.scss";
+
 import { Link } from "react-router-dom";
 const Woman = ({ prd }) => {
   // console.log({ prd });
