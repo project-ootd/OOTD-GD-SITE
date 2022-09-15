@@ -107,7 +107,7 @@ const Login = () => {
             Login
           </button>
           <span>&nbsp;</span>
-          <Link to="/Join">
+          <Link to="/JoinPage">
             <button>JOIN</button>
           </Link>
         </div>
