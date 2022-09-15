@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "../styles/icons/FavoritCheck.scss"
 
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
