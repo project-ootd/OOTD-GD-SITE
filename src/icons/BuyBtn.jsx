@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BiWon } from "react-icons/bi";
+import "../styles/icons/BuyBtn.scss";
 
 function BuybtnMan() {
   return (

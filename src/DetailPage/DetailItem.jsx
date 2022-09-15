@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BuybtnMan from "../icons/BuybtnMan";
+import Buybtn from "../icons/BuyBtn";
 import ShoppingCart from "../icons/ShoppingCart";
 import FavoritCheck from "../icons/FavoritCheck";
 import { useRecoilState } from "recoil";
 import { authenticatedState } from "../recoil/authState";
 import axios from "axios";
+import "../styles/DetailItem.scss";
 
 const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   const [authenticated, setAuthenticated] = useRecoilState(authenticatedState);
@@ -93,7 +94,7 @@ const SubDetailWoman = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
             <hr />
             <div className="buy-btn-box flex">
               <div className="buy">
-                <BuybtnMan />
+                <Buybtn />
               </div>
               <div className="cart">
                 {authenticated === true ? (
