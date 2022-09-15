@@ -74,7 +74,7 @@
 }
 .list-box-1 .cell:hover .prod-name,
 .list-box-1 .cell:hover .prod-price {
-  color: #ddd;
+  color: red;
 }
 
 /* 기타 효과 */
@@ -89,7 +89,7 @@
   position: relative;
 }
 .list-box-1 .cell .img-box > .ico-view {
-  color: inherit;
+  color: white;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -97,7 +97,7 @@
   opacity: 0;
   transition: opacity 1s;
   z-index: 1;
-  border: 2px solid inherit;
+  border: 2px solid white;
   border-radius: 10px;
   padding: 5px;
 }
