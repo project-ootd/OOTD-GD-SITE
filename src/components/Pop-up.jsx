@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/Pop-up.scss";
 
 const Popup = () => {
   // const [row, Setrow] = useState("curr");

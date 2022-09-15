@@ -8,13 +8,13 @@ const Woman = ({ prd }) => {
     <>
       <section>
         <div className="sub-menu">
-          <h1>Woman</h1>
+          <h1>Accessory</h1>
         </div>
         <div className="main-pic">
-          {/* <img
+          <img
             src={prd.length > 0 ? prd[20].prdImg : console.log("이미지 없음")}
             alt=""
-          /> */}
+          />
         </div>
         <div className="list-box-1 con">
           <ul className="row">
@@ -29,7 +29,6 @@ const Woman = ({ prd }) => {
                     }
                     alt=""
                   />
-                  npm
                   <div className="ico-view">
                     <i className="fas fa-search" />
                   </div>
