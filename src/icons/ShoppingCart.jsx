@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-
 import axios from "axios";
+import "../styles/icons/ShoppingCart.scss";
 
 function ShoppingCart({ prdId, userId }) {
   const [dup, setDup] = useState(false);
