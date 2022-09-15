@@ -6,7 +6,7 @@ import {
   MdModeEditOutline,
 } from "react-icons/md";
 import cn from "classnames";
-// styles/board/NoticeListItem";
+import "../styles/board/NoticeListItem.scss";
 
 const NoticeListItem = ({
   Notice,
@@ -30,6 +30,7 @@ const NoticeListItem = ({
       <div className="NoticeNumber">{id}</div>
       <div className="text">{text}</div>
       {/* <div
+>>>>>>> 23f3b7bcf61a439ff782bbb3aebeb8cc529caa6b
         className="edit"
         onClick={() => {
           onInsertToggle();

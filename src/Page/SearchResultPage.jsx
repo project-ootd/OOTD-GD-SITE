@@ -4,7 +4,8 @@ import { BiSearchAlt } from "react-icons/bi";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
 import SearchListItem from "../DetailPage/SearchListItem";
-const SearchPage = () => {
+import "../styles/SearchResultPage.scss";
+const SearchResultPage = () => {
   const [arrSearch, setArrSearch] = useState([]);
   const [search, setSearch] = useState("");
   const onChange = (e) => {
@@ -50,6 +51,7 @@ const SearchPage = () => {
           onChange={onChange}
           value={search}
           className="input-bar"
+          style={{ width: "200px" }}
         />
         <button type="submit" className="search-btn">
           <BiSearchAlt className="mirror" />
@@ -70,4 +72,4 @@ const SearchPage = () => {
   );
 };
 
-export default SearchPage;
+export default SearchResultPage;

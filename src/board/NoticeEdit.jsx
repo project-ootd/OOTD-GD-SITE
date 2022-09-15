@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-// styles/board/NoticeEdit";
+import "../styles/board/NoticeEdit.scss";
 
 const NoticeEdit = ({ selectedNotice, onUpdate, onInsertToggle }) => {
   const [value, setValue] = useState("");
