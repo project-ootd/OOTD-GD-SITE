@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 const Kids = ({ prd }) => {
   const { id } = useParams();
   console.log("prd", prd);
-  console.log("아이디", id);
+
   return (
     <div>
       <section>
