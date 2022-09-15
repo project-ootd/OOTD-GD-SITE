@@ -5,6 +5,7 @@ import UserIcon from "../icons/UserIcon";
 import { useRecoilState } from "recoil";
 import { authenticatedState } from "../recoil/authState";
 import { BiSearchAlt } from "react-icons/bi";
+import { useEffect } from "react";
 
 const Login = () => {
   let sessionStorage = window.sessionStorage;
@@ -19,6 +20,10 @@ const Login = () => {
   const pwChange = (e) => {
     setPw(e.target.value);
   };
+
+  useEffect(() => {
+    setAuthenticated(false);
+  }, []);
 
   return (
     <nav className="login">
