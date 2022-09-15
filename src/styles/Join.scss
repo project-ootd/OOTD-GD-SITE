@@ -1,0 +1,47 @@
+.join_box {
+  width: 100%;
+  height: calc(100vh - 180px - 57.5px);
+  background: rgb(224, 224, 224);
+  margin-bottom: -100px;
+  display: flex;
+  justify-content: center;
+}
+
+.join_box > .align-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+div > h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(73, 73, 73);
+}
+
+.form_box {
+  margin: 15px auto 0;
+}
+
+.joinFrom {
+  width: max-content;
+  margin: 0 auto;
+}
+
+.joinForm .joininput {
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  color: black;
+  border: 1px solid #aaa;
+}
+
+.joinFrom > .btn {
+  display: flex;
+}
+
+.btn-ghost {
+  display: flex;
+  margin: 0 auto;
+}
