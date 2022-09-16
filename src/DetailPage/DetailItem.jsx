@@ -1,12 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import BuyBtn from "../icons/BuyBtn";
+=======
+import Buybtn from "../icons/Buybtn";
+>>>>>>> master
 import ShoppingCart from "../icons/ShoppingCart";
 import FavoritCheck from "../icons/FavoritCheck";
 import { useRecoilState } from "recoil";
 import { authenticatedState } from "../recoil/authState";
 import axios from "axios";
+<<<<<<< HEAD
 import "../styles/DetailItem.scss";
+=======
+import "../styles/DetailItem.scss"
+>>>>>>> master
 
 const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   const [authenticated, setAuthenticated] = useRecoilState(authenticatedState);
@@ -41,7 +49,11 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
           <div className="product-text">
             <div className="text-wrap">
               <h2>
+<<<<<<< HEAD
                 제품정보 <span>　　　　　Product Info</span>
+=======
+              제품정보 <span>　　　　　Product Info</span>
+>>>>>>> master
               </h2>
               <div className="text-box1 flex">
                 <div className="text1">
@@ -95,12 +107,16 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
             <hr />
             <div className="buy-btn-box flex">
               <div className="buy">
+<<<<<<< HEAD
                 <BuyBtn />
               </div>
             </div>
             <div className="cart-heart">
               <div className="heart">
                 <FavoritCheck />
+=======
+                <Buybtn />
+>>>>>>> master
               </div>
               <div className="cart">
                 {authenticated === true ? (

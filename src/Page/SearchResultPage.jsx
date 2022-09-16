@@ -11,6 +11,7 @@ const SearchResultPage = () => {
   const onChange = (e) => {
     e.preventDefault();
     setSearch(e.target.value);
+    console.log(e.target.value);
   };
   const onSubmit = (e) => {
     e.preventDefault();
@@ -43,6 +44,7 @@ const SearchResultPage = () => {
   return (
     <div>
       <Topbar />
+<<<<<<< HEAD
 
       <form onSubmit={onSubmit} className="controler">
         <input
@@ -57,12 +59,40 @@ const SearchResultPage = () => {
           <BiSearchAlt className="mirror" />
         </button>
       </form>
+=======
+      <div className="form-control">
+        <form onSubmit={onSubmit} className="controler">
+          <input
+            type="text"
+            placeholder="검색할 상품 이름을 검색해주세요"
+            onChange={onChange}
+            value={search}
+            className="input-bar"
+            style={{ width: "300px", border: "3px solid black" }}
+          />
+          <button type="submit" className="search-btn">
+            <BiSearchAlt className="mirror" />
+          </button>
+        </form>
+      </div>
+>>>>>>> master
       <div className="list-box-1 con">
         <div className="itemList">
           <ul className="row">
-            {arrSearch.map((arrSearch, index) => {
-              return <SearchListItem arrSearch={arrSearch} key={index} />;
-            })}
+            {arrSearch.length > 0 ? (
+              arrSearch.map((arrSearch, index) => {
+                return <SearchListItem arrSearch={arrSearch} key={index} />;
+              })
+            ) : (
+              <li className="ListItemZone">
+                <div
+                  className="ListItemZone_Text"
+                  style={{ paddingTop: "10%" }}
+                >
+                  검색하신 상품이 없습니다.
+                </div>
+              </li>
+            )}
           </ul>
         </div>
       </div>
