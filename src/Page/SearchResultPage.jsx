@@ -44,22 +44,6 @@ const SearchResultPage = () => {
   return (
     <div>
       <Topbar />
-<<<<<<< HEAD
-
-      <form onSubmit={onSubmit} className="controler">
-        <input
-          type="text"
-          placeholder="검색할 상품 이름을 검색해주세요"
-          onChange={onChange}
-          value={search}
-          className="input-bar"
-          style={{ width: "200px" }}
-        />
-        <button type="submit" className="search-btn">
-          <BiSearchAlt className="mirror" />
-        </button>
-      </form>
-=======
       <div className="form-control">
         <form onSubmit={onSubmit} className="controler">
           <input
@@ -75,7 +59,6 @@ const SearchResultPage = () => {
           </button>
         </form>
       </div>
->>>>>>> master
       <div className="list-box-1 con">
         <div className="itemList">
           <ul className="row">

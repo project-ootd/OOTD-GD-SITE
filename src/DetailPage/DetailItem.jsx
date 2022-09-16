@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BuybtnMan from "../icons/BuybtnMan";
+import BuyBtn from "../icons/BuyBtn";
 import ShoppingCart from "../icons/ShoppingCart";
 import FavoritCheck from "../icons/FavoritCheck";
 import { useRecoilState } from "recoil";
 import { authenticatedState } from "../recoil/authState";
 import axios from "axios";
+import "../styles/DetailItem.scss";
 
 const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   const [authenticated, setAuthenticated] = useRecoilState(authenticatedState);
@@ -40,7 +41,7 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
           <div className="product-text">
             <div className="text-wrap">
               <h2>
-                Product Info <span>제품정보</span>
+                Product Info <span>　　　제품정보</span>
               </h2>
               <div className="text-box1 flex">
                 <div className="text1">
@@ -94,7 +95,7 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
             <hr />
             <div className="buy-btn-box flex">
               <div className="buy">
-                <BuybtnMan />
+                <BuyBtn />
               </div>
               <div className="cart">
                 {authenticated === true ? (
