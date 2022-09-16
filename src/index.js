@@ -12,6 +12,7 @@ import SearchResultPage from "./Page/SearchResultPage";
 import JoinPage from "./Page/JoinPage";
 import NoticeBoard from "./board/NoticeBoard";
 import PaymentPage from "./Page/PaymentPage";
+import ShoppingBasketPage from "./Page/ShoppingBasketPage";
 const root = createRoot(document.getElementById("root"));
 
 root.render(
@@ -24,6 +25,7 @@ root.render(
           {/* <Route path="/BuyWoman" element={<BuyWoman />} />
           <Route path="/BuyWoman/:prdId" element={<BuyWoman />} /> */}
           <Route path="/PaymentPage" element={<PaymentPage />} />
+          <Route path="/SBP" element={<ShoppingBasketPage />} />
           <Route path="/NoticeBoard" element={<NoticeBoard />} />
           <Route path="/DetailPage" element={<DetailPage />} />
           <Route path="/GoodsList" element={<GoodsList />} />
