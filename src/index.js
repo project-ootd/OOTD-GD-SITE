@@ -10,6 +10,8 @@ import DetailPage from "./Page/DetailPage";
 import ScrollToTop from "./components/ScrollToTop";
 import SearchResultPage from "./Page/SearchResultPage";
 import JoinPage from "./Page/JoinPage";
+import NoticeTemplate from "./board/NoticeTemplate";
+import NoticePost from "./board/NoticePost";
 import NoticeBoard from "./board/NoticeBoard";
 import PaymentPage from "./Page/PaymentPage";
 import ShoppingBasketPage from "./Page/ShoppingBasketPage";
@@ -26,6 +28,8 @@ root.render(
           <Route path="/BuyWoman/:prdId" element={<BuyWoman />} /> */}
           <Route path="/PaymentPage" element={<PaymentPage />} />
           <Route path="/SBP" element={<ShoppingBasketPage />} />
+          <Route path="/NoticeTemplate" element={<NoticeTemplate />} />
+          <Route path="/NoticePost" element={<NoticePost />} />
           <Route path="/NoticeBoard" element={<NoticeBoard />} />
           <Route path="/DetailPage" element={<DetailPage />} />
           <Route path="/GoodsList" element={<GoodsList />} />

@@ -1,52 +1,62 @@
-.TodoListItem {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
+.NoticeListItem {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom-width: 0.5px;
+  border-color: black;
+}
+
+.NoticeNumber {
+  margin-left: 1rem;
+  font-weight: bold;
+  width: 2%;
+}
+
+.NoticeListItem-virtualized {
+  & + & {
+    border-top: 1px solid #dee2e6;
   }
-  .TodoListItem-virtualized {
-    & + & {
-      border-top: 1px solid #dee2e6;
-    }
-    &:nth-child(even) {
-      background-color: #f8f9fa;
-    }
+  &:nth-child(even) {
+    background-color: #f8f9fa;
   }
-  .checkbox {
-    cursor: pointer;
-    flex: 1;
-    display: flex;
-    align-items: center;
+}
+.checkbox {
+  cursor: pointer;
+  flex: 0.02;
+  display: block;
+  align-items: center;
+  svg {
+    font-size: 1.5rem;
+  }
+
+  &.checked {
     svg {
-      font-size: 1.5rem;
-    }
-    .text {
-      margin-left: 0.5rem;
-    }
-    &.checked {
-      svg {
-        color: #9c88ff;
-      }
-      .text {
-        color: #adb5bd;
-        text-decoration: line-through;
-      }
+      color: gray;
     }
   }
-  .remove {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-    color: #e84118;
-    cursor: pointer;
-    &:hover {
-      color: #ff7f5f;
-    }
+}
+
+.text {
+  cursor: pointer;
+  flex: 1;
+  display: block;
+  margin-left: 0.5rem;
+}
+
+.remove {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #e84118;
+  cursor: pointer;
+  &:hover {
+    color: #ff7f5f;
   }
-  .edit {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin-right: 1rem;
-  }
-  
+}
+.edit {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}

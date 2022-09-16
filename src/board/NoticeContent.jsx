@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/board/NoticeContent.scss";
 
 const NoticeContent = () => {
   return (
@@ -28,8 +29,8 @@ const NoticeContent = () => {
       </nav>
       <article className="notice-content-btn">
         {/* <div className="notice-content-btn2"> */}
-        <button class="btn">등록</button>
-        <button class="btn">돌아가기</button>
+        <button className="btn">등록</button>
+        <button className="btn">돌아가기</button>
         {/* </div> */}
       </article>
     </div>

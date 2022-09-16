@@ -1,19 +1,26 @@
-.TodoTemplate {
-    width: 512px;
-    margin: 6rem auto 0 auto;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .app-title {
-    background: #9c88ff;
-    color: white;
-    height: 4rem;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .content {
-    background: white;
-  }
-  
+.app-title {
+  background: gray;
+  color: white;
+  height: 4rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.NoticeTemplate {
+  width: 70%;
+  margin: 6rem auto 0 auto;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.Notice-Template-btn {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1.5vh;
+}
+
+.Notice-subtitle {
+  background-color: white;
+}

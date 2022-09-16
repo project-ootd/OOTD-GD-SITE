@@ -15,9 +15,9 @@ const FavoritCheck = () => {
   return (
     <div className="favorite">
       {checked ? (
-        <AiOutlineHeart className="voidheart hrt-btn" onClick={onClick} />
-      ) : (
         <AiFillHeart className="fullheart hrt-btn" onClick={onClick} />
+      ) : (
+        <AiOutlineHeart className="voidheart hrt-btn" onClick={onClick} />
       )}
       <div className="favorite-text" onClick={onClick}>
         관심상품 등록
