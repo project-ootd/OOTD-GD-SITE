@@ -35,9 +35,9 @@ const NoticePost = () => {
       />
 
       <article className="Notice-btn">
-        <button class="btn">등록</button>
+        <button className="btn">등록</button>
         <Link to={`/NoticeBoard`}>
-          <button class="btn">돌아가기</button>
+          <button className="btn">돌아가기</button>
         </Link>
       </article>
       <Footer />
