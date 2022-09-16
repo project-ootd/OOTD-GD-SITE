@@ -9,7 +9,7 @@ function BuybtnMan() {
         <div className="won">
           <BiWon />
         </div>{" "}
-        <div className="buy-text">구매하기</div>
+        구매하기
       </button>
     </div>
   );
