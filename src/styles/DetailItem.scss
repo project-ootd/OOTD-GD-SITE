@@ -124,10 +124,23 @@
   margin-top: 5px;
 }
 
-.buy-btn-box > .cart {
-  margin-left: 10px;
+// .buy-btn-box > .cart {
+// }
+
+// .buy-btn-box > .heart {
+// }
+
+.cart-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.buy-btn-box > .heart {
-  margin-left: 10px;
+.cart {
+  width: 49%;
+}
+
+.heart {
+  width: 49%;
 }
