@@ -1,7 +1,20 @@
-.fullheart{
-    color: rgb(255, 102, 102);
-    
+.fullheart {
+  color: rgb(255, 102, 102);
 }
-.hrt-btn{
-    font-size: 45px;
+.hrt-btn {
+  font-size: 45px;
+}
+
+.favorite {
+  border: 1px solid black;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.favorite-text {
+  margin-left: 10px;
+  font-size: 1.2rem;
 }

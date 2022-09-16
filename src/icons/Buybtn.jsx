@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { BiWon } from "react-icons/bi";
-import "../styles/icons/Buybtn.scss"
+import "../styles/icons/BuyBtn.scss";
 
-function Buybtn() {
+function BuyBtn() {
   return (
-    <div>
+    <div className="buy-btn">
       <button className="sell">
         <div className="won">
           <BiWon />
@@ -14,4 +14,4 @@ function Buybtn() {
     </div>
   );
 }
-export default Buybtn;
+export default BuyBtn;

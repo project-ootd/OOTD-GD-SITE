@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Buybtn from "../icons/Buybtn";
+import BuyBtn from "../icons/BuyBtn";
 import ShoppingCart from "../icons/ShoppingCart";
 import FavoritCheck from "../icons/FavoritCheck";
 import { useRecoilState } from "recoil";
@@ -63,7 +63,7 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
             <hr />
             <div className="price-wrap">
               <h2>
-                Price Info <span>가격정보</span>
+                Price Info <span>　　　　　가격정보</span>
               </h2>
               <div className="text-box1 flex">
                 <div className="text1">
@@ -78,6 +78,7 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
                     {parseInt(prdPrice)
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                    원
                   </p>
                   <div className="p2">
                     {" "}
@@ -94,7 +95,12 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
             <hr />
             <div className="buy-btn-box flex">
               <div className="buy">
-                <Buybtn />
+                <BuyBtn />
+              </div>
+            </div>
+            <div className="cart-heart">
+              <div className="heart">
+                <FavoritCheck />
               </div>
               <div className="cart">
                 {authenticated === true ? (
@@ -104,9 +110,6 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
                 ) : (
                   console.log("로그인이 필요합니다.")
                 )}
-              </div>
-              <div className="heart">
-                <FavoritCheck />
               </div>
             </div>
           </div>
