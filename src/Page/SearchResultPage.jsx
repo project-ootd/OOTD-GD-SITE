@@ -52,7 +52,7 @@ const SearchResultPage = () => {
             onChange={onChange}
             value={search}
             className="input-bar"
-            style={{ width: "300px", border: "5px solid red" }}
+            style={{ width: "300px", border: "3px solid black" }}
           />
           <button type="submit" className="search-btn">
             <BiSearchAlt className="mirror" />
