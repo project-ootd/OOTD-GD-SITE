@@ -4,7 +4,7 @@ import "../styles/icons/BuyBtn.scss";
 
 function BuyBtn() {
   return (
-    <div>
+    <div className="buy-btn">
       <button className="sell">
         <div className="won">
           <BiWon />

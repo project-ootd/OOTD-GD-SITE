@@ -1,10 +1,14 @@
+.buy-btn {
+}
+
 .sell {
   font-size: 20px;
   border: 1px solid black;
   border-radius: 25px;
   display: flex;
-  align-items: center;
+  justify-content: center;
   padding: 5px 100px;
+  width: 500px;
 }
 
 .sell > .won {

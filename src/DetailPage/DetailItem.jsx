@@ -41,11 +41,7 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
           <div className="product-text">
             <div className="text-wrap">
               <h2>
-<<<<<<< HEAD
-                Product Info <span>　　　제품정보</span>
-=======
                 제품정보 <span>　　　　　Product Info</span>
->>>>>>> origin
               </h2>
               <div className="text-box1 flex">
                 <div className="text1">
@@ -100,6 +96,11 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
             <div className="buy-btn-box flex">
               <div className="buy">
                 <BuyBtn />
+              </div>
+            </div>
+            <div className="cart-heart">
+              <div className="heart">
+                <FavoritCheck />
               </div>
               <div className="cart">
                 {authenticated === true ? (
