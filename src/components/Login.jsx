@@ -21,9 +21,9 @@ const Login = () => {
     setPw(e.target.value);
   };
 
-  useEffect(() => {
-    setAuthenticated(false);
-  }, []);
+  // useEffect(() => {
+  //   setAuthenticated(false);
+  // }, []);
 
   return (
     <nav className="login">
