@@ -13,6 +13,7 @@ import JoinPage from "./Page/JoinPage";
 import NoticeTemplate from "./board/NoticeTemplate";
 import NoticePost from "./board/NoticePost";
 import NoticeBoard from "./board/NoticeBoard";
+import NoticeList from "./board/NoticeList";
 import PaymentPage from "./Page/PaymentPage";
 import ShoppingBasketPage from "./Page/ShoppingBasketPage";
 const root = createRoot(document.getElementById("root"));
@@ -30,6 +31,7 @@ root.render(
           <Route path="/SBP" element={<ShoppingBasketPage />} />
           <Route path="/NoticeTemplate" element={<NoticeTemplate />} />
           <Route path="/NoticePost" element={<NoticePost />} />
+          <Route path="/NoticeList" element={<NoticeList />} />
           <Route path="/NoticeBoard" element={<NoticeBoard />} />
           <Route path="/DetailPage" element={<DetailPage />} />
           <Route path="/GoodsList" element={<GoodsList />} />

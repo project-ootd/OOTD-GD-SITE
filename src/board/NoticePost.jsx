@@ -5,14 +5,13 @@ import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
 import { Link, useParams } from "react-router-dom";
+import "../styles/board/NoticePost.scss";
 
 const NoticePost = () => {
   return (
     <>
       <Topbar />
-      <section className="Notice-h1">
-        <h1 style={{ color: "white" }}>공지사항 등록</h1>
-      </section>
+      <h1 className="Notice-h1">공지사항 등록</h1>
 
       <CKEditor
         className="Editor"
