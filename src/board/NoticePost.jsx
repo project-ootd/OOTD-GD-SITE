@@ -9,6 +9,8 @@ import "../styles/board/NoticePost.scss";
 
 const NoticePost = ({ onInsert }) => {
   const [value, setValue] = useState("");
+  const [content, setContent] = useState("");
+
   const onchange = (e) => {
     setValue(e.target.value);
   };
@@ -17,7 +19,9 @@ const NoticePost = ({ onInsert }) => {
     <>
       <Topbar />
       <h1 className="Notice-h1">공지사항 등록</h1>
-
+      <div className="notice-title">
+        <input type="text" name="" id="" style={{ border: "5px solid gold" }} />
+      </div>
       <CKEditor
         className="Editor"
         editor={ClassicEditor}
@@ -30,6 +34,7 @@ const NoticePost = ({ onInsert }) => {
           const data = editor.getData();
           console.log("text를 받아오는 중");
           console.log({ event, editor, data });
+          setContent(data);
         }}
         onBlur={(event, editor) => {
           console.log("Blur.", editor);
