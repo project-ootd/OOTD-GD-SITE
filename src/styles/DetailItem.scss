@@ -110,37 +110,22 @@
   color: darkolivegreen;
 }
 
-.buy-btn-box {
-  margin-top: 50px;
-}
-
 .coupon-btn > a {
   padding: 10px 30px;
   color: white;
   font-weight: 600;
 }
 
-.buy-btn-box > .buy {
-  margin-top: 5px;
+.buy-btn-box {
+  margin-top: 5%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
 }
 
-// .buy-btn-box > .cart {
-// }
-
-// .buy-btn-box > .heart {
-// }
-
 .cart-heart {
+  margin-left: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-}
-
-.cart {
-  width: 49%;
-}
-
-.heart {
-  width: 49%;
 }

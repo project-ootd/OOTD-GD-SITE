@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BuyBtn from "../icons/Buybtn";
+import BuyBtn from "../icons/BuyBtn";
 import ShoppingCart from "../icons/ShoppingCart";
 import FavoritCheck from "../icons/FavoritCheck";
 import { useRecoilState } from "recoil";
@@ -97,19 +97,20 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
               <div className="buy">
                 <BuyBtn />
               </div>
-            </div>
-            <div className="cart-heart">
-              <div className="heart">
-                <FavoritCheck />
-              </div>
-              <div className="cart">
-                {authenticated === true ? (
-                  <Link to={`/SBP`}>
-                    <ShoppingCart prdId={prdId} userId={userId} />
-                  </Link>
-                ) : (
-                  console.log("로그인이 필요합니다.")
-                )}
+
+              <div className="cart-heart">
+                <div className="heart">
+                  <FavoritCheck />
+                </div>
+                <div className="cart">
+                  {authenticated === true ? (
+                    <Link to={`/SBP`}>
+                      <ShoppingCart prdId={prdId} userId={userId} />
+                    </Link>
+                  ) : (
+                    console.log("로그인이 필요합니다.")
+                  )}
+                </div>
               </div>
             </div>
           </div>
