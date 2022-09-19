@@ -19,7 +19,7 @@ const NewmainPG = () => {
         <div className="notice">
           <ul className="notice-top">
             <li>
-              <Link to={`/NoticeTemplate`}>NOTICE</Link>
+              <Link to={`/NoticeBoard`}>NOTICE</Link>
             </li>
           </ul>
           <ul className="notice-list">

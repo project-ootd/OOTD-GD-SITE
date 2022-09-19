@@ -2,6 +2,8 @@ import "../styles/board/NoticeTemplate.scss";
 import { Link, useParams } from "react-router-dom";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
+import NoticeList from "./NoticeList";
+import NoticeBoard from "./NoticeBoard";
 
 function NoticeTemplate({ children }) {
   return (
