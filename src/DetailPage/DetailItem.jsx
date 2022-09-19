@@ -104,7 +104,7 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
               </div>
               <div className="cart">
                 {authenticated === true ? (
-                  <Link to={`/SBP/${prdId}`}>
+                  <Link to={`/SBP`}>
                     <ShoppingCart prdId={prdId} userId={userId} />
                   </Link>
                 ) : (
