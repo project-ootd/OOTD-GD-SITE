@@ -23,7 +23,6 @@ function ShoppingCart({ prdId, userId }) {
       <button className="shopping-cart">
         <AiOutlineShoppingCart />
       </button>
-      <div className="cart-text">장바구니 담기</div>
     </div>
   );
 }

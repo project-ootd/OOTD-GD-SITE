@@ -6,12 +6,12 @@
 }
 
 .favorite {
-  border: 1px solid black;
-  border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .favorite-text {
