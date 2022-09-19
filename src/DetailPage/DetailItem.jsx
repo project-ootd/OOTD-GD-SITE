@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import BuyBtn from "../icons/BuyBtn";
 import ShoppingCart from "../icons/ShoppingCart";
@@ -14,6 +14,8 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   let sessionStorage = window.sessionStorage;
   const userId = sessionStorage.getItem("id");
 
+  const [checked, setChecked] = useState(false);
+
   const cartAdd = async () => {
     await axios({
       url: `http://localhost:4000/cart`,
@@ -23,6 +25,30 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
         userId,
       },
     });
+  };
+  const onClick = async () => {
+    console.log("before", checked);
+
+    setChecked((prev) => !prev);
+    // if (checked === false) {
+    //   setChecked(!false);
+    // } else {
+    //   setChecked(false);
+    // }
+    console.log("after", checked);
+  };
+
+  const heart = async () => {
+    await axios({
+      url: `http://localhost:4000/addHeart`,
+      method: "PATCH",
+      data: {
+        prdId,
+        userId,
+        checked,
+      },
+    });
+    onClick();
   };
 
   return (
