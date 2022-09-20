@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import BuyBtn from "../icons/Buybtn";
+import BuyBtn from "../icons/BuyBtn";
 import ShoppingCart from "../icons/ShoppingCart";
 import FavoritCheck from "../icons/FavoritCheck";
 import { useRecoilState } from "recoil";
 import { authenticatedState } from "../recoil/authState";
 import axios from "axios";
 import "../styles/DetailItem.scss";
+import { useEffect } from "react";
 
 const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   const [authenticated, setAuthenticated] = useRecoilState(authenticatedState);
@@ -15,27 +16,26 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   const userId = sessionStorage.getItem("id");
 
   const [checked, setChecked] = useState(false);
+  const [arrHeart, setArrHeart] = useState([]);
 
-  const cartAdd = async () => {
-    await axios({
-      url: `http://localhost:4000/cart`,
-      method: "POST",
-      data: {
-        prdId,
-        userId,
-      },
-    });
-  };
+  useEffect(() => {
+    const getData = async () => {
+      const data = await axios({
+        url: `http://localhost:4000/getHeart`,
+        method: "post",
+        data: { prdId, userId },
+      });
+      setArrHeart(data.data);
+    };
+    getData();
+  }, [prdId]);
+
+  useEffect(() => {
+    setChecked(arrHeart.checked);
+  }, [arrHeart]);
+
   const onClick = async () => {
-    console.log("before", checked);
-
-    setChecked((prev) => !prev);
-    // if (checked === false) {
-    //   setChecked(!false);
-    // } else {
-    //   setChecked(false);
-    // }
-    console.log("after", checked);
+    setChecked((checked) => !checked);
   };
 
   const heart = async () => {
@@ -125,14 +125,25 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
               </div>
 
               <div className="cart-heart">
-                <div className="heart">
-                  <FavoritCheck />
+                <div onClick={heart} className="heart">
+                  <FavoritCheck
+                    arrHeart={arrHeart}
+                    setChecked={setChecked}
+                    checked={checked}
+                    onClick={onClick}
+                  />
                 </div>
                 <div className="cart">
                   {authenticated === true ? (
                     <ShoppingCart />
                   ) : (
-                    console.log("로그인이 필요합니다.")
+                    <div
+                      onClick={() => {
+                        alert("로그인이 필요");
+                      }}
+                    >
+                      <ShoppingCart prdId={prdId} userId={userId} />
+                    </div>
                   )}
                 </div>
               </div>
