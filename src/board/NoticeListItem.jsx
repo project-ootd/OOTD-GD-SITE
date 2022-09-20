@@ -6,7 +6,7 @@ import {
   MdModeEditOutline,
 } from "react-icons/md";
 import cn from "classnames";
-import "../styles/board/NoticeListItem.scss";
+// import "../styles/board/NoticeListItem.scss";
 
 const NoticeListItem = ({
   Notice,
