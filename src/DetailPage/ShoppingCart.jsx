@@ -9,11 +9,11 @@ const ShoppingCart = () => {
   useEffect(() => {
     const getData = async () => {
       const data = await axios({
-        url: `http://localhost:4000/SBP`,
-        method: "POST",
+        url: `http://localhost:4000/SBP/:id`,
+        method: "GET",
       });
       SetCartArr(data.data);
-      console.log(CartArr);
+      console.log(data.data);
     };
     getData();
   }, []);

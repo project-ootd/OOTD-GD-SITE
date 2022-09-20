@@ -1,7 +1,6 @@
 import React from "react";
 
 const ShoppingListItem = ({ CartArr }) => {
-  console.log(CartArr);
   return (
     <div className="Shopping-list-item">
       <tr>
