@@ -8,15 +8,14 @@ function ShoppingCart({ prdId, userId }) {
   const [addCart, setAddCart] = useState("");
   const cartAdd = async () => {
     const data = await axios({
-      url: `http://localhost:4000/cart`,
+      url: `http://localhost:4000/SBP`,
       method: "POST",
       data: {
         prdId,
-        userId,
       },
     });
     setAddCart(data.data);
-    console.log(addCart);
+    console.log(data.data);
   };
   return (
     <div onClick={cartAdd} className="all-cart">
