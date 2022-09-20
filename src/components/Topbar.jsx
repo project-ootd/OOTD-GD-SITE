@@ -29,7 +29,7 @@ const Topbar = () => {
   return (
     <div className="top-bar-sub">
       <header className="top-header">
-        <h1>
+        <h1 className="topbar_title">
           <div className="move-home">
             <Link to="/">
               <BsEye />{" "}
