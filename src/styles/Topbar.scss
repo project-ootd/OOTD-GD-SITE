@@ -13,6 +13,7 @@ a {
 .top-bar-sub {
   overflow-x: hidden;
   margin-bottom: 6vh;
+  width: 100%;
 }
 .top-header {
   z-index: 999;
@@ -26,7 +27,24 @@ a {
   background-color: #1c1c1c;
   font-weight: bold;
   align-items: center;
+  justify-content: space-around;
 }
+
+.top-header > .topbar_title {
+  // justify-content: start;
+  width: 20%;
+}
+
+.top-header > .top-bar {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+}
+
+// .top-header > * {
+//   width: 33.3%;
+// }
+
 //OOTP 로고 부분
 .top-header > h1 > .move-home {
   // margin-top: -50px;
@@ -40,10 +58,8 @@ a {
 }
 // 메뉴박스
 .menu-box-1 > ul {
-  width: 900px;
   display: flex;
-  padding: 0 20px;
-  margin-left: 200px;
+  min-width: none;
 }
 // 1 차 메뉴 아이템
 .menu-box-1 > ul > li {
@@ -86,5 +102,6 @@ a {
 .login {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  justify-content: end;
+  width: 20%;
 }

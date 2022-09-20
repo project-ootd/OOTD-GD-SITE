@@ -141,14 +141,14 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
               <div className="buy">
                 <BuyBtn />
               </div>
-              <div
+              {/* <div
                 onClick={() => {
                   console.log("현재 체크값", checked);
                   console.log("체크된 개수", heartCount);
                 }}
               >
                 check
-              </div>
+              </div> */}
               <div className="cart-heart">
                 <div onClick={heart} className="heart">
                   <FavoritCheck checked={checked} onClick={onClick} />
