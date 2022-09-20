@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import BuyBtn from "../icons/Buybtn";
+import BuyBtn from "../icons/BuyBtn";
 import ShoppingCart from "../icons/ShoppingCart";
 import FavoritCheck from "../icons/FavoritCheck";
 import { useRecoilState } from "recoil";
