@@ -17,6 +17,7 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
 
   const [checked, setChecked] = useState(false);
   const [arrHeart, setArrHeart] = useState([]);
+  const [heartCount, setHeartCount] = useState("");
 
   useEffect(() => {
     const getData = async () => {
@@ -26,16 +27,33 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
         data: { prdId, userId },
       });
       setArrHeart(data.data);
+      // console.log(data.data.checked);
     };
     getData();
   }, [prdId]);
 
+  const HeartCount = async () => {
+    const data = await axios({
+      url: `http://localhost:4000/HeartCount`,
+      method: "post",
+      data: { prdId },
+    });
+    setHeartCount(data.data.checked);
+    console.log("디비 체크 개수", data.data.checked);
+  };
+  // useEffect(() => {
+  //   HeartCount();
+  // }, [checked]);
+
   useEffect(() => {
     setChecked(arrHeart.checked);
+    HeartCount();
   }, [arrHeart]);
 
   const onClick = async () => {
     setChecked((checked) => !checked);
+    HeartCount();
+    console.log("heartCount", heartCount);
   };
 
   const heart = async () => {
@@ -48,6 +66,7 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
         checked,
       },
     });
+    console.log("checked", checked);
     onClick();
   };
 
@@ -123,15 +142,18 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
               <div className="buy">
                 <BuyBtn />
               </div>
-
+              <div
+                onClick={() => {
+                  console.log("현재 체크값", checked);
+                  console.log("체크된 개수", heartCount);
+                }}
+              >
+                check
+              </div>
               <div className="cart-heart">
                 <div onClick={heart} className="heart">
-                  <FavoritCheck
-                    arrHeart={arrHeart}
-                    setChecked={setChecked}
-                    checked={checked}
-                    onClick={onClick}
-                  />
+                  <FavoritCheck checked={checked} onClick={onClick} />
+                  <div className="heartCount">{heartCount}</div>
                 </div>
                 <div className="cart">
                   {authenticated === true ? (
