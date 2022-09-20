@@ -27,3 +27,10 @@
 .ck-editor__editable {
   min-height: 500px;
 }
+
+.notice-title {
+  border: 5px solid red;
+  display: flex;
+  justify-content: center;
+  width: 500px;
+}
