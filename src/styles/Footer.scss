@@ -1,12 +1,19 @@
+// body,
+// ul,
+// li {
+//   margin: 0;
+//   padding: 0;
+//   list-style: 0;
+// }
 .company {
-  margin-top: 100px;
   width: 100%;
   height: auto;
-  margin-left: 20px;
-  background-color: black;
+
+  background-color: #1c1c1c;
 }
 .company > ul {
   color: white;
+  margin-left: 20px;
 }
 .company > ul > li:first-child {
   font-weight: bold;
@@ -19,4 +26,5 @@
 .company > ul > li:last-child {
   text-align: center;
   font-size: 1rem;
+  margin-right: 20px;
 }
