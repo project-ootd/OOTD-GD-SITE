@@ -1,6 +1,14 @@
+import axios from "axios";
 import React from "react";
 
 const ShoppingListItem = ({ CartArr }) => {
+  const Deletebtn = async () => {
+    try {
+      await axios({
+        url: "http://localhost:4000/SBP",
+      });
+    } catch (e) {}
+  };
   return (
     <div className="Shopping-list-item">
       <tr>
