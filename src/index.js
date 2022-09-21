@@ -14,8 +14,10 @@ import NoticeTemplate from "./board/NoticeTemplate";
 import NoticePost from "./board/NoticePost";
 import NoticeBoard from "./board/NoticeBoard";
 import NoticeList from "./board/NoticeList";
+import NoticeContent from "./board/NoticeContent";
 import PaymentPage from "./Page/PaymentPage";
 import ShoppingBasketPage from "./Page/ShoppingBasketPage";
+
 const root = createRoot(document.getElementById("root"));
 
 root.render(
@@ -33,6 +35,7 @@ root.render(
           <Route path="/NoticePost" element={<NoticePost />} />
           <Route path="/NoticeList" element={<NoticeList />} />
           <Route path="/NoticeBoard" element={<NoticeBoard />} />
+          <Route path="/NoticeContent" element={<NoticeContent />} />
           <Route path="/DetailPage" element={<DetailPage />} />
           <Route path="/GoodsList" element={<GoodsList />} />
           <Route path="/GoodsList/:number" element={<GoodsList />} />

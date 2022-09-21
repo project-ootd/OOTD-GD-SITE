@@ -36,14 +36,18 @@
   }
 }
 
-.text {
+.NoticeText {
   cursor: pointer;
   flex: 1;
   display: block;
   margin-left: 0.5rem;
 }
 
-.remove {
+.NoticeDate {
+  border: 5px solid red;
+}
+
+.NoticeRemove {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
@@ -53,7 +57,7 @@
     color: #ff7f5f;
   }
 }
-.edit {
+.NoticeEdit {
   display: flex;
   align-items: center;
   font-size: 1.5rem;

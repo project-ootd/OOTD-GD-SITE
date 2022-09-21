@@ -6,7 +6,7 @@ import {
   MdModeEditOutline,
 } from "react-icons/md";
 import cn from "classnames";
-// import "../styles/board/NoticeListItem.scss";
+import "../styles/board/NoticeListItem.scss";
 
 const NoticeListItem = ({
   Notice,
@@ -20,7 +20,7 @@ const NoticeListItem = ({
   return (
     <li className="NoticeListItem">
       <div
-        className={cn("checkbox", { checked: checked })}
+        className={("checkbox", { checked: checked })}
         onClick={() => {
           onToggle(id);
         }}
@@ -28,9 +28,10 @@ const NoticeListItem = ({
         {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
       </div>
       <div className="NoticeNumber">{id}</div>
-      <div className="text">{text}</div>
+      <div className="NoticeText">{text}</div>
+      <div className="NoticeDate">Date</div>
       <div
-        className="edit"
+        className="NoticeEdit"
         onClick={() => {
           onInsertToggle();
           setSelectedNotice((prev) => Notice);
@@ -39,7 +40,7 @@ const NoticeListItem = ({
         <MdModeEditOutline />
       </div>
       <div
-        className="remove"
+        className="NoticeRemove"
         onClick={() => {
           onRemove(id);
         }}
