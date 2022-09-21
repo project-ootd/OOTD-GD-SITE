@@ -9,7 +9,7 @@ const ShoppingCart = () => {
   useEffect(() => {
     const getData = async () => {
       const data = await axios({
-        url: `http://localhost:4000/SBP/:id`,
+        url: `http://localhost:4000/SBP`,
         method: "GET",
       });
       SetCartArr(data.data);

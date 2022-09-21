@@ -155,17 +155,7 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
                   <div className="heartCount">{heartCount}</div>
                 </div>
                 <div className="cart">
-                  {authenticated === true ? (
-                    <ShoppingCart />
-                  ) : (
-                    <div
-                      onClick={() => {
-                        alert("로그인이 필요");
-                      }}
-                    >
-                      <ShoppingCart prdId={prdId} userId={userId} />
-                    </div>
-                  )}
+                  <ShoppingCart prdId={prdId} />
                 </div>
               </div>
             </div>

@@ -3,7 +3,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import axios from "axios";
 import "../styles/icons/ShoppingCart.scss";
 
-function ShoppingCart({ prdId, userId }) {
+function ShoppingCart({ prdId }) {
   const [dup, setDup] = useState(false);
   const [addCart, setAddCart] = useState("");
   const cartAdd = async () => {
