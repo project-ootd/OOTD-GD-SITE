@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import BuyBtn from "../icons/Buybtn";
+import BuyBtn from "../icons/BuyBtn";
 import ShoppingCart from "../icons/ShoppingCart";
 import FavoritCheck from "../icons/FavoritCheck";
 import { useRecoilState } from "recoil";
 import { authenticatedState } from "../recoil/authState";
 import axios from "axios";
 import "../styles/DetailItem.scss";
+import { useEffect } from "react";
 
 const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   const [authenticated, setAuthenticated] = useRecoilState(authenticatedState);
@@ -15,27 +16,43 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   const userId = sessionStorage.getItem("id");
 
   const [checked, setChecked] = useState(false);
+  const [arrHeart, setArrHeart] = useState([]);
+  const [heartCount, setHeartCount] = useState("");
 
-  const cartAdd = async () => {
-    await axios({
-      url: `http://localhost:4000/cart`,
-      method: "POST",
-      data: {
-        prdId,
-        userId,
-      },
+  useEffect(() => {
+    const getData = async () => {
+      const data = await axios({
+        url: `http://localhost:4000/getHeart`,
+        method: "post",
+        data: { prdId, userId },
+      });
+      setArrHeart(data.data);
+    };
+    getData();
+  }, [prdId]);
+
+  const HeartCount = async () => {
+    const data = await axios({
+      url: `http://localhost:4000/HeartCount`,
+      method: "post",
+      data: { prdId },
     });
+    setHeartCount(data.data.checked);
+    console.log("디비 체크 개수", data.data.checked);
   };
-  const onClick = async () => {
-    console.log("before", checked);
+  // useEffect(() => {
+  //   HeartCount();
+  // }, [checked]);
 
-    setChecked((prev) => !prev);
-    // if (checked === false) {
-    //   setChecked(!false);
-    // } else {
-    //   setChecked(false);
-    // }
-    console.log("after", checked);
+  useEffect(() => {
+    setChecked(arrHeart.checked);
+    HeartCount();
+  }, [arrHeart]);
+
+  const onClick = async () => {
+    setChecked((checked) => !checked);
+    HeartCount();
+    console.log("heartCount", heartCount);
   };
 
   const heart = async () => {
@@ -48,6 +65,7 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
         checked,
       },
     });
+    console.log("checked", checked);
     onClick();
   };
 
@@ -123,10 +141,18 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
               <div className="buy">
                 <BuyBtn />
               </div>
-
+              {/* <div
+                onClick={() => {
+                  console.log("현재 체크값", checked);
+                  console.log("체크된 개수", heartCount);
+                }}
+              >
+                check
+              </div> */}
               <div className="cart-heart">
-                <div className="heart">
-                  <FavoritCheck />
+                <div onClick={heart} className="heart">
+                  <FavoritCheck checked={checked} onClick={onClick} />
+                  <div className="heartCount">{heartCount}</div>
                 </div>
                 <div className="cart">
                   <ShoppingCart prdId={prdId} />

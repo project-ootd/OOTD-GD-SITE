@@ -37,7 +37,6 @@
 .cell {
   float: left;
   box-sizing: border-box;
-  border: 5px solid white;
 }
 
 /* 커스텀 */
@@ -48,6 +47,7 @@
 }
 .list-box-1 .cell {
   width: 20%;
+
   padding: 0 10px;
   margin-top: 20px;
   cursor: pointer;

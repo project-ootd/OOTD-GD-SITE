@@ -1,6 +1,7 @@
 //  메인 타이틀
 .detail_wrap {
-  margin-top: 80px;
+  // margin-top: 80px;
+  height: calc(100vh - 180px - 60px);
 }
 
 .flex {
@@ -128,4 +129,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.cart-heart > .heart {
+  position: relative;
+}
+
+.cart-heart > .heart > .heartCount {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-53%, -55%);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
 }
