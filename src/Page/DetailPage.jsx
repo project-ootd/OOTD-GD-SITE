@@ -12,7 +12,7 @@ const WSBP = () => {
   const [prdName, setPrdName] = useState("");
   const [prdEName, setPrdEName] = useState("");
   const [prdPrice, setPrdPrice] = useState("");
-  const [prdId, setPrdId] = useState("");
+  const [prdid, setPrdid] = useState("");
   const [prdImg, setPrdImg] = useState("");
 
   // useEffect(() => {
@@ -20,13 +20,10 @@ const WSBP = () => {
     const data = await axios({
       url: `http://localhost:4000/product`,
       method: "POST",
-      data: { prdId },
+      data: { prdId: location.state.data },
     });
-    // console.log("prdid", prdId);
 
-    // console.log(data.data);
-
-    setPrdId(location.state.data);
+    setPrdid(data.data.prdId);
     setPrdName(data.data.prdName);
     setPrdEName(data.data.prdEName);
     setPrdPrice(data.data.prdPrice);
@@ -39,7 +36,7 @@ const WSBP = () => {
     <div>
       <Topbar />
       <DetailItem
-        prdId={prdId}
+        prdId={prdid}
         prdName={prdName}
         prdEName={prdEName}
         prdPrice={prdPrice}
