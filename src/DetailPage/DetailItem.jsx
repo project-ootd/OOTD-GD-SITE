@@ -40,19 +40,14 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
     setHeartCount(data.data.checked);
     console.log("디비 체크 개수", data.data.checked);
   };
-  // useEffect(() => {
-  //   HeartCount();
-  // }, [checked]);
 
   useEffect(() => {
     setChecked(arrHeart.checked);
     HeartCount();
-  }, [arrHeart]);
+  }, [arrHeart, heartCount]);
 
   const onClick = async () => {
     setChecked((checked) => !checked);
-    HeartCount();
-    console.log("heartCount", heartCount);
   };
 
   const heart = async () => {
@@ -65,8 +60,7 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
         checked,
       },
     });
-    console.log("checked", checked);
-    onClick();
+    // onClick();
   };
 
   return (
@@ -141,17 +135,24 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
               <div className="buy">
                 <BuyBtn />
               </div>
-              {/* <div
+              <div
                 onClick={() => {
-                  console.log("현재 체크값", checked);
+                  console.log("현재 체크값", arrHeart);
                   console.log("체크된 개수", heartCount);
                 }}
               >
                 check
-              </div> */}
+              </div>
               <div className="cart-heart">
-                <div onClick={heart} className="heart">
-                  <FavoritCheck checked={checked} onClick={onClick} />
+                <div className="heart">
+                  <FavoritCheck
+                    checked={checked}
+                    onClick={() => {
+                      onClick();
+                      heart();
+                      // HeartCount();
+                    }}
+                  />
                   <div className="heartCount">{heartCount}</div>
                 </div>
                 <div className="cart">
