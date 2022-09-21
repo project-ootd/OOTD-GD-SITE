@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import BuyBtn from "../icons/BuyBtn";
 import ShoppingCart from "../icons/ShoppingCart";
@@ -7,7 +7,6 @@ import { useRecoilState } from "recoil";
 import { authenticatedState } from "../recoil/authState";
 import axios from "axios";
 import "../styles/DetailItem.scss";
-import { useEffect } from "react";
 
 const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   const [authenticated, setAuthenticated] = useRecoilState(authenticatedState);
@@ -15,52 +14,40 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   let sessionStorage = window.sessionStorage;
   const userId = sessionStorage.getItem("id");
 
-  const [checked, setChecked] = useState(false);
-  const [arrHeart, setArrHeart] = useState([]);
-  const [heartCount, setHeartCount] = useState("");
+  const [arrcheck, setArrcheck] = useState([]);
+  const [checked, setChecked] = useState("");
 
   useEffect(() => {
-    const getData = async () => {
-      const data = await axios({
-        url: `http://localhost:4000/getHeart`,
-        method: "post",
-        data: { prdId, userId },
-      });
-      setArrHeart(data.data);
-    };
-    getData();
-  }, [prdId]);
+    console.log("prdId:", prdId);
+    // const getData = async () => {
+    //   const data = await axios({
+    //     url: `http://localhost:4000/heart/${userId}/${prdId}`,
+    //     method: "GET",
+    //   });
+    //   // console.log(data.data);
+    //   // setArrcheck(data.data);
+    // };
+    // getData();
+  }, []);
 
-  const HeartCount = async () => {
-    const data = await axios({
-      url: `http://localhost:4000/HeartCount`,
-      method: "post",
-      data: { prdId },
-    });
-    setHeartCount(data.data.checked);
-    console.log("디비 체크 개수", data.data.checked);
-  };
-
-  useEffect(() => {
-    setChecked(arrHeart.checked);
-    HeartCount();
-  }, [arrHeart, heartCount]);
-
-  const onClick = async () => {
-    setChecked((checked) => !checked);
-  };
-
-  const heart = async () => {
+  const insertHeart = async (checked) => {
     await axios({
-      url: `http://localhost:4000/addHeart`,
-      method: "PATCH",
-      data: {
-        prdId,
-        userId,
-        checked,
-      },
+      url: `http://localhost:4000/addHeart/${userId}/${prdId}`,
+      method: "patch",
+      data: { checked },
     });
-    // onClick();
+    // setArrcheck((arrcheck) =>
+    //   arrcheck.map((checked) =>
+    //     checked.prdId === prdId
+    //       ? { ...checked, checked: !checked.checked }
+    //       : checked
+    //   )
+    // );
+  };
+
+  const onToggle = () => {
+    setChecked((checked) => !checked);
+    console.log("checked", checked);
   };
 
   return (
@@ -132,28 +119,35 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
             </div>
             <hr />
             <div className="buy-btn-box flex">
+              <div
+                onClick={() => {
+                  console.log(checked);
+                }}
+              >
+                click
+              </div>
               <div className="buy">
                 <BuyBtn />
               </div>
-              <div
+              {/* <div
                 onClick={() => {
-                  console.log("현재 체크값", arrHeart);
+                  console.log("현재 체크값", checked);
                   console.log("체크된 개수", heartCount);
                 }}
               >
                 check
-              </div>
+              </div> */}
               <div className="cart-heart">
                 <div className="heart">
                   <FavoritCheck
+                    prdId={prdId}
                     checked={checked}
-                    onClick={() => {
-                      onClick();
-                      heart();
-                      // HeartCount();
-                    }}
+                    insertHeart={insertHeart}
+                    onToggle={onToggle}
+                    // setHeart={setHeart}
+                    // checked={checked} onClick={onClick}
                   />
-                  <div className="heartCount">{heartCount}</div>
+                  <div className="heartCount">{/* {heartCount} */}</div>
                 </div>
                 <div className="cart">
                   <ShoppingCart prdId={prdId} />
