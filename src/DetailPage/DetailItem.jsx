@@ -129,11 +129,7 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
                   <FavoritCheck />
                 </div>
                 <div className="cart">
-                  {authenticated === true ? (
-                    <ShoppingCart />
-                  ) : (
-                    console.log("로그인이 필요합니다.")
-                  )}
+                  <ShoppingCart prdId={prdId} />
                 </div>
               </div>
             </div>
