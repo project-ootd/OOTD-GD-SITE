@@ -6,13 +6,38 @@ import "../styles/icons/FavoritCheck.scss";
 import axios from "axios";
 import cn from "classnames";
 
-const FavoritCheck = ({ checked, onClick }) => {
+const FavoritCheck = ({
+  prdId,
+  checked,
+  insertHeart,
+  onToggle,
+  // setHeart,
+  // checked, onClick
+}) => {
   return (
+    // <div>
+    //   <AiOutlineHeart className="voidheart hrt-btn" />
+    // </div>
     <div className={cn("favorite", { checked: checked })}>
       {checked === true || checked === 1 ? (
-        <AiFillHeart className="fullheart hrt-btn" onClick={onClick} />
+        <AiFillHeart
+          className="fullheart hrt-btn"
+          onClick={() => {
+            insertHeart(checked);
+            onToggle();
+            console.log("활성화", checked);
+          }}
+        />
       ) : (
-        <AiOutlineHeart className="voidheart hrt-btn" onClick={onClick} />
+        <AiOutlineHeart
+          className="voidheart hrt-btn"
+          onClick={() => {
+            console.log("비활성화", checked);
+            insertHeart(checked);
+            onToggle();
+          }}
+          //  onClick={onClick}
+        />
       )}
     </div>
   );
