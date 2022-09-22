@@ -7,9 +7,7 @@ import axios from "axios";
 import cn from "classnames";
 
 const FavoritCheck = ({
-  prdId,
   checked,
-  insertHeart,
   onToggle,
   // setHeart,
   // checked, onClick
@@ -23,17 +21,16 @@ const FavoritCheck = ({
         <AiFillHeart
           className="fullheart hrt-btn"
           onClick={() => {
-            insertHeart(checked);
             onToggle();
-            console.log("활성화", checked);
+            // console.log("활성화", checked);
           }}
         />
       ) : (
         <AiOutlineHeart
           className="voidheart hrt-btn"
           onClick={() => {
-            console.log("비활성화", checked);
-            insertHeart(checked);
+            // console.log("비활성화", checked);
+            // insertHeart(checked);
             onToggle();
           }}
           //  onClick={onClick}
