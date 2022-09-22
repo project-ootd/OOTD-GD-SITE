@@ -19,9 +19,9 @@ function NoticeTemplate({ children }) {
           <button className="btn">공지사항 작성</button>
         </Link>
 
-        <a href="javascript:history.back();">
+        <Link to={`/`}>
           <button className="btn">돌아가기</button>
-        </a>
+        </Link>
       </section>
       <Footer />
     </>

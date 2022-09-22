@@ -15,7 +15,8 @@ const NoticeListItem = ({
   onInsertToggle,
   setSelectedNotice,
 }) => {
-  const { id, text, checked } = Notice;
+  const { checked, id, text, reg_date } = Notice;
+
   // console.log(`${id}번 NoticelistItem에서 Notice를 출력함`, Notice);
   return (
     <li className="NoticeListItem">
@@ -24,13 +25,14 @@ const NoticeListItem = ({
         onClick={() => {
           onToggle(id);
         }}
+        style={{ fontSize: "1.5rem" }}
       >
         {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
       </div>
       <div className="NoticeNumber">{id}</div>
       <div className="NoticeText">{text}</div>
-      <div className="NoticeDate">Date</div>
-      <div
+      <div className="NoticeDate">{reg_date.substring(0, 10)}</div>
+      {/* <div
         className="NoticeEdit"
         onClick={() => {
           onInsertToggle();
@@ -46,7 +48,7 @@ const NoticeListItem = ({
         }}
       >
         <MdRemoveCircleOutline />
-      </div>
+      </div> */}
     </li>
   );
 };

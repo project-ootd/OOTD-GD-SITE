@@ -18,6 +18,19 @@
   border: 5px solid gold;
 }
 
+.numANDtitle {
+  display: flex;
+}
+
+.notice-content-num {
+  text-align: left;
+  margin-bottom: 50px;
+  border-bottom: 2px solid black;
+  font-size: 1.7rem;
+  width: max-content;
+  margin-right: 10px;
+}
+
 .notice-content-title {
   text-align: left;
   margin-bottom: 50px;
@@ -31,6 +44,7 @@
   text-align: left;
   border: 5px solid blue;
   height: 500px;
+  // height: max-content;
 }
 
 .notice-content-btn {
