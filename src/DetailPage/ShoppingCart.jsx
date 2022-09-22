@@ -45,7 +45,13 @@ const ShoppingCart = () => {
           </thead>
           <tbody>
             {CartArr.map((CartArr, index) => {
-              return <ShoppingListItem CartArr={CartArr} key={index} />;
+              return (
+                <ShoppingListItem
+                  CartArr={CartArr}
+                  SetCartArr={SetCartArr}
+                  key={index}
+                />
+              );
             })}
           </tbody>
           {/** 구매 취소 버튼 */}
