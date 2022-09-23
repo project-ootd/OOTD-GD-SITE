@@ -17,7 +17,6 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   const [arrcheck, setArrcheck] = useState([]);
   const [checked, setChecked] = useState("");
 
-<<<<<<< HEAD
   // useEffect(() => {
   //   const getData = async () => {
   //     const data = await axios({
@@ -67,18 +66,18 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   //   console.log("checked", checked);
   //   onClick();
   // };
-=======
+
   useEffect(() => {
     console.log("prdId:", prdId);
-    // const getData = async () => {
-    //   const data = await axios({
-    //     url: `http://localhost:4000/heart/${userId}/${prdId}`,
-    //     method: "GET",
-    //   });
-    //   // console.log(data.data);
-    //   // setArrcheck(data.data);
-    // };
-    // getData();
+    const getData = async () => {
+      const data = await axios({
+        url: `http://localhost:4000/heart/${userId}/${prdId}`,
+        method: "GET",
+      });
+      // console.log(data.data);
+      // setArrcheck(data.data);
+    };
+    getData();
   }, []);
 
   const insertHeart = async (checked) => {
@@ -87,20 +86,19 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
       method: "patch",
       data: { checked },
     });
-    // setArrcheck((arrcheck) =>
-    //   arrcheck.map((checked) =>
-    //     checked.prdId === prdId
-    //       ? { ...checked, checked: !checked.checked }
-    //       : checked
-    //   )
-    // );
+    setArrcheck((arrcheck) =>
+      arrcheck.map((checked) =>
+        checked.prdId === prdId
+          ? { ...checked, checked: !checked.checked }
+          : checked
+      )
+    );
   };
 
   const onToggle = () => {
     setChecked((checked) => !checked);
     console.log("checked", checked);
   };
->>>>>>> master
 
   return (
     <>
@@ -190,11 +188,6 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
                 check
               </div> */}
               <div className="cart-heart">
-<<<<<<< HEAD
-                <div /*onClick={heart}*/ className="heart">
-                  {/* <FavoritCheck checked={checked} onClick={onClick} /> */}
-                  <div className="heartCount">{heartCount}</div>
-=======
                 <div className="heart">
                   <FavoritCheck
                     prdId={prdId}
@@ -205,7 +198,6 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
                     // checked={checked} onClick={onClick}
                   />
                   <div className="heartCount">{/* {heartCount} */}</div>
->>>>>>> master
                 </div>
                 <div className="cart">
                   <ShoppingCart prdId={prdId} />
