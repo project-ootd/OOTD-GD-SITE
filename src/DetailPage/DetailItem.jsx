@@ -14,71 +14,28 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   let sessionStorage = window.sessionStorage;
   const userId = sessionStorage.getItem("id");
 
-  const [arrcheck, setArrcheck] = useState([]);
-  const [checked, setChecked] = useState("");
+  const [heartArr, setHeartArr] = useState([]);
+  const [checked, setChecked] = useState(false);
+  const [allHeartCount, setAllHeartCount] = useState(0);
 
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     const data = await axios({
-  //       url: `http://localhost:4000/getHeart`,
-  //       method: "post",
-  //       data: { prdId, userId },
-  //     });
-  //     setArrHeart(data.data);
-  //   };
-  //   getData();
-  // }, [prdId]);
+  const getHeart = async () => {
+    const data = await axios({
+      url: `http://localhost:4000/HeartCount`,
+      method: "post",
+      data: { prdId },
+    });
+    // setAllHeartCount(data.data.checked);
+    // setHeartArr(data.data);
+    setHeartArr(data.data);
+    console.log(data.data);
+    let count = 0;
+    data.data.map((check, index) => {
+      count += check.checked;
+    });
 
-  // const HeartCount = async () => {
-  //   const data = await axios({
-  //     url: `http://localhost:4000/HeartCount`,
-  //     method: "post",
-  //     data: { prdId },
-  //   });
-  //   setHeartCount(data.data.checked);
-  //   console.log("디비 체크 개수", data.data.checked);
-  // };
-  // useEffect(() => {
-  //   HeartCount();
-  // }, [checked]);
-
-  // useEffect(() => {
-  //   setChecked(arrHeart.checked);
-  //   HeartCount();
-  // }, [arrHeart]);
-
-  // const onClick = async () => {
-  //   setChecked((checked) => !checked);
-  //   HeartCount();
-  //   console.log("heartCount", heartCount);
-  // };
-
-  // const heart = async () => {
-  //   await axios({
-  //     url: `http://localhost:4000/addHeart`,
-  //     method: "PATCH",
-  //     data: {
-  //       prdId,
-  //       userId,
-  //       checked,
-  //     },
-  //   });
-  //   console.log("checked", checked);
-  //   onClick();
-  // };
-
-  useEffect(() => {
-    console.log("prdId:", prdId);
-    const getData = async () => {
-      const data = await axios({
-        url: `http://localhost:4000/heart/${userId}/${prdId}`,
-        method: "GET",
-      });
-      // console.log(data.data);
-      // setArrcheck(data.data);
-    };
-    getData();
-  }, []);
+    setAllHeartCount(count);
+    console.log("count", count);
+  };
 
   const insertHeart = async (checked) => {
     await axios({
@@ -86,19 +43,34 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
       method: "patch",
       data: { checked },
     });
-    setArrcheck((arrcheck) =>
-      arrcheck.map((checked) =>
-        checked.prdId === prdId
-          ? { ...checked, checked: !checked.checked }
-          : checked
-      )
-    );
   };
 
   const onToggle = () => {
     setChecked((checked) => !checked);
-    console.log("checked", checked);
+    insertHeart(!checked);
+    // getHeart();
+    // console.log("checked", checked);
   };
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await axios({
+        url: `http://localhost:4000/heart/${userId}`,
+        method: "POST",
+        data: { prdId },
+      });
+
+      setChecked(data.data.checked);
+      // console.log(data.data);
+    };
+    getData();
+  }, [prdId]);
+
+  useEffect(() => {
+    // console.log(heartArr);
+    getHeart();
+    console.log("checked", checked);
+  }, [checked]);
 
   return (
     <>
@@ -171,10 +143,11 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
             <div className="buy-btn-box flex">
               <div
                 onClick={() => {
-                  console.log(checked);
+                  console.log("heartArr", heartArr);
+                  // insertHeart(checked);
                 }}
               >
-                click
+                {allHeartCount}
               </div>
               <div className="buy">
                 <BuyBtn />
@@ -190,9 +163,7 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
               <div className="cart-heart">
                 <div className="heart">
                   <FavoritCheck
-                    prdId={prdId}
                     checked={checked}
-                    insertHeart={insertHeart}
                     onToggle={onToggle}
                     // setHeart={setHeart}
                     // checked={checked} onClick={onClick}
