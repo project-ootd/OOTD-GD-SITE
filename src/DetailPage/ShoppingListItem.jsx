@@ -26,10 +26,37 @@ const ShoppingListItem = ({ CartArr, SetCartArr }) => {
   });
   return (
     <tr className="Shopping-list-item">
+      <th>
+        <label>
+          <input type="checkbox" className="checkbox" />
+        </label>
+      </th>
       <td>
-        <div></div>
+        <div className="flex items-center space-x-3">
+          <div className="avatar">
+            <div className="mask mask-squircle w-12 h-12">
+              <img src={CartArr.prdImg} alt="Avatar Tailwind CSS Component" />
+            </div>
+          </div>
+          <div>
+            <div className="font-bold">{CartArr.prdName}</div>
+          </div>
+        </div>
       </td>
       <td>
+        {CartArr.prdEname}
+        <br />
+      </td>
+      <td>수량</td>
+      <td></td>
+      <th>
+        <button className="btn btn-ghost btn-xs">삭제</button>
+      </th>
+
+      {/* <td>
+        <div></div>
+      </td> */}
+      {/* <td>
         <div className="flex items-center space-x-3">
           <div className="avatar">
             <div className="mask mask-squircle w-12 h-12">
@@ -79,20 +106,20 @@ const ShoppingListItem = ({ CartArr, SetCartArr }) => {
         ></div>
         <br />
         {/* <span className="badge badge-ghost badge-sm"></span> */}
-      </td>
-      <td>{CartArr.prdPrice}</td>
+      {/* </td> */}
+      {/* // <td>{CartArr.prdPrice}</td> */}
       {/* <td>{list.prdPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</td> */}
-      <td>
-        <button
-          className="btn btn-ghost btn-mg"
-          style={{ color: "red" }}
-          onClick={() => {
-            Deletebtn();
-          }}
-        >
-          삭제
-        </button>
-      </td>
+      {/* // <td>
+      //   <button */}
+      {/* //     className="btn btn-ghost btn-mg"
+      //     style={{ color: "red" }}
+      //     onClick={() => { */}
+      {/* //       Deletebtn();
+      //     }}
+      //   >
+      //     삭제
+      //   </button> */}
+      {/* // </td> */}
     </tr>
   );
 };

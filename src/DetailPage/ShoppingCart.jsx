@@ -25,24 +25,33 @@ const ShoppingCart = () => {
         style={{ width: "90%", margin: "15vh auto" }}
       >
         <table className="table w-full">
-          {/* head */}
-          <thead
+          <thead>
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" className="checkbox" />
+                </label>
+              </th>
+              <th>상품명</th>
+              <th>수량</th>
+              <th>가격</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          {/*    {/* head */}
+          {/* <thead
             style={{
               display: "flex",
               justyficontent: "space-between",
-            }}
-          >
-            <tr
-              className="cart-menubar w-max"
-              style={{ border: "5px solid red" }}
-            >
-              <th></th>
+            }} */}
+          {/* >
+            <tr className="cart-menubar">
               <th className="cart-title">상품 명</th>
-              <th>상품 개수</th>
-              <th>상품 가격</th>
-              <th style={{ width: "100%" }}></th>
+              <th className="cart-title">상품 개수</th>
+              <th className="cart-title">상품 가격</th>
             </tr>
-          </thead>
+          </thead>  */}
           <tbody>
             {CartArr.map((CartArr, index) => {
               return (
@@ -58,6 +67,8 @@ const ShoppingCart = () => {
           <tfoot style={{ width: "100%" }}>
             <tr>
               <th />
+              <th></th>
+              <th></th>
               <th>돌아가기</th>
               <th>결제하기</th>
             </tr>
