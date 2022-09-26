@@ -18,36 +18,48 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   const [checked, setChecked] = useState(false);
   const [allHeartCount, setAllHeartCount] = useState(0);
 
+  let [allCount, setAllCount] = useState(0);
+
   // useEffect(() => {
   //   // getHeart();
   //   console.log("checked", checked);
   // }, [checked]);
+  // `
+  //   const getHeart = async () => {
+  //     const data = await axios({
+  //       url: `http://localhost:4000/HeartCount`,
+  //       method: "post",
+  //       data: { prdId },
+  //     });
+  //     setHeartArr(data.data);
+  //     console.log(data.data);
+  //     let count = 0;
+  //     data.data.map((check, index) => {
+  //       count += check.checked;
+  //     });
 
-  const getHeart = async () => {
-    const data = await axios({
-      url: `http://localhost:4000/HeartCount`,
-      method: "post",
-      data: { prdId },
-    });
-    // setAllHeartCount(data.data.checked);
-    // setHeartArr(data.data);
-    setHeartArr(data.data);
-    console.log(data.data);
-    let count = 0;
-    data.data.map((check, index) => {
-      count += check.checked;
-    });
-
-    setAllHeartCount(count);
-    console.log("count", count);
-  };
+  //     setAllHeartCount(count);
+  //     console.log("count", count);
+  //   };
 
   const insertHeart = async (checked) => {
-    await axios({
+    // console.log(allCount);
+    const data = await axios({
       url: `http://localhost:4000/addHeart/${userId}/${prdId}`,
       method: "patch",
-      data: { checked },
+      data: {
+        checked,
+        // allCount
+      },
     });
+
+    // setAllCount(data.data.checked);
+
+    // {
+    //   checked === true || checked === 1
+    //     ? (allCount = allCount + 1)
+    //     : (allCount = allCount - 1);
+    // }
   };
 
   const onToggle = () => {
@@ -58,20 +70,20 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
     // console.log("checked", checked);
   };
 
-  useEffect(() => {
-    const getData = async () => {
-      const data = await axios({
-        url: `http://localhost:4000/heart/${userId}`,
-        method: "POST",
-        data: { prdId },
-      });
+  //   useEffect(() => {
+  //     const getData = async () => {
+  //       const data = await axios({
+  //         url: `http://localhost:4000/heart/${userId}`,
+  //         method: "POST",
+  //         data: { prdId },
+  //       });
 
-      setChecked(data.data.checked);
-      // console.log(data.data);
-    };
-    getData();
-    getHeart();
-  }, [prdId]);
+  //       setChecked(data.data.checked);
+  //       // console.log(data.data);
+  //     };
+  //     getData();
+  //     getHeart();
+  //   }, [prdId]);`
 
   return (
     <>
@@ -144,11 +156,11 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
             <div className="buy-btn-box flex">
               <div
                 onClick={() => {
-                  console.log("heartArr", heartArr);
+                  // console.log("heartArr", heartArr);
                   // insertHeart(checked);
                 }}
               >
-                {allHeartCount}
+                {/* {allHeartCount} */}
               </div>
               <div className="buy">
                 <BuyBtn />
@@ -166,7 +178,7 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
                   <FavoritCheck
                     checked={checked}
                     onToggle={onToggle}
-                    getHeart={getHeart}
+                    // getHeart={getHeart}
                     // setHeart={setHeart}
                     // checked={checked} onClick={onClick}
                   />
