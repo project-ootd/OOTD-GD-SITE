@@ -9,7 +9,7 @@ import cn from "classnames";
 const FavoritCheck = ({
   checked,
   onToggle,
-  getHeart,
+  // getHeart,
   // setHeart,
   // checked, onClick
 }) => {
@@ -23,18 +23,16 @@ const FavoritCheck = ({
           className="fullheart hrt-btn"
           onClick={() => {
             onToggle();
-            getHeart();
-            // console.log("활성화", checked);
+            // getHeart();
           }}
         />
       ) : (
         <AiOutlineHeart
           className="voidheart hrt-btn"
           onClick={() => {
-            // console.log("비활성화", checked);
             // insertHeart(checked);
             onToggle();
-            getHeart();
+            // getHeart();
           }}
           //  onClick={onClick}
         />
