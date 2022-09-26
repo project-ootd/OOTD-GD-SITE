@@ -18,6 +18,11 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
   const [checked, setChecked] = useState(false);
   const [allHeartCount, setAllHeartCount] = useState(0);
 
+  // useEffect(() => {
+  //   // getHeart();
+  //   console.log("checked", checked);
+  // }, [checked]);
+
   const getHeart = async () => {
     const data = await axios({
       url: `http://localhost:4000/HeartCount`,
@@ -49,6 +54,7 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
     setChecked((checked) => !checked);
     insertHeart(!checked);
     // getHeart();
+    // getHeart();
     // console.log("checked", checked);
   };
 
@@ -64,13 +70,8 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
       // console.log(data.data);
     };
     getData();
-  }, [prdId]);
-
-  useEffect(() => {
-    // console.log(heartArr);
     getHeart();
-    console.log("checked", checked);
-  }, [checked]);
+  }, [prdId]);
 
   return (
     <>
@@ -165,6 +166,7 @@ const DetailItem = ({ prdId, prdName, prdEName, prdPrice, prdImg }) => {
                   <FavoritCheck
                     checked={checked}
                     onToggle={onToggle}
+                    getHeart={getHeart}
                     // setHeart={setHeart}
                     // checked={checked} onClick={onClick}
                   />
