@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   MdCheckBoxOutlineBlank,
   MdRemoveCircleOutline,
@@ -7,6 +8,7 @@ import {
 } from "react-icons/md";
 import cn from "classnames";
 import "../styles/board/NoticeListItem.scss";
+import NoticeContent from "./NoticeContent";
 
 const NoticeListItem = ({
   Notice,
@@ -15,7 +17,7 @@ const NoticeListItem = ({
   onInsertToggle,
   setSelectedNotice,
 }) => {
-  const { checked, id, text, reg_date } = Notice;
+  const { checked, id, title, reg_date } = Notice;
 
   // console.log(`${id}번 NoticelistItem에서 Notice를 출력함`, Notice);
   return (
@@ -30,7 +32,11 @@ const NoticeListItem = ({
         {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
       </div>
       <div className="NoticeNumber">{id}</div>
-      <div className="NoticeText">{text}</div>
+      <Link to={`/NoticeContent/${id}`}>
+        <div className="NoticeText" onClick={() => {}}>
+          {title}
+        </div>
+      </Link>
       <div className="NoticeDate">{reg_date.substring(0, 10)}</div>
       {/* <div
         className="NoticeEdit"

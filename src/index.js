@@ -15,6 +15,7 @@ import NoticePost from "./board/NoticePost";
 import NoticeBoard from "./board/NoticeBoard";
 import NoticeList from "./board/NoticeList";
 import NoticeContent from "./board/NoticeContent";
+import NoticeContentItem from "./board/NoticeContentItem";
 import PaymentPage from "./Page/PaymentPage";
 import ShoppingBasketPage from "./Page/ShoppingBasketPage";
 
@@ -36,6 +37,8 @@ root.render(
           <Route path="/NoticeList" element={<NoticeList />} />
           <Route path="/NoticeBoard" element={<NoticeBoard />} />
           <Route path="/NoticeContent" element={<NoticeContent />} />
+          <Route path="/NoticeContentItem" element={<NoticeContentItem />} />
+          <Route path="/NoticeContent/:id" element={<NoticeContent />} />
           <Route path="/DetailPage" element={<DetailPage />} />
           <Route path="/GoodsList" element={<GoodsList />} />
           <Route path="/GoodsList/:number" element={<GoodsList />} />

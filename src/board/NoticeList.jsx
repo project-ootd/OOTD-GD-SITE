@@ -1,9 +1,10 @@
 import React from "react";
 import NoticeListItem from "./NoticeListItem";
 import "../styles/board/NoticeList.scss";
+import MainPG from "../components/MainPG";
 
 const NoticeList = ({
-  notices,
+  notice,
   onRemove,
   onToggle,
   onInsertToggle,
@@ -11,17 +12,19 @@ const NoticeList = ({
 }) => {
   return (
     <ul className="NoticeList">
-      {notices.map((Notice, index) => {
+      {notice.map((Notice, index) => {
         //console.log(`${index}번 Notice `, Notice);
         return (
-          <NoticeListItem
-            Notice={Notice}
-            key={index}
-            onRemove={onRemove}
-            onToggle={onToggle}
-            onInsertToggle={onInsertToggle}
-            setSelectedNotice={setSelectedNotice}
-          />
+          <>
+            <NoticeListItem
+              Notice={Notice}
+              key={index}
+              onRemove={onRemove}
+              onToggle={onToggle}
+              onInsertToggle={onInsertToggle}
+              setSelectedNotice={setSelectedNotice}
+            />
+          </>
         );
       })}
     </ul>

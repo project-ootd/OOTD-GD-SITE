@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Main.scss";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+import NoticeList from "../board/NoticeList";
 
-const NewmainPG = () => {
+const MainPG = ({ Notice }) => {
+  // const { id, title } = Notice;
+  const { id } = useParams();
+  const [contentLimitItem, setContentLimitItem] = useState([]);
+  const [error, setError] = useState(null);
+
+  const getItem = async (id) => {
+    try {
+      const data = await axios.get(`http://localhost:4000/noticelimit`);
+      setContentLimitItem(data.data);
+    } catch (e) {
+      setError(e);
+    }
+  };
+
+  useEffect(() => {
+    getItem(id);
+  }, [id]);
+
   return (
     <div className="Main-pg">
       <section className="main-img">
@@ -24,7 +44,7 @@ const NewmainPG = () => {
           </ul>
           <ul className="notice-list">
             <li>
-              <Link to={`/`}>5. 침수로 인한 배송지연 안내</Link>
+              <Link to={`/`}>{""}</Link>
             </li>
             <li>
               <Link to={`/`}>4. 상담센터 증설 안내</Link>
@@ -73,4 +93,5 @@ const NewmainPG = () => {
     </div>
   );
 };
-export default NewmainPG;
+
+export default MainPG;
