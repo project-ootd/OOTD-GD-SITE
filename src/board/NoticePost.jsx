@@ -16,7 +16,7 @@ const NoticePost = () => {
 
   const onInsert = async (title, contents) => {
     try {
-      const data = await axios.post("http://localhost:4000/Notice2", {
+      const data = await axios.post("http://localhost:4000/notice", {
         title,
         contents,
       });

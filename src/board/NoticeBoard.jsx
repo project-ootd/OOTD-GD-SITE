@@ -6,7 +6,7 @@ import NoticeList from "./NoticeList";
 import NoticeTemplate from "./NoticeTemplate";
 
 const NoticeBoard = () => {
-  const [notices, setNotices] = useState([]);
+  const [notice, setNotice] = useState([]);
   const [insertToggle, setInsertToggle] = useState(false);
   const [selectedNotice, setSelectedNotice] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -14,9 +14,9 @@ const NoticeBoard = () => {
   const nextId = useRef(4);
 
   const onInsert = async (text) => {
-    const data = await axios.post(`http://localhost:4000/notices/`, { text });
-    setNotices(data.data);
-    // setNotices((notices) => notices.concat(todo));
+    const data = await axios.post(`http://localhost:4000/notice/`, { text });
+    setNotice(data.data);
+    // setNotice((notice) => notice.concat(todo));
 
     nextId.current++;
   };
@@ -26,17 +26,17 @@ const NoticeBoard = () => {
   };
 
   const onRemove = async (id) => {
-    // setNotices((notices) => notices.filter((todo) => todo.id !== id));
+    // setNotice((notice) => notice.filter((todo) => todo.id !== id));
     try {
       await axios({
-        url: `http://localhost:4000/notices/${id}`,
+        url: `http://localhost:4000/notice/${id}`,
         method: "DELETE",
       });
       const data = await axios({
-        url: `http://localhost:4000/notices`,
+        url: `http://localhost:4000/notice`,
         method: "GET",
       });
-      setNotices(data.data);
+      setNotice(data.data);
     } catch (e) {
       setError(e);
     }
@@ -45,29 +45,29 @@ const NoticeBoard = () => {
   const onToggle = async (id) => {
     try {
       const data = await axios({
-        url: `http://localhost:4000/notices/check/${id}`,
+        url: `http://localhost:4000/notice/check/${id}`,
         method: "PATCH",
       });
-      setNotices(data.data);
+      setNotice(data.data);
     } catch (e) {
       setError(e);
     }
   };
 
   const onUpdate = async (id, text) => {
-    // setNotices((notices) =>
-    //   notices.map((todo) => (todo.id === id ? { ...todo, text } : todo))
+    // setNotice((notice) =>
+    //   notice.map((todo) => (todo.id === id ? { ...todo, text } : todo))
     // );
     try {
       const data = await axios({
-        url: `http://localhost:4000/notices/${id}`,
+        url: `http://localhost:4000/notice/${id}`,
         method: "PATCH",
         data: {
           text,
           perform_date: "2022-08-09 11:11:11",
         },
       });
-      setNotices(data.data);
+      setNotice(data.data);
     } catch (e) {
       setError(e);
     }
@@ -78,11 +78,12 @@ const NoticeBoard = () => {
     const getData = async () => {
       try {
         const data = await axios({
-          url: "http://localhost:4000/notices",
+          url: "http://localhost:4000/notice",
           method: "GET",
         });
 
-        setNotices(data.data);
+        setNotice(data.data);
+
         setIsLoading(false);
         // throw new Error("조회중 에러발생!!");
         // await new Promise((resolve, reject) => {
@@ -110,7 +111,7 @@ const NoticeBoard = () => {
     <NoticeTemplate>
       {/* <NoticeInsert onInsert={onInsert} /> */}
       <NoticeList
-        notices={notices}
+        notice={notice}
         onRemove={onRemove}
         onToggle={onToggle}
         onInsertToggle={onInsertToggle}
