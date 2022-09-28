@@ -3,25 +3,43 @@ import "../styles/Main.scss";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import NoticeList from "../board/NoticeList";
+import MainNotice from "../board/MainNotice";
 
-const MainPG = ({ Notice }) => {
-  // const { id, title } = Notice;
-  const { id } = useParams();
-  const [contentLimitItem, setContentLimitItem] = useState([]);
-  const [error, setError] = useState(null);
+const MainPG = () => {
 
-  const getItem = async (id) => {
-    try {
-      const data = await axios.get(`http://localhost:4000/noticelimit`);
-      setContentLimitItem(data.data);
-    } catch (e) {
-      setError(e);
-    }
-  };
+  // const { id } = useParams();
+    const [contentLimitItem, setContentLimitItem] = useState([]);
+    const [error, setError] = useState(null);
+
+  // const getItem = async () => {
+  //   try {
+  //     const data = await axios.get(`http://localhost:4000/mainNotice`);
+  //     setContentLimitItem(data.data);
+  //   } catch (e) {
+  //     setError(e);
+  //   }
+  // };
+
+
 
   useEffect(() => {
-    getItem(id);
-  }, [id]);
+    const getData = async () => {
+      try {
+        const data = await axios.get(`http://localhost:4000/mainNotice`);
+        setContentLimitItem(data.data);
+        
+      } catch (e) {
+        setError(e);
+      }
+    };
+    getData();
+  }, []);
+  console.log("contentLimitItem");
+  console.log(contentLimitItem);
+  console.log("contentLimitItem[0]");
+  console.log(contentLimitItem[0]);
+  // console.log("contentLimitItem[0].id");
+  // console.log(contentLimitItem[0].id);
 
   return (
     <div className="Main-pg">
@@ -37,30 +55,34 @@ const MainPG = ({ Notice }) => {
       {/*  공지사항  */}
       <article className="con con2">
         <div className="notice">
-          <ul className="notice-top">
+        <ul className="notice-top">
             <li>
               <Link to={`/NoticeBoard`}>NOTICE</Link>
             </li>
           </ul>
-          <ul className="notice-list">
-            <li>
-              <Link to={`/`}>{""}</Link>
+        <ul className="notice-list">
+            {/* <li>
+              <Link to={`/NoticeContent/${contentLimitItem[0].id}`}>
+                <span>{contentLimitItem[0].id}</span> &nbsp; {contentLimitItem[0].title}</Link>
             </li>
             <li>
-              <Link to={`/`}>4. 상담센터 증설 안내</Link>
+              <Link to={`/NoticeContent/${contentLimitItem[1].id}`}>
+                <span>{contentLimitItem[1].id}</span> &nbsp; {contentLimitItem[1].title}</Link>
             </li>
             <li>
-              <Link to={`/`}>3. 서비스 확장에 따른 임시휴무 안내</Link>
+              <Link to={`/NoticeContent/${contentLimitItem[2].id}`}>
+                <span>{contentLimitItem[2].id}</span> &nbsp; {contentLimitItem[2].title}</Link>
             </li>
             <li>
-              <Link to={`/`}>2. 입고 지연 안내</Link>
+              <Link to={`/NoticeContent/${contentLimitItem[3].id}`}>
+                <span>{contentLimitItem[3].id}</span> &nbsp; {contentLimitItem[3].title}</Link>
             </li>
             <li>
-              <Link to={`/`}>
-                1. 인터넷 쇼핑몰 입점 안내(쿠팡, G-market, Amazon)
-              </Link>
-            </li>
-          </ul>
+              <Link to={`/NoticeContent/${contentLimitItem[1].id}`}>
+                <span>{contentLimitItem[4].id}</span> &nbsp; {contentLimitItem[4].title}</Link>
+            </li> */}
+        </ul>
+
         </div>
         {/* 이벤트 */}
         <div className="event">
