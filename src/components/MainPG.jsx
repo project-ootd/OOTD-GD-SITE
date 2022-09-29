@@ -6,40 +6,20 @@ import NoticeList from "../board/NoticeList";
 import MainNotice from "../board/MainNotice";
 
 const MainPG = () => {
-
-  // const { id } = useParams();
-    const [contentLimitItem, setContentLimitItem] = useState([]);
-    const [error, setError] = useState(null);
-
-  // const getItem = async () => {
-  //   try {
-  //     const data = await axios.get(`http://localhost:4000/mainNotice`);
-  //     setContentLimitItem(data.data);
-  //   } catch (e) {
-  //     setError(e);
-  //   }
-  // };
-
-
+  const [contentLimitItem, setContentLimitItem] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const getData = async () => {
       try {
         const data = await axios.get(`http://localhost:4000/mainNotice`);
         setContentLimitItem(data.data);
-        
       } catch (e) {
         setError(e);
       }
     };
     getData();
   }, []);
-  console.log("contentLimitItem");
-  console.log(contentLimitItem);
-  console.log("contentLimitItem[0]");
-  console.log(contentLimitItem[0]);
-  // console.log("contentLimitItem[0].id");
-  // console.log(contentLimitItem[0].id);
 
   return (
     <div className="Main-pg">
@@ -55,34 +35,18 @@ const MainPG = () => {
       {/*  공지사항  */}
       <article className="con con2">
         <div className="notice">
-        <ul className="notice-top">
+          <ul className="notice-top">
             <li>
               <Link to={`/NoticeBoard`}>NOTICE</Link>
             </li>
           </ul>
-        <ul className="notice-list">
-            {/* <li>
-              <Link to={`/NoticeContent/${contentLimitItem[0].id}`}>
-                <span>{contentLimitItem[0].id}</span> &nbsp; {contentLimitItem[0].title}</Link>
-            </li>
-            <li>
-              <Link to={`/NoticeContent/${contentLimitItem[1].id}`}>
-                <span>{contentLimitItem[1].id}</span> &nbsp; {contentLimitItem[1].title}</Link>
-            </li>
-            <li>
-              <Link to={`/NoticeContent/${contentLimitItem[2].id}`}>
-                <span>{contentLimitItem[2].id}</span> &nbsp; {contentLimitItem[2].title}</Link>
-            </li>
-            <li>
-              <Link to={`/NoticeContent/${contentLimitItem[3].id}`}>
-                <span>{contentLimitItem[3].id}</span> &nbsp; {contentLimitItem[3].title}</Link>
-            </li>
-            <li>
-              <Link to={`/NoticeContent/${contentLimitItem[1].id}`}>
-                <span>{contentLimitItem[4].id}</span> &nbsp; {contentLimitItem[4].title}</Link>
-            </li> */}
-        </ul>
-
+          <ul className="notice-list">
+            {contentLimitItem.map((contentLimitItem, index) => {
+              return (
+                <MainNotice contentLimitItem={contentLimitItem} key={index} />
+              );
+            })}
+          </ul>
         </div>
         {/* 이벤트 */}
         <div className="event">
