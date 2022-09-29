@@ -6,33 +6,20 @@ import NoticeList from "../board/NoticeList";
 import MainNotice from "../board/MainNotice";
 
 const MainPG = () => {
-  // const { id } = useParams();
-  // const [contentLimitItem, setContentLimitItem] = useState([]);
-  // const [error, setError] = useState(null);
+  const [contentLimitItem, setContentLimitItem] = useState([]);
+  const [error, setError] = useState(null);
 
-  // // const getItem = async () => {
-  // //   try {
-  // //     const data = await axios.get(`http://localhost:4000/mainNotice`);
-  // //     setContentLimitItem(data.data);
-  // //   } catch (e) {
-  // //     setError(e);
-  // //   }
-  // // };
-
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     try {
-  //       const data = await axios.get(`http://localhost:4000/mainNotice`);
-  //       setContentLimitItem(data.data);
-  //     } catch (e) {
-  //       setError(e);
-  //     }
-  //   };
-  //   getData();
-  // }, []);
-
-  // console.log("MainPG : without useEffect");
-  // console.log(contentLimitItem[0]);
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const data = await axios.get(`http://localhost:4000/mainNotice`);
+        setContentLimitItem(data.data);
+      } catch (e) {
+        setError(e);
+      }
+    };
+    getData();
+  }, []);
 
   return (
     <div className="Main-pg">
@@ -54,15 +41,11 @@ const MainPG = () => {
             </li>
           </ul>
           <ul className="notice-list">
-            {/* {contentLimitItem.map((contentLimitItem, index) => {
+            {contentLimitItem.map((contentLimitItem, index) => {
               return (
-                <MainNotice
-                  contentLimitItem={contentLimitItem}
-                  setContentLimitItem={setContentLimitItem}
-                  key={index}
-                />
+                <MainNotice contentLimitItem={contentLimitItem} key={index} />
               );
-            })} */}
+            })}
           </ul>
         </div>
         {/* 이벤트 */}

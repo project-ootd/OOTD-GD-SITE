@@ -34,7 +34,7 @@ root.render(
           <Route path="/PaymentPage" element={<PaymentPage />} />
           <Route path="/SBP" element={<ShoppingBasketPage />} />
           <Route path="/NoticeTemplate" element={<NoticeTemplate />} />
-          {/* <Route path="/MainNotice" element={<MainNotice />} /> */}
+          <Route path="/MainNotice" element={<MainNotice />} />
           <Route path="/NoticePost" element={<NoticePost />} />
           <Route path="/NoticeList" element={<NoticeList />} />
           <Route path="/NoticeBoard" element={<NoticeBoard />} />
