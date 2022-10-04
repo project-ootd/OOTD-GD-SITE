@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import Topbar from "../components/Topbar";
 import axios from "axios";
 import NoticeContentItem from "./NoticeContentItem";
+import parse from "html-react-parser";
 
 import "../styles/board/NoticeContent.scss";
 
@@ -22,8 +23,8 @@ const NoticeContent = ({}) => {
   //   setContentItem(data.data);
   // };
 
-  // const Date = (contentItem.reg_date || "").split("T");
-  // const contentText = `<pre>${contentItem.contents}</pre>`;
+  const Date = (contentItem.reg_date || "").split("T");
+  const contentText = `<pre>${contentItem.contents}</pre>`;
   const getItem = async (id) => {
     try {
       const data = await axios.get(`http://localhost:4000/notice/${id}`);
@@ -43,12 +44,12 @@ const NoticeContent = ({}) => {
       <article className="notice-content">
         <div className="notice-main-title">공지사항</div>
         <div>
-          <div className="notice-date">{contentItem.reg_date}</div>
+          <div className="notice-date">{Date[0]}</div>
           <nav className="numANDtitle">
             <div className="notice-content-num">{contentItem.id}</div>
             <div className="notice-content-title">{contentItem.title}</div>
           </nav>
-          <div className="notice-content-text">{contentItem.contents}</div>
+          <div className="notice-content-text">{parse(contentText)}</div>
         </div>
         <nav className="notice-content-btn">
           <button className="btn mod-btn">수정</button>

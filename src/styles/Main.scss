@@ -43,7 +43,13 @@
   display: inline-block;
   font-weight: bold;
   font-size: 1.3rem;
+  border: 5px solid red;
 }
+
+.notice-list {
+  border: 5px solid red;
+}
+
 .notice-list > li {
   margin-top: 5px;
 }

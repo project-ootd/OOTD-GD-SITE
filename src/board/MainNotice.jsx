@@ -4,11 +4,11 @@ import axios from "axios";
 
 const MainNotice = ({ contentLimitItem }) => {
   return (
-    <Link to={`/NoticeContent/${contentLimitItem.id}`}>
-      <li>
+    <li>
+      <Link to={`/NoticeContent/${contentLimitItem.id}`}>
         {contentLimitItem.id}.&nbsp;{contentLimitItem.title}
-      </li>
-    </Link>
+      </Link>
+    </li>
   );
 };
 
